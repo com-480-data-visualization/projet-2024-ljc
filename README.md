@@ -1,10 +1,10 @@
 # Project of Data Visualization (COM-480)
 
-| Student's name | SCIPER |
-| -------------- | ------ |
-| | |
-| | |
-| | |
+|  Student's name  | SCIPER |
+| ---------------- | ------ |
+| Julie Korber | 300467 |
+| Clara Tavernier | 302586 |
+| Louise Font | 301847 |
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
