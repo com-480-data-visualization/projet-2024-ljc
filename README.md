@@ -33,8 +33,9 @@ Please, fill the following sections about your project.
 > 
 > The dataset 2 is only on plastic based textiles, i.e synthetic fibers. To also compare them with natural fibers, we will use the article [Carbon Footprint of Textile and Clothing Products](https://www.researchgate.net/publication/276193965_Carbon_Footprint_of_Textile_and_Clothing_Products) where we can find the energy Consumption and CO2 emissions of different natural and synthetic fibers clothing.
 >
-> **Datasets on the 4 main consumptions of textile industry in a global way:**
->
+> **Datasets 4:**
+> 
+> These are multiple simple dataset on the four main consumptions of textile industry in a global way
 > Accessibles from the website *Our World in Data*:
 > - [CO₂ and Greenhouse Gas Emissions](https://ourworldindata.org/co2-and-greenhouse-gas-emissions)
 > - [Water use](https://ourworldindata.org/water-use-stress)
@@ -49,8 +50,9 @@ Please, fill the following sections about your project.
 
 ### Exploratory Data Analysis
 
-> Pre-processing of the data set you chose
-> - Show some basic statistics and get insights about the data
+> You can find the pre-processing in the two notebooks in the repository:
+> - `Consumptions-dataset-exploration.ipynb`: Datasets 1 & 4
+> - `Textile-dataset-exploration.ipynb`: Dataset 2
 
 ### Related work
 
