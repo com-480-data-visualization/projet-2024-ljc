@@ -19,9 +19,27 @@ Please, fill the following sections about your project.
 
 ### Dataset
 
-> Find a dataset (or multiple) that you will explore. Assess the quality of the data it contains and how much preprocessing / data-cleaning it will require before tackling visualization. We recommend using a standard dataset as this course is not about scraping nor data processing.
+> Unfortunately, most of the information that we find important on the subject has not been brought together in datasets available to the general public. On the other hand, numerous government or NGO reports are made public, as well as published scientific articles on the subject. We will therefore create some of our datasets from the figures and information we find there.
 >
-> Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)), you could use also the DataSets proposed by the ENAC (see the Announcements section on Zulip).
+> **Dataset 1:**
+> 
+> In order to introduce the subject of pollution in a general way, we will start by showing how the average carbon footprint of a person living in Switzerland is distributed using “carbon-footprint.xlsx” and “actions.xlsx” datasets from the affiliated with UNIL and EPFL center CLIMACT. (Datasets recoverable [here](https://climpact.ch/about).)
+>
+> **Dataset 2:**
+> 
+> To show the impact on different ways (water use, pollutants emitted, greenhouse gas emissions…) from different fabrics, we will use the following dataset: [Plastic based Textiles in clothing industry](https://www.kaggle.com/datasets/purohitgaurav/plastic-based-textiles-in-clothing-industry). 
+>
+> **Dataset 3 (need to be created from article):**
+> 
+> The dataset 2 is only on plastic based textiles, i.e synthetic fibers. To also compare them with natural fibers, we will use the article [Carbon Footprint of Textile and Clothing Products](https://www.researchgate.net/publication/276193965_Carbon_Footprint_of_Textile_and_Clothing_Products) where we can find the energy Consumption and CO2 emissions of different natural and synthetic fibers clothing.
+>
+> **Datasets on the 4 main consumptions of textile industry in a global way:**
+>
+> Accessibles from the website *Our World in Data*:
+> - [CO₂ and Greenhouse Gas Emissions](https://ourworldindata.org/co2-and-greenhouse-gas-emissions)
+> - [Water use](https://ourworldindata.org/water-use-stress)
+> - [Energy](https://ourworldindata.org/energy)
+> - [Land use](https://ourworldindata.org/land-use)
 
 ### Problematic
 
