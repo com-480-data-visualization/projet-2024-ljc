@@ -49,7 +49,7 @@
 
 > You can find the pre-processing in the two notebooks in the repository:
 > - `Consumptions-dataset-exploration.ipynb`: Datasets 1 & 4
-> - `Textile-dataset-exploration.ipynb`: Dataset 2
+> - `Textile-dataset-exploration.ipynb`: Datasets 2 & 3 (and an extra dataset that we don't think we will use)
 
 ### Related work
 
