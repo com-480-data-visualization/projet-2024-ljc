@@ -10,6 +10,7 @@
 
 ## Milestone 1 (29th March, 5pm)
 
+
 ### Dataset
 
 > Unfortunately, most of the information that we find important on the subject has not been brought together in datasets available to the general public. On the other hand, numerous government or NGO reports are made public, as well as published scientific articles on the subject. We will therefore create some of our datasets from the figures and information we find there.
@@ -38,9 +39,9 @@
 ### Problematic
 
 > Following the latest IPCC report, the inevitable consequences of climate change have once again been highlighted. Rising greenhouse gas emissions, ocean acidification and water pollution are having an undeniable impact on our environment. When confronted with this information, the public's first point of attack is often transport. Indeed, the political battle against the use of combustion engine cars and the work of environmental movements to promote rail travel over air travel highlight the primary impact of this sector on global warming. However, this leaves other major players behind such as the fashion industry. Our inclination to regularly change our wardrobe is responsible for 8-10% of global greenhouse gas emissions. Cotton production uses 2.5% of agricultural land, and synthetic materials consume 342 million barrels of oil every year and dyes 42 million tonnes of chemicals. This does not take into account water consumption, which is 2,700 litres for a T-shirt and 10,000 for a pair of jeans. On top of this, the industry poses an ethical problem, whether through forced child labour, deplorable living wages or dangerous working conditions. 
-
+>
 > With an average of £600 spent on clothes each year in Europe, the over-consumption encouraged by fast fashion is having a disastrous impact. Through this project, we want to show the public the real cost of their clothes and encourage them to think more carefully before buying their next jumper from a major brand. By making it easier to visualise, we hope that readers will be genuinely affected by this problem and will share this information with others in order to reduce the problem as a whole. In our case, our audience would be mainly young, as this is the age group that is also targeted by the advertising produced by the extra fast and fast fashion industry. 
-
+>
 > Sources : 
 > - https://www.bbc.com/news/science-environment-60382624
 > - https://www.weforum.org/agenda/2019/01/by-the-numbers-the-economic-social-and-environmental-impacts-of-fast-fashion/
