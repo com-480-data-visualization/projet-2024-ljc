@@ -10,12 +10,6 @@
 
 ## Milestone 1 (29th March, 5pm)
 
-**10% of the final grade**
-
-This is a preliminary milestone to let you set up goals for your final project and assess the feasibility of your ideas.
-Please, fill the following sections about your project.
-
-*(max. 2000 characters per section)*
 
 ### Dataset
 
@@ -44,17 +38,13 @@ Please, fill the following sections about your project.
 
 ### Problematic
 
-> Frame the general topic of your visualization and the main axis that you want to develop.
-> - What am I trying to show with my visualization?
-> - Think of an overview for the project, your motivation, and the target audience.
->
-Following the latest IPCC report, the inevitable consequences of climate change have once again been highlighted. Rising greenhouse gas emissions, ocean acidification and water pollution are having an undeniable impact on our environment. When confronted with this information, the public's first point of attack is often transport. Indeed, the political battle against the use of combustion engine cars and the work of environmental movements to promote rail travel over air travel highlight the primary impact of this sector on global warming. However, this leaves other major players behind such as the fashion industry. Our inclination to regularly change our wardrobe is responsible for 8-10% of global greenhouse gas emissions. Cotton production uses 2.5% of agricultural land, and synthetic materials consume 342 million barrels of oil every year and dyes 42 million tonnes of chemicals. This does not take into account water consumption, which is 2,700 litres for a T-shirt and 10,000 for a pair of jeans. On top of this, the industry poses an ethical problem, whether through forced child labour, deplorable living wages or dangerous working conditions. 
+> Following the latest IPCC report, the inevitable consequences of climate change have once again been highlighted. Rising greenhouse gas emissions, ocean acidification and water pollution are having an undeniable impact on our environment. When confronted with this information, the public's first point of attack is often transport. Indeed, the political battle against the use of combustion engine cars and the work of environmental movements to promote rail travel over air travel highlight the primary impact of this sector on global warming. However, this leaves other major players behind such as the fashion industry. Our inclination to regularly change our wardrobe is responsible for 8-10% of global greenhouse gas emissions. Cotton production uses 2.5% of agricultural land, and synthetic materials consume 342 million barrels of oil every year and dyes 42 million tonnes of chemicals. This does not take into account water consumption, which is 2,700 litres for a T-shirt and 10,000 for a pair of jeans. On top of this, the industry poses an ethical problem, whether through forced child labour, deplorable living wages or dangerous working conditions. 
 
-With an average of £600 spent on clothes each year in Europe, the over-consumption encouraged by fast fashion is having a disastrous impact. Through this project, we want to show the public the real cost of their clothes and encourage them to think more carefully before buying their next jumper from a major brand. By making it easier to visualise, we hope that readers will be genuinely affected by this problem and will share this information with others in order to reduce the problem as a whole. In our case, our audience would be mainly young, as this is the age group that is also targeted by the advertising produced by the extra fast and fast fashion industry. 
+> With an average of £600 spent on clothes each year in Europe, the over-consumption encouraged by fast fashion is having a disastrous impact. Through this project, we want to show the public the real cost of their clothes and encourage them to think more carefully before buying their next jumper from a major brand. By making it easier to visualise, we hope that readers will be genuinely affected by this problem and will share this information with others in order to reduce the problem as a whole. In our case, our audience would be mainly young, as this is the age group that is also targeted by the advertising produced by the extra fast and fast fashion industry. 
 
-Sources : 
-- https://www.bbc.com/news/science-environment-60382624
-- https://www.weforum.org/agenda/2019/01/by-the-numbers-the-economic-social-and-environmental-impacts-of-fast-fashion/
+> Sources : 
+> - https://www.bbc.com/news/science-environment-60382624
+> - https://www.weforum.org/agenda/2019/01/by-the-numbers-the-economic-social-and-environmental-impacts-of-fast-fashion/
 
 ### Exploratory Data Analysis
 
@@ -64,11 +54,24 @@ Sources :
 
 ### Related work
 
+- What others have already done with the data?
+> There are numerous papers, reports and websitse discussing the environmental impact of fast-fashion brands. Here are some examples: 
+> - The website mentioned in dataset 4 section. 
+> - [This report](https://www.eionet.europa.eu/etcs/etc-wmge/products/etc-wmge-reports/plastic-in-textiles-potentials-for-circularity-and-reduced-environmental-and-climate-impacts) adressing the presence of plastic in textiles. It provides an overview of the current data on the production and consumption of synthetic polymers in Europe. It also provides insights into the environmental impacts of synthetic textiles, focusing on resource and water usage, greenhouse gas emissions, chemical usage and the release of microplastic. 
+> - Some websites discuss the environmental impact of fast-fashion via numbers and statistics, such as [the European Parliament website](https://www.europarl.europa.eu/topics/en/article/20201208STO93327/the-impact-of-textile-production-and-waste-on-the-environment-infographics) or [this one](https://illuminem.com/illuminemvoices/behind-the-seams-shocking-fast-fashion-statistics-you-need-to-know).
 
-> - What others have already done with the data?
-> - Why is your approach original?
-> - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
-> - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
+- Why is your approach original?
+
+> As we can see, the environmental impact of fast-fashion has been widely discussed. Thus, we wondered what new perspective we can bring to the subject. 
+
+We noticed that most of the reports are overviews about fast-fashion in general, with a lot of information. Instead of having numbers and statistics from nowhere, our approach aims to tell a story, a story that provides simple but impactful visualizations and examples tto help our audience to realise the environmental impact of clothing production. 
+
+- What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
+> - [This document](https://librairie.ademe.fr/ged/4367/lrdml_expo_affiche_a2_conception_version_def.pdf) is constructed in a way we want to transmit our story. 
+> - Further research into the subject led us to discover some plot models we wish to integrate into our story as in [this report from the European Environment Information and Observation Network](https://www.eionet.europa.eu/etcs/etc-wmge/products/etc-wmge-reports/plastic-in-textiles-potentials-for-circularity-and-reduced-environmental-and-climate-impacts), where there is a hierarchical representation of different types of textiles based on their environmental impact. 
+> ![image](images/figure12.png)
+> - Once we had selected our dataset, we took a look at projects from previous years. One website, in particular, caught our eyes. We really liked the way the information is transmitted to the user, and how their story is told, which might be inspirational for the way we want to construct our project. This is the site about [the wine journey project](https://com-480-data-visualization.github.io/com-480-project-onvagagner/website/index.html). 
+
 
 ## Milestone 2 (26th April, 5pm)
 
