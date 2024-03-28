@@ -62,9 +62,7 @@
 
 - Why is your approach original?
 
-> As we can see, the environmental impact of fast-fashion has been widely discussed. Thus, we wondered what new perspective we can bring to the subject. 
-
-We noticed that most of the reports are overviews about fast-fashion in general, with a lot of information. Instead of having numbers and statistics from nowhere, our approach aims to tell a story, a story that provides simple but impactful visualizations and examples tto help our audience to realise the environmental impact of clothing production. 
+> As we can see, the environmental impact of fast-fashion has been widely discussed. Thus, we wondered what new perspective we can bring to the subject. We noticed that most of the reports are overviews about fast-fashion in general, with a lot of information. Instead of having numbers and statistics from nowhere, our approach aims to tell a story, a story that provides simple but impactful visualizations and examples tto help our audience to realise the environmental impact of clothing production. 
 
 - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
 > - [This document](https://librairie.ademe.fr/ged/4367/lrdml_expo_affiche_a2_conception_version_def.pdf) is constructed in a way we want to transmit our story. 
