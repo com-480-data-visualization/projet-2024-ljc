@@ -10,7 +10,6 @@
 
 ## Milestone 1 (29th March, 5pm)
 
-
 ### Dataset
 
 > Unfortunately, most of the information that we find important on the subject has not been brought together in datasets available to the general public. On the other hand, numerous government or NGO reports are made public, as well as published scientific articles on the subject. We will therefore create some of our datasets from the figures and information we find there.
