@@ -16,20 +16,108 @@
 
 <body>
   <div id="fullpage">
-    <div class="section">Impact Of The Textile Industry</div>
-    <div class="section">Some section 1</div>
     <div class="section">
-      <div class="slide">Slide 1</div>
-      <div class="slide">Slide 2</div>
-      <div class="slide">Slide 3</div>
+      Impact Of The Textile Industry
+    
+      <div class="tshirt">
+        <svg viewBox="0 0 10 10" fill="#ffcdf9">
+          <clipPath id="myClip">
+            <circle cx="6" cy="5" r="1" />
+          </clipPath>
+          <path
+            id="heart"
+            d="M 3 8 L 3 4 L 2 5 L 1 4 L 3 2 L 4 2 C 4 3 6 3 6 2 L 7 2 L 9 4 L 8 5 L 7 4 L 7 8 T 3 8" />
+          <use clip-path="url(#myClip)" href="#heart" fill="#fffecd" />
+        </svg>
+      </div>
     </div>
-    <div class="section">Some section 3</div>
+
+   
+
+    <div class="section">
+        <div class="section-title">Repartition of the carbon footprint of a swiss person</div>
+        <div class="section-text">First of all, here is the average repartition of a swiss person carbon footprint :</div>
+        <img
+          class="sketch-picture"
+          src="img/swiss-carbon-footprint.jpg"
+          alt="Repartition of the carbon footprint of a swiss person" />
+          <div class="section-text">We can see that Clothing is not that small, and more important, a part that we have a lot of influence of our footprint.</div>
+    </div>
+
+    <div class="section">
+      <div class="slide">
+        <div class="section-text">In the textile industry, not only the carbon emissions matter. Actually, the 4 main (?) are water use, carbon emissions, energy consumption and land use. And the 4 of them are in constant increase for the past century:</div>
+        <img
+          class="sketch-picture"
+          src="img/uses-timeline.jpg"
+          alt="Repartition of the carbon footprint of a swiss person" />
+      </div>
+
+      <div class="slide">
+        <div class="section-text">Let's have a closer look at each consumptions:</div>
+        <img
+          class="sketch-picture"
+          src="img/main-tshirt.jpg"/>
+      </div> 
+      
+      <div class="slide">
+        <div class="partitioned-tshirt-container">
+          <svg class="partitioned-tshirt" viewBox="-20 -20 40 60" xmlns="http://www.w3.org/2000/svg">
+              <g class="part" id="part1">
+                <path d="M -9 0 L -9 -4 L -13 0 L -17 -4 L -9 -12 L -4 -12 C -4 -9 0 -9 0 -9 L 0 0 Z" fill="#53e8e8"/>
+                <text text-anchor="middle" x="-4.5" y="-6" font-size="1" width="2" fill="black">
+                  <tspan x="-4.5" dy="1.2em">Water</tspan>
+                  <tspan x="-4.5" dy="1.2em">Use</tspan>
+                </text>
+              </g>
+              <g class="part">
+                <path d="M 9 0 L 9 -4 L 13 0 L 17 -4 L 9 -12 L 4 -12 C 4 -9 0 -9 0 -9 L 0 0 Z" fill="#ede03a"/>
+                <text text-anchor="middle" x="4.5" y="-6" font-size="1" width="2" fill="black">
+                  <tspan x="4.5" dy="1.2em">Energy</tspan>
+                  <tspan x="4.5" dy="1.2em">Consumption</tspan>
+                </text>
+              </g>
+              <g class="part">
+                <path d="M 9 12 L 9 0 L 0 0 L 0 12 Z" fill="#7d788b"/>
+                <text text-anchor="middle" x="4.5" y="4" font-size="1" width="2" fill="black">
+                  <tspan x="4.5" dy="1.2em">CO2</tspan>
+                  <tspan x="4.5" dy="1.2em">Emissions</tspan>
+                </text>
+              </g>
+              <g class="part">
+                <path d="M -9 12 L -9 0 L 0 0 L 0 12 Z" fill="#53e878"/>
+                <text text-anchor="middle" x="-4.5" y="4" font-size="1" width="2" fill="black">
+                  <tspan x="-4.5" dy="1.2em">Land</tspan>
+                  <tspan x="-4.5" dy="1.2em">Use</tspan>
+                </text>
+              </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Which fabric is the best?</div>
+      <div class="section-text">We can compare the water use, carbon emissions and land use for different fabrics:</div>
+      <img
+        class="sketch-picture"
+        src="img/uses-per-fabric.jpg"
+        alt="Repartition of the carbon footprint of a swiss person" />
+        <div class="section-text">So each fabric has its pros and cons. Natural ones consume in general more water and land use, but emit less carbon dioxide and consume less energy.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Conclusion: Be responsible</div>
+      
+    </div>
+
+
   </div>
 
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js" integrity="sha512-yHHLi2ZwgtW9QNVZd0asqMyWGJ6Kx73ijKlGWSi3MwYFB5ZzOJV8wPtopKr6muHk5SERgF3OB/2dZj3StlI34w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 
