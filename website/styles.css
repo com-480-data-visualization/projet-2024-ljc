@@ -70,3 +70,34 @@ animation: openYourHeart 10s infinite;
     margin-right: 100px;
     margin: 40px;
 }
+
+/* Pop up */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: white;
+    width: 80%; /* Vous pouvez ajuster la largeur selon vos besoins */
+    height: 80%; /* Vous pouvez ajuster la hauteur selon vos besoins */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
