@@ -1,0 +1,351 @@
+body {
+    background: #F1FDB0;
+}
+
+* {
+    position: relative;
+}
+
+.title {
+    font-size: 200px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #7c5921;
+}
+
+.grow {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:root {
+    --green: #b9d31c;
+    --second-green: #7f7a12;
+}
+  
+.ground {
+    background: #7c5921;
+    width: 10rem;
+    height: 9.5rem;
+    border-top-left-radius: 3.5rem;
+    border-top-right-radius: 3.5rem;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    z-index: 100;
+}
+
+.plant{
+    position: absolute;
+    top: -0rem;
+    animation: plant 3s infinite;
+}
+
+@keyframes plant{
+    0%{
+      top:0; 
+    }
+    30%{
+      top: -8rem;
+    }
+    80%{
+      top: -8rem;
+    }
+    100%{
+     top: 0rem;
+    }
+}
+
+.stem {
+    background: var(--green);
+    width: 0.8rem;
+    height: 9rem;
+    border-radius: 0.8rem;
+    animation: stem 3s infinite;
+}
+
+@keyframes stem {
+    0%{
+      height: 3rem;
+    }
+    30%{
+      height: 9rem;
+      ;
+    }
+    80%{
+       height: 9rem;
+         background: var(--second-green);
+    } 
+    90%{
+       background: #b26912;
+    }
+    100%{
+      height: 3rem;
+            background: #b26912;}
+    
+}
+
+.leaf {
+    position: absolute;
+    background: var(--green);
+    width: 4rem;
+    height: 3.7rem;
+    border-top-right-radius: 3.5rem;
+    border-bottom-left-radius: 3.2rem;
+    border-bottom-right-radius: 1.2rem;
+  }
+
+.left {
+    left: -3.8rem;
+    top: 18%;
+     transform: scale(0);
+      animation: left 3s infinite;
+    transform-origin: 100% 100%;
+}
+
+@keyframes left{
+    0%{
+     transform: scale(0);
+    }
+    15%{
+       transform: scale(1);
+    }
+    60%{
+       background: var(--second-green);
+    }
+    80%{
+         background: #b26912;
+       transform:scale(1);
+      opacity: 1;
+    }
+    90%{ 
+      transform:scale(1);}
+      100%{
+         background: #b26912;
+       opacity: 0;
+           transform:scale(1); 
+      }
+}
+
+.right {
+       background: var(--green);
+    transform: scaleX(-1) scaleY(0);
+    left: -3.8rem;
+    top: 40%;
+      animation: right 3s infinite;
+    transform-origin: 100% 100%;
+}
+  
+@keyframes right{
+    0%{
+     transform:   scaleX(-1) scaleY(0);
+    }
+    15%{
+       transform:  scaleX(-1) scaleY(0);
+          background: var(--green);
+    }
+    25%{
+       transform: scaleY(1)  scaleX(-1);
+    }
+    75%{
+       background: var(--second-green);
+    }
+    85%{  
+       background: #b26912;
+      transform:scaleY(1)  scaleX(-1);
+    }
+    90%{
+      transform:scaleY(0)  scaleX(-1);}
+    100%{
+       background: #b26912;
+      transform:scaleY(0)  scaleX(-1);}
+}
+
+.receptacle {
+    position: absolute;
+    background: var(--green);
+     width: 3rem;
+    height: 2rem;
+    left: -1.2rem;
+    top: -2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 0.7rem;
+    transform:  scale(0) rotate(0deg);
+     animation: recep 3s infinite;
+}
+  
+.receptacle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--green);
+    width: 3rem;
+    height: 2rem;
+    left: 2rem;
+    top: -0.8rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 0.7rem;
+    transform:  rotate(-80deg);
+}
+  
+@keyframes recep{
+    0%{}
+    60%{transform: scale(0) rotate(0deg);}
+    70%{transform: scale(1) rotate(0deg);}
+    80%{top: -2rem;}
+    90%{transform: scale(1) rotate(0deg);}
+    100%{transform: scale(1) rotate(0deg);top: 4rem;}
+}
+
+.flower{
+    position: absolute;
+    top: -4rem;
+    z-index: 8;
+    
+}
+  
+.flower span{
+  /*   transform: scale(0); */
+    transform-origin: 100% 100%;
+  
+    position: absolute;
+    background: white;
+    left: -1.6rem;
+    width: 4rem;
+    height: 4rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 0.2rem;
+}
+
+.flower span:nth-child(1) {
+    transform: rotate(12deg) translateY(0.2rem) scale(0);
+      animation: flower1 3s infinite;
+}
+
+@keyframes flower1{
+    0%{transform: scale(0) rotate(12deg) translateY(0.2rem);}
+    40%{transform: scale(0) rotate(12deg) translateY(0.2rem);}
+    50%{transform: scale(1) rotate(12deg) translateY(0.2rem);}
+    65%{transform: scale(1) rotate(12deg) translateY(0.2rem);}
+    75%{transform: scale(1) rotate(12deg) translateY(-3rem) translateX(-3rem);
+    opacity: 1;}
+    100%{transform: scale(1) rotate(12deg) translateY(-3rem) translateX(-3rem);
+     opacity: 0;}
+}
+  .flower span:nth-child(2) {
+    transform: rotate(84deg) translateY(0.2rem);
+    animation: flower2 3s infinite;
+  }
+  @keyframes flower2{
+    0%{transform: scale(0) rotate(84deg) translateY(0.2rem);}
+    40%{transform: scale(0) rotate(84deg) translateY(0.2rem);}
+    50%{transform: scale(1) rotate(84deg) translateY(0.2rem);}
+    65%{transform: scale(1) rotate(84deg) translateY(0.2rem);}
+    75%{transform: scale(1) rotate(84deg) translateY(-2rem) translateX(-3rem);
+    opacity: 1;}
+    100%{transform: scale(1) rotate(84deg) translateY(-2rem) translateX(-3rem);
+     opacity: 0;}
+  }
+  .flower span:nth-child(3) {
+    transform: rotate(156deg) translateY(0.2rem);
+    animation: flower3 3s infinite;
+  }
+  @keyframes flower3{
+    0%{transform: scale(0) rotate(156deg) translateY(0.2rem);}
+    40%{transform: scale(0) rotate(156deg) translateY(0.2rem);}
+    50%{transform: scale(1) rotate(156deg) translateY(0.2rem);}
+    65%{transform: scale(1) rotate(156deg) translateY(0.2rem);}
+    75%{transform: scale(1) rotate(156deg) translateY(-2rem) translateX(-3rem);
+    opacity: 1;}
+    100%{transform: scale(1) rotate(156deg) translateY(-2rem) translateX(-3rem);
+     opacity: 0;}
+  }
+  .flower span:nth-child(4) {
+    transform: rotate(228deg) translateY(0.2rem);
+      animation: flower4 3s infinite;
+  }
+  @keyframes flower4{
+    0%{transform: scale(0) rotate(228deg) translateY(0.2rem);}
+    40%{transform: scale(0) rotate(228deg) translateY(0.2rem);}
+    50%{transform: scale(1) rotate(228deg) translateY(0.2rem);}
+    65%{transform: scale(1) rotate(228deg) translateY(0.2rem);}
+    75%{transform: scale(1) rotate(228deg) translateY(-2rem) translateX(-3rem);
+    opacity: 1;}
+    100%{transform: scale(1) rotate(228deg) translateY(-2rem) translateX(-3rem);
+     opacity: 0;}
+  }
+  .flower span:nth-child(5) {
+    transform: rotate(300deg) translateY(0.2rem);
+    animation: flower5 3s infinite;
+  }
+  @keyframes flower5{
+    0%{transform: scale(0) rotate(300deg) translateY(0.2rem);}
+    40%{transform: scale(0) rotate(300deg) translateY(0.2rem);}
+    50%{transform: scale(1) rotate(300deg) translateY(0.2rem);}
+    65%{transform: scale(1) rotate(300deg) translateY(0.2rem);}
+    75%{transform: scale(1) rotate(300deg) translateY(-2rem) translateX(-3rem);
+    opacity: 1;}
+    100%{transform: scale(1) rotate(300deg) translateY(-2rem) translateX(-3rem);
+     opacity: 0;}
+  }
+  .fruit{
+    background: #fcd32b;
+    width: 3.3rem;
+    height: 3.3rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 0.8rem;
+    border-radius: 100%;
+    opacity: 0;
+    z-index: 9;
+    animation: fruit 3s infinite;
+  }
+  
+  @keyframes fruit{
+    0%{
+    }
+    45%{
+     opacity: 0; 
+    }
+    60%{
+  border-radius: 100%;
+    width: 3.3rem;
+    height: 3.3rem;
+       left: 0.8rem;
+        background: #fcd32b;
+        opacity: 1; 
+    }
+    80%{
+    width: 5rem;
+    height: 5rem;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 2rem;
+      transform: rotate(24deg)  ;
+      top: -1.5rem;
+       left: -1rem;
+         background: #f42914;
+    }
+    100%{   
+      border-top-left-radius: 5rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 2rem;
+      width: 5rem;
+      transform: rotate(24deg);
+       top: 3rem;
+    height: 5rem;
+    left: -1rem;
+      background: #aa1911;
+         opacity: 1;
+    }
+    
+  }

@@ -2,11 +2,13 @@ new fullpage('#fullpage', {
     //options here
     autoScrolling:true,
     scrollHorizontally: true,
-    sectionsColor: ['#C8D6A2', '#B7CE66', '#C8D6A2', '#B7CE66','#C8D6A2'],//['#ADDCCA', '#DCEBC2', '#FED2B7', '#F7A8A4', '#F58A94'],
+    sectionsColor: ['#ffb330', '#fff0cb', '#fff0cb', '#fff0cb','#fff0cb'],
     navigation: true,
     slidesNavigation: true,
     anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
-    navigationTooltips: ['Title', 'First Section', 'Slides', 'Third Section'],
+    navigationTooltips: ['Introduction', 'Your carbon footprint', 'Main problems', 'Fabric comparision', 'Conclusion'],
+    loopHorizontal: false,
+    dropEffect: true,
 });
 
 document.getElementById('part1').addEventListener('click', function() {
@@ -14,25 +16,33 @@ document.getElementById('part1').addEventListener('click', function() {
 });
 
 document.getElementById('part2').addEventListener('click', function() {
-    window.location.href = 'page2.html'; // Change the URL to your desired page
+    document.getElementById('popup-part2').style.display = 'block'; 
 });
 
 document.getElementById('part3').addEventListener('click', function() {
-    window.location.href = 'page3.html'; // Change the URL to your desired page
+    document.getElementById('popup-part3').style.display = 'block'; 
 });
 
 document.getElementById('part4').addEventListener('click', function() {
-    window.location.href = 'page4.html'; // Change the URL to your desired page
+    document.getElementById('popup-part4').style.display = 'block'; 
 });
-
 
 window.addEventListener('click', function(event) {
-  if (event.target === popup) {
-    popup.style.display = 'none';
-  }
+    if (event.target === document.getElementById('popup-part1')) {
+        document.getElementById('popup-part1').style.display = 'none';
+    } else if (event.target === document.getElementById('popup-part2')){
+        document.getElementById('popup-part2').style.display = 'none';
+    } else if (event.target === document.getElementById('popup-part3')){
+        document.getElementById('popup-part3').style.display = 'none';
+    } else if (event.target === document.getElementById('popup-part4')){
+        document.getElementById('popup-part4').style.display = 'none';
+    }
 });
 
-function closePopup() {
-  popup.style.display = 'none';
+function closePopup(id) {
+    document.getElementById(id).style.display = 'none';
 }
+
+
+
 
