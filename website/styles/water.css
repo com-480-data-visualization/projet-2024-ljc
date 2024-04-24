@@ -2,15 +2,16 @@
 
 
 body {
-	display: flex;
 	background: #d1edff;
-	align-items: center;
-	justify-content: center;
 	font-family: "Poppins", sans-serif;
 }
 
 .wrapper {
-	position: relative;
+	position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    inline-size: 8em;
 }
 
 .wrapper h1 {
@@ -61,8 +62,21 @@ body {
 	}
 }
 
-.container {
+.main-container {
 	text-align: left;
-	margin: 10% auto;
+	margin:12em auto 0;
+	margin-left: 10%;
+	margin-right: 10%;
+	font-family: system-ui;
+}
 
+.sketch-picture {
+    width: 400px;
+	display: block;
+    margin: 0 auto;
+}
+
+.text {
+	font-size: 20px;
+	color: #004976;
 }

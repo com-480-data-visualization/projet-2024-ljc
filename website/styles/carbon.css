@@ -5,7 +5,7 @@ body {
     background-color: #dddddd;
 }
 
-#container {
+#title-container {
     position: absolute;
     margin: 30px;
     width: 100vw;
@@ -14,6 +14,20 @@ body {
     bottom: 0;
 
     filter: url(#threshold) blur(0.6px);
+}
+
+.main-container {
+    font-size: 20px;
+    text-align: left;
+	margin-left: 10%;
+	margin-right: 10%;
+    font-family: system-ui;
+}
+
+.sketch-picture {
+    width: 400px;
+	display: block;
+    margin: 0 auto;
 }
 
 #text1,
