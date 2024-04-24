@@ -74,7 +74,7 @@
 
 **10% of the final grade**
 
-You can find the our milestone 2 pdf ![here](milestones/Milestone_2.pdf).
+You can find the our milestone 2 pdf [here](milestones/Milestone_2.pdf).
 
 ## Milestone 3 (31st May, 5pm)
 
