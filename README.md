@@ -8,7 +8,7 @@
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
-## Milestone 1 (29th March, 5pm)
+## Milestone 1 (29th March, 5pm) <a classe="anchor" id="milestone-1"></a>
 
 ### Dataset
 
@@ -70,13 +70,13 @@
 > - Once we had selected our dataset, we took a look at projects from previous years. One website, in particular, caught our eyes. We really liked the way the information is transmitted to the user, and how their story is told, which might be inspirational for the way we want to construct our project. This is the site about [the wine journey project](https://com-480-data-visualization.github.io/com-480-project-onvagagner/website/index.html). 
 
 
-## Milestone 2 (26th April, 5pm)
+## Milestone 2 (26th April, 5pm) <a classe="anchor" id="milestone-2"></a>
 
 **10% of the final grade**
 
 You can find our milestone 2 pdf [here](milestones/Milestone_2.pdf).
 
-## Milestone 3 (31st May, 5pm)
+## Milestone 3 (31st May, 5pm) <a classe="anchor" id="milestone-3"></a>
 
 **80% of the final grade**
 
