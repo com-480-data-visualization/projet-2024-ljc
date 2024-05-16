@@ -8,10 +8,13 @@
 
   <title>BeAware</title>
   <meta name="author" content="Clara Tavernier, Julie Korber, Louise Font" />
+  
+  <link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
+  <!-- <link rel="stylesheet" href="lib/fullpage.min.css" /> -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
 
   <link rel="stylesheet" href="styles/styles.css" />
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.css" integrity="sha512-i5IHYtHBVvbgT6M4ltVKNqF7fh/MTVfGh3ilW1gxxgmlMocsl8aYz28aF0Iph+ceUpun06UW9CpExog9qXqFKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/treemap.css" />
 </head>
 
 <body>
@@ -35,13 +38,21 @@
    
 
     <div class="section">
+      <div class="slide" id="carbonfootprint-slide">
+        <div id="divi">
+          <svg id='swiss-carbonfootprint' width="960" height="570"></svg>
+          <svg id='scfp-legend' width="500"></svg>
+        </div>
+      </div>
+      <div class="slide">
         <div class="section-title">Repartition of the carbon footprint of a swiss person</div>
         <div class="section-text">First of all, here is the average repartition of a swiss person carbon footprint :</div>
         <img
           class="sketch-picture"
           src="img/swiss-carbon-footprint.jpg"
           alt="Repartition of the carbon footprint of a swiss person" />
-          <div class="section-text">We can see that Clothing is not that small, and more important, a part that we have a lot of influence of our footprint.</div>
+        <div class="section-text">We can see that Clothing is not that small, and more important, a part that we have a lot of influence of our footprint.</div>
+      </div>
     </div>
 
     <div class="section">
@@ -147,10 +158,23 @@
 		</div>
 	</div>
 
-
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js" integrity="sha512-yHHLi2ZwgtW9QNVZd0asqMyWGJ6Kx73ijKlGWSi3MwYFB5ZzOJV8wPtopKr6muHk5SERgF3OB/2dZj3StlI34w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="lib/d3.v5.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/treemap.js"></script>
+  <script type="text/javascript" src="lib/fullpage.js"></script>
+  <script>
+    new fullpage('#fullpage', {
+      autoScrolling:true,
+      scrollHorizontally: true,
+      sectionsColor: ['#ffb330', '#fff0cb', '#fff0cb', '#fff0cb','#fff0cb'],
+      navigation: true,
+      slidesNavigation: true,
+      anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
+      navigationTooltips: ['Introduction', 'Your carbon footprint', 'Main problems', 'Fabric comparision', 'Conclusion'],
+      loopHorizontal: false,
+    });
+  </script>
 
 </body>
 

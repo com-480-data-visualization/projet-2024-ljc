@@ -1,15 +1,4 @@
-new fullpage('#fullpage', {
-    //options here
-    autoScrolling:true,
-    scrollHorizontally: true,
-    sectionsColor: ['#ffb330', '#fff0cb', '#fff0cb', '#fff0cb','#fff0cb'],
-    navigation: true,
-    slidesNavigation: true,
-    anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
-    navigationTooltips: ['Introduction', 'Your carbon footprint', 'Main problems', 'Fabric comparision', 'Conclusion'],
-    loopHorizontal: false,
-    dropEffect: true,
-});
+
 
 document.getElementById('part1').addEventListener('click', function() {
     document.getElementById('popup-part1').style.display = 'block'; 
