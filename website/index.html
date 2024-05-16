@@ -12,9 +12,10 @@
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.css" integrity="sha512-i5IHYtHBVvbgT6M4ltVKNqF7fh/MTVfGh3ilW1gxxgmlMocsl8aYz28aF0Iph+ceUpun06UW9CpExog9qXqFKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Include Chart.js for the radar chart -->
+  <!-- Chart.js for the radar chart -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+  <!-- d3 to load csv data -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 
 
 </head>
@@ -99,24 +100,26 @@
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
         <div class="section-text">We can compare the water use, carbon emissions and land use for different fabrics:</div>
-        <canvas id="radarChart" width="400" height="400"></canvas>
+        <canvas class = 'plots', id="radarChart"></canvas>
+
         <!-- <img
           class="sketch-picture"
           src="img/star-plot.jpg"
-          alt="Repartition of the carbon footprint of a swiss person" />
-          <div class="section-text">So each fabric has its pros and cons. Natural ones consume in general more water and land use, but emit less carbon dioxide and consume less energy.</div>
-      </div> -->
+          alt="Repartition of the carbon footprint of a swiss person" />-->
+        <div class="section-text">So each fabric has its pros and cons. Natural ones consume in general more water and land use, but emit less carbon dioxide and consume less energy.</div>
+      </div> 
 
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
         <div class="section-text">If you want to focus on one consumptions:</div>
-        <img
-          class="sketch-picture"
-          src="img/comparison-fabric.jpg" />
-      </div>
-      <g id="star-plot"></g>
-      </g>
 
+        <button id="waterButton">Water</button>
+        <button id="co2Button">CO2</button>
+        <button id="energyButton">Energy</button>
+        
+        <canvas class = 'plot', id="comparisonFabric"></canvas>
+        
+      </div>
     </div>
     <div class="section">
       <div class="section-title">Conclusion: Be responsible</div>

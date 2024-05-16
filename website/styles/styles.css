@@ -26,6 +26,10 @@ svg {
     margin: auto;
 }
 
+.plots {
+    margin: auto;
+    width: 900px;
+}
 .partitioned-tshirt-container {
     display: flex;
     justify-content: center;
