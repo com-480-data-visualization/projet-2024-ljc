@@ -100,7 +100,7 @@
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
         <div class="section-text">We can compare the water use, carbon emissions and land use for different fabrics:</div>
-        <canvas class = 'plots', id="radarChart"></canvas>
+        <canvas class = 'plots' id="radarChart"></canvas>
 
         <!-- <img
           class="sketch-picture"
@@ -113,10 +113,22 @@
         <div class="section-title">Which fabric is the best?</div>
         <div class="section-text">If you want to focus on one consumptions:</div>
 
-        <button id="waterButton">Water</button>
-        <button id="co2Button">CO2</button>
-        <button id="energyButton">Energy</button>
+        <button class="button clicked" onclick = "clicked(this)" id="waterButton">Water</button>
+        <button class="button" onclick = "clicked(this)" id="co2Button">CO2</button>
+        <button class="button" onclick = "clicked(this)" id="energyButton">Energy</button>
         
+        <script>
+          function clicked(button) {
+              // Remove clicked class from all buttons, not to have two button selected at same time
+              const buttons = document.querySelectorAll('.button');
+              buttons.forEach(btn => btn.classList.remove('clicked'));
+      
+              // Add clicked class to the actual clicked button
+              button.classList.add('clicked');
+          }
+      </script>
+
+
         <canvas class = 'plot', id="comparisonFabric"></canvas>
         
       </div>
