@@ -22,7 +22,6 @@ function drawTimeChart(dataset) {
     //let = datasets [];
     
     let col = Object.keys(dataset[0]);
-    console.log(col[0])
     let d = { 'year' : [], 'col1':[], 'col2':[], 'col2':[], 'col3':[], 'col4':[]}
     dataset.forEach((row) => {
         d['year'].push(row[col[0]])
@@ -31,27 +30,27 @@ function drawTimeChart(dataset) {
         d['col3'].push(row[col[3]])
         d['col4'].push(row[col[4]])
     });
-
+    console.log('just before chart')
     new Chart(ctx, {
         type: "line",
         data: {
             labels : d.year,
             datasets : [{
                 data : d.col1,
-                id : col[1],
-                yAxisID : 'y1'
+                label : col[1],
+                yAxisID : 'y1',
             },{
                 data : d.col2,
-                id : col[2],
-                yAxisID : 'y2'
+                label : col[2],
+                yAxisID : 'y2',
             },{
                 data : d.col3,
-                id : col[3],
-                yAxisID : 'y3'
+                label : col[3],
+                yAxisID : 'y3',
             },{
                 data : d.col4,
-                id : col[4],
-                yAxisID : 'y4'
+                label : col[4],
+                yAxisID : 'y4',
             }]
         },
         options: {
@@ -59,10 +58,24 @@ function drawTimeChart(dataset) {
                 padding: 20
             },
             scales : {
-                x: {stacked : false},
-                y1 : {}
+                yAxes: [{
+                    id: 'y1',
+                    type:'linear',
+                    position:'left',
+                },{
+                    id: 'y2',
+                    type:'linear',
+                    position:'left',
+                },{
+                    id: 'y3',
+                    type:'linear',
+                    position:'right',
+                },{
+                    id: 'y4',
+                    type:'linear',
+                    position:'right',
+                }]
             }
-
         }
       });
 }
