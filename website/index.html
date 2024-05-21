@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
   <!-- <link rel="stylesheet" href="lib/fullpage.min.css" /> -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="styles/treemap.css" />
@@ -60,10 +61,11 @@
     <div class="section">
       <div class="slide">
         <div class="section-text">In the textile industry, not only the carbon emissions matter. Actually, the 4 main (?) are water use, carbon emissions, energy consumption and land use. And the 4 of them are in constant increase for the past century:</div>
-        <img
+        <!--img
           class="sketch-picture"
           src="img/uses-timeline.jpg"
-          alt="Repartition of the carbon footprint of a swiss person" />
+          alt="Repartition of the carbon footprint of a swiss person" />-->
+      <canvas id="timeChart"></canvas>
       </div>
       
       <div class="slide">
@@ -164,6 +166,7 @@
   <script src="lib/d3.v5.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/treemap.js"></script>
+  <script src="js/time.js"></script>
   <script type="text/javascript" src="lib/fullpage.js"></script>
   <script>
     new fullpage('#fullpage', {
