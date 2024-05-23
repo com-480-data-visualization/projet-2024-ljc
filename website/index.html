@@ -8,16 +8,24 @@
 
   <title>BeAware</title>
   <meta name="author" content="Clara Tavernier, Julie Korber, Louise Font" />
+  
+  <link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
+  <!-- <link rel="stylesheet" href="lib/fullpage.min.css" /> -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@16.6.2/distribute/nouislider.min.js"></script>
+
 
   <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.css" integrity="sha512-i5IHYtHBVvbgT6M4ltVKNqF7fh/MTVfGh3ilW1gxxgmlMocsl8aYz28aF0Iph+ceUpun06UW9CpExog9qXqFKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Chart.js for the radar chart -->
+  <link rel="stylesheet" href="styles/treemap.css" />
+  <link href="https://cdn.jsdelivr.net/npm/nouislider@16.6.2/distribute/nouislider.min.css" rel="stylesheet">
+  
+    <!-- Chart.js for the radar chart -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- d3 to load csv data -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
-
-
+  
 </head>
 
 <body>
@@ -41,23 +49,41 @@
    
 
     <div class="section">
+      <div class="slide" id="carbonfootprint-slide">
+        <div id="divi">
+          <svg id="swiss-carbonfootprint" width="1200" height="900"></svg>
+          <div id="legend-container" width="1200" >
+            <svg id="scfp-legend" width="1200" ></svg>
+          </div>
+        </div>        
+      </div>
+      <div class="slide">
         <div class="section-title">Repartition of the carbon footprint of a swiss person</div>
         <div class="section-text">First of all, here is the average repartition of a swiss person carbon footprint :</div>
         <img
           class="sketch-picture"
           src="img/swiss-carbon-footprint.jpg"
           alt="Repartition of the carbon footprint of a swiss person" />
-          <div class="section-text">We can see that Clothing is not that small, and more important, a part that we have a lot of influence of our footprint.</div>
+        <div class="section-text">We can see that Clothing is not that small, and more important, a part that we have a lot of influence of our footprint.</div>
+        <script>console.log('hey')</script>
+      </div>
     </div>
 
     <div class="section">
       <div class="slide">
         <div class="section-text">In the textile industry, not only the carbon emissions matter. Actually, the 4 main (?) are water use, carbon emissions, energy consumption and land use. And the 4 of them are in constant increase for the past century:</div>
-        <img
+        <!--img
           class="sketch-picture"
           src="img/uses-timeline.jpg"
-          alt="Repartition of the carbon footprint of a swiss person" />
-      </div>
+          alt="Repartition of the carbon footprint of a swiss person" />-->
+    <canvas id="timeChart"></canvas>
+    <div class="slidecontainer1">
+      <input type="range" min="1965" max="2014" value="50" class="slider" id="startRange">
+    </div>
+    <div class="slidecontainer2">
+      <input type="range" min="1965" max="2014" value="50" class="slider" id="endRange">
+    </div>
+    </div>
       
       <div class="slide">
         <div class="section-text">Let's have a closer look at each consumptions:</div>
@@ -160,6 +186,7 @@
 		<div class="popup-content">
 		  <span class="close" onclick="closePopup('popup-part3')">&times;</span>
 		  <iframe src="carbonemissions.html" width=100% height=100%></iframe>
+      <canvas id="co2tshirt"></canvas>
 		</div>
 	</div>
 
@@ -170,11 +197,26 @@
 		</div>
 	</div>
 
-
   <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js" integrity="sha512-yHHLi2ZwgtW9QNVZd0asqMyWGJ6Kx73ijKlGWSi3MwYFB5ZzOJV8wPtopKr6muHk5SERgF3OB/2dZj3StlI34w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="lib/d3.v5.min.js"></script>
   <script src="js/script.js"></script>
+
+  <script src="js/treemap.js"></script>
+  <script src="js/time.js"></script>
   <script src="js/textil.js"></script> 
+  <script type="text/javascript" src="lib/fullpage.js"></script>
+  <script>
+    new fullpage('#fullpage', {
+      autoScrolling:true,
+      scrollHorizontally: true,
+      sectionsColor: ['#ffb330', '#fff0cb', '#fff0cb', '#fff0cb','#fff0cb'],
+      navigation: true,
+      slidesNavigation: true,
+      anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
+      navigationTooltips: ['Introduction', 'Your carbon footprint', 'Main problems', 'Fabric comparision', 'Conclusion'],
+      loopHorizontal: false,
+    });
+  </script>
 
 </body>
 

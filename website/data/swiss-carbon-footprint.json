@@ -1,0 +1,77 @@
+{
+  "name": "swiss-carbon-footprint",
+  "children": [
+   {
+    "name": "Goods and Services",
+    "children": [
+      {"name": "Education, social and financial services", "value": 821, "category": "Goods and Services"},
+      {"name": "Health", "value": 627, "category": "Goods and Services"},
+      {"name": "Restaurants and hotels", "value": 569, "category": "Goods and Services"},
+      {"name": "Cloting and shoes", "value": 522, "category": "Goods and Services"},
+      {"name": "Electronic devices", "value": 250, "category": "Goods and Services"},
+      {"name": "Internet network", "value": 108, "category": "Goods and Services"},
+      {"name": "Data centers", "value": 85, "category": "Goods and Services"},
+      {"name": "Freight", "value": 309, "category": "Goods and Services"},
+      {"name": "Mail services", "value": 24, "category": "Goods and Services"},
+      {"name": "Recreation and culture", "value": 205, "category": "Goods and Services"}
+    ]
+   },
+   {
+    "name": "Food",
+    "children": [
+      {"name": "Beef, veal", "value": 389, "category": "Food"},
+      {"name": "Pork", "value": 130, "category": "Food"},
+      {"name": "Fruits", "value": 149, "category": "Food"},
+      {"name": "Vegetables", "value": 77, "category": "Food"},
+      {"name": "Rice", "value": 45, "category": "Food"},
+      {"name": "Milk, dairy products", "value": 260, "category": "Food"},
+      {"name": "Fish and crustaceans", "value": 56, "category": "Food"},
+      {"name": "Chicken", "value": 43, "category": "Food"},
+      {"name": "Eggs", "value": 38, "category": "Food"},
+      {"name": "Sugar", "value": 28, "category": "Food"},
+      {"name": "Potatoes", "value": 11, "category": "Food"},
+      {"name": "Cereals-based products ", "value": 99, "category": "Food"},
+      {"name": "Animal fats", "value": 82, "category": "Food"},
+      {"name": "Pasta", "value": 35, "category": "Food"},
+      {"name": "Chocolate", "value": 30, "category": "Food"},
+      {"name": "Bread", "value": 24, "category": "Food"},
+      {"name": "Fruit and vegetable juices", "value": 49, "category": "Food"},
+      {"name": "Vegetable fats", "value": 55, "category": "Food"},
+      {"name": "Walnuts", "value": 6, "category": "Food"},
+      {"name": "Spices", "value": 2, "category": "Food"},
+      {"name": "Sweet drink", "value": 95, "category": "Food"},
+      {"name": "Coffee", "value": 15, "category": "Food"},
+      {"name": "Tobacco", "value": 13, "category": "Food"},
+      {"name": "Alcoholic beverage", "value": 10, "category": "Food"},
+      {"name": "Tea", "value": 2, "category": "Food"},
+      {"name": "Oilseeds", "value": 12, "category": "Food"}
+    ]
+   },
+   {
+    "name": "Transport",
+    "children": [
+      {"name": "Car", "value": 1683, "category": "Transport"},
+      {"name": "Plane", "value": 1679, "category": "Transport"},
+      {"name": "Road public transport", "value": 51, "category": "Transport"},
+      {"name": "Train", "value": 25, "category": "Transport"},
+      {"name": "Motorbike", "value": 31, "category": "Transport"}
+    ]
+   },
+   {
+    "name": "Housing",
+    "children": [
+      {"name": "Heating", "value": 1459, "category": "Housing"},
+      {"name": "Waste management", "value": 174, "category": "Housing"},
+      {"name": "New buildings", "value": 599, "category": "Housing"},
+      {"name": "Hot water", "value": 118, "category": "Housing"},
+      {"name": "Water", "value": 24, "category": "Housing"},
+      {"name": "Lighting", "value": 18, "category": "Housing"},
+      {"name": "Maintenance work", "value": 49, "category": "Housing"},
+      {"name": "Renovation", "value": 17, "category": "Housing"},
+      {"name": "Furniture", "value": 245, "category": "Housing"},
+      {"name": "Household appliances", "value": 183, "category": "Housing"}
+    ]
+   }
+  ]
+ }
+ 

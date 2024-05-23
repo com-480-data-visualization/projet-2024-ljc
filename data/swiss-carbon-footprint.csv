@@ -1,52 +1,52 @@
-category,sector,carbon_footprint
-"Education, social and financial services",goods and services,821
-Health,goods and services,627
-Restaurants and hotels ,goods and services,569
-Cloting and shoes,goods and services,522
-Electronic devices ,goods and services,250
-Internet network,goods and services,108
-Data centers,goods and services,85
-Freight,goods and services,309
-Mail services,goods and services,24
-Recreation and culture,goods and services,205
-Car,transport,1683
-Plane,transport,1679
-Road public transport,transport,51
-Train,transport,25
-Motorbike,transport,31
-Heating,housing,1459
-Waste management,housing,174
-New buildings,housing,599
-Hot water,housing,118
-Water,housing,24
-Lighting,housing,18
-Maintenance work,housing,49
-Renovation,housing,17
-Furnitures,housing,245
-Household appliances,housing,183
-"Beef, veal",food,389
-Pork,food,130
-Fruits,food,149
-Vegetables,food,77
-Rice,food,45
-"Milk, dairy products",food,260
-Fish and crustaceans,food,56
-Chicken,food,43
-Eggs,food,38
-Sugar,food,28
-Potatoes,food,11
-Cereals-based products ,food,99
-Animal fats,food,82
-Pasta,food,35
-Chocolate,food,30
-Bread,food,24
-Fruit and vegetable juices,food,49
-Vegetable fats,food,55
-Walnuts,food,6
-Spices,food,2
-Sweet drink,food,95
-Coffee,food,15
-Tobacco,food,13
-Alcoholic beverage,food,10
-Tea,food,2
-Oilseeds,food,12
+sector,category,carbon_footprint
+goods and services,"Education, social and financial services",821
+goods and services,Health,627
+goods and services,Restaurants and hotels ,569
+goods and services,Cloting and shoes,522
+goods and services,Electronic devices ,250
+goods and services,Internet network,108
+goods and services,Data centers,85
+goods and services,Freight,309
+goods and services,Mail services,24
+goods and services,Recreation and culture,205
+transport,Car,1683
+transport,Plane,1679
+transport,Road public transport,51
+transport,Train,25
+transport,Motorbike,31
+housing,Heating,1459
+housing,Waste management,174
+housing,New buildings,599
+housing,Hot water,118
+housing,Water,24
+housing,Lighting,18
+housing,Maintenance work,49
+housing,Renovation,17
+housing,Furniture,245
+housing,Household appliances,183
+food,"Beef, veal",389
+food,Pork,130
+food,Fruits,149
+food,Vegetables,77
+food,Rice,45
+food,"Milk, dairy products",260
+food,Fish and crustaceans,56
+food,Chicken,43
+food,Eggs,38
+food,Sugar,28
+food,Potatoes,11
+food,Cereals-based products ,99
+food,Animal fats,82
+food,Pasta,35
+food,Chocolate,30
+food,Bread,24
+food,Fruit and vegetable juices,49
+food,Vegetable fats,55
+food,Walnuts,6
+food,Spices,2
+food,Sweet drink,95
+food,Coffee,15
+food,Tobacco,13
+food,Alcoholic beverage,10
+food,Tea,2
+food,Oilseeds,12

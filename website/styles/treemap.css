@@ -1,0 +1,52 @@
+.svg-2 {
+  font: 10px monospace;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+#divi {
+  display: flex;
+  flex-direction: column; /* Change to column to stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center;
+  font-family: 'Brush Script MT', cursive;
+  background-color: #26465300;
+  margin: 10% auto;
+  padding: 20px;
+}
+
+.tile-text {
+  cursor: default;
+  font-family: 'URW Bookman L', serif;
+  font-size: 15px;
+  fill: #264653; 
+}
+
+div.tooltip {
+  position: absolute;
+  padding: 10px;                
+  font: 12px 'IBM Plex Mono', monospace;        
+  background: color-mix(in srgb, #264653 95%, rgba(255, 255, 255, 0));
+  box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
+  border: 0px;        
+  border-radius: 2px;            
+  pointer-events: none; 
+}
+
+#legend-container {
+  display: flex;
+  justify-content: center; /* Center the legend horizontally */
+  margin-top: 20px; /* Add some space between the treemap and the legend */
+}
+
+#scfp-legend {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 30px;
+  width: auto; /* Allow the legend to adjust its width */
+  height: auto; /* Allow the legend to adjust its height */
+  fill: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
