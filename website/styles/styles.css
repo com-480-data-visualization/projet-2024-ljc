@@ -182,3 +182,18 @@ h1 {
     background-color: #4CAF50;
     color: white;
 }
+
+#counter {
+    position: fixed;
+    text-align: center;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 1000;
+    cursor: pointer;
+}
