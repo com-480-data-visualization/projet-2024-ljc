@@ -13,9 +13,12 @@
   <!-- <link rel="stylesheet" href="lib/fullpage.min.css" /> -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@16.6.2/distribute/nouislider.min.js"></script>
+
 
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="styles/treemap.css" />
+  <link href="https://cdn.jsdelivr.net/npm/nouislider@16.6.2/distribute/nouislider.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -66,8 +69,14 @@
           class="sketch-picture"
           src="img/uses-timeline.jpg"
           alt="Repartition of the carbon footprint of a swiss person" />-->
-      <canvas id="timeChart"></canvas>
-      </div>
+    <canvas id="timeChart"></canvas>
+    <div class="slidecontainer1">
+      <input type="range" min="1965" max="2014" value="50" class="slider" id="startRange">
+    </div>
+    <div class="slidecontainer2">
+      <input type="range" min="1965" max="2014" value="50" class="slider" id="endRange">
+    </div>
+    </div>
       
       <div class="slide">
         <div class="section-text">Let's have a closer look at each consumptions:</div>
@@ -153,6 +162,7 @@
 		<div class="popup-content">
 		  <span class="close" onclick="closePopup('popup-part3')">&times;</span>
 		  <iframe src="carbonemissions.html" width=100% height=100%></iframe>
+      <canvas id="co2tshirt"></canvas>
 		</div>
 	</div>
 
