@@ -161,3 +161,24 @@ h1 {
 	background-color: #FFF;
 	color: #122;
 }
+ /* added by me :) */
+
+ .plots {
+    margin: auto;
+    width: 900px;
+}
+
+.button{
+    padding: 10px 30px;
+    margin: 1px;
+    border: 1px solid #ccc;
+    background-color: rgb(216, 216, 216);
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+
+.button.clicked{
+    background-color: #4CAF50;
+    color: white;
+}
