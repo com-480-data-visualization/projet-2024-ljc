@@ -133,7 +133,7 @@ whenDocumentLoaded(() => {
             textile.color = d3.rgb(colorScale(index));
         });
         // Bar plots
-        barChart(textiles, lab_[0], true)
+        barChart(textiles, lab_[0], true);
         // Add event listeners to buttons
         document.getElementById('waterButton').addEventListener('click', () => {
             barChart(textiles, lab_[0]);
