@@ -1,5 +1,5 @@
 // just to check i'm entering the correct folder
-/*
+
 console.log("I'm in the time.js file :)");
 
 function whenDocumentLoaded(action) {
@@ -107,7 +107,7 @@ whenDocumentLoaded(() => {
         drawTimeChart(data)
     })
 });
-*/
+/*
 
 console.log("I'm in the time.js file :)");
 
@@ -242,3 +242,4 @@ whenDocumentLoaded(() => {
 
     });
 });
+*/
