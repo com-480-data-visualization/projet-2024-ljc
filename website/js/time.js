@@ -11,23 +11,27 @@ function whenDocumentLoaded(action) {
 	}
 }
 
-const labels = [1900, 1910, 1940, 1950];
-const values1 = [1,2,4,5];
-const values2 = [3,5,3,7];
+let timeChartInstance = null;
 
 function drawTimeChart(dataset, startYear = 1965, endYear = 2014) {
     let ctx = document.getElementById('timeChart'); 
     
     //let's make the data usable
     // Filter dataset based on selected years
+    
+    if (timeChartInstance) {
+        timeChartInstance.destroy();
+    }
+    
 
     let dataset_ = dataset.filter(function(row)  {
         return row.Year >= startYear && row.Year <= endYear;
     }); 
+
     
-    let col = Object.keys(dataset[0]);
+    let col = Object.keys(dataset_[0]);
     let d = { 'year' : [], 'col1':[], 'col2':[], 'col2':[], 'col3':[], 'col4':[]}
-    dataset.forEach((row) => {
+    dataset_.forEach((row) => {
         d['year'].push(row[col[0]])
         d['col1'].push(row[col[1]])
         d['col2'].push(row[col[2]])
@@ -35,7 +39,7 @@ function drawTimeChart(dataset, startYear = 1965, endYear = 2014) {
         d['col4'].push(row[col[4]])
     });
     console.log('just before chart')
-    new Chart(ctx, {
+    timeChartInstance = new Chart(ctx, {
         type: "line",
         data: {
             labels : d.year,
@@ -118,6 +122,7 @@ let minGap = 0;
 let sliderTrack = document.querySelector(".slider-track");
 let sliderMaxValue = document.getElementById("slider-1").max;
 
+
 function slideOne(){
     if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
         sliderOne.value = parseInt(sliderTwo.value) - minGap;
@@ -145,9 +150,21 @@ whenDocumentLoaded(() => {
     console.log('loaded hey')
 
     d3.csv('data/final_short.csv').then((data) => {
-        
-        console.log(sliderOne.value)
         drawTimeChart(data, sliderOne.value, sliderTwo.value)
+        document.getElementById('slider-1').addEventListener('input', () => {
+            canvas = document.getElementById('canvas');
+            console.log(sliderOne.value)
+            drawTimeChart(data, sliderOne.value, sliderTwo.value);
+            sliderOne.addEventListener('input', slideOne);
+            sliderTwo.addEventListener('input', slideTwo);
+        }) 
+        document.getElementById('slider-2').addEventListener('input', () => {
+            canvas = document.getElementById('canvas');
+            console.log(sliderTwo.value)
+            drawTimeChart(data, sliderOne.value, sliderTwo.value);
+            sliderOne.addEventListener('input', slideOne);
+            sliderTwo.addEventListener('input', slideTwo);
+        }) 
     })
 });
 /*
