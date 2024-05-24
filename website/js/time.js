@@ -15,12 +15,15 @@ const labels = [1900, 1910, 1940, 1950];
 const values1 = [1,2,4,5];
 const values2 = [3,5,3,7];
 
-function drawTimeChart(dataset) {
-    console.log('drawTimeChart')
+function drawTimeChart(dataset, startYear = 1965, endYear = 2014) {
     let ctx = document.getElementById('timeChart'); 
     
     //let's make the data usable
-    //let = datasets [];
+    // Filter dataset based on selected years
+
+    let dataset_ = dataset.filter(function(row)  {
+        return row.Year >= startYear && row.Year <= endYear;
+    }); 
     
     let col = Object.keys(dataset[0]);
     let d = { 'year' : [], 'col1':[], 'col2':[], 'col2':[], 'col3':[], 'col4':[]}
@@ -67,44 +70,84 @@ function drawTimeChart(dataset) {
                 padding: 60
             },
             scales : {
-                yAxes: [{
-                    id: 'y1',
+                y1: {
+                    //id: 'y1',
                     type:'linear',
                     position:'left',
-                    scaleLabel : {
+                    title : {
                         display:true,
-                        labelString:'Water, CO2, Land',
+                        text:'Water, CO2, Land',
                     },
+                    min: 2,
+                    max : 5,
                     ticks : {
-                        min: 2,
-                        max : 5,
                         stepSize: 0.5,
                     }
-                },{
-                    id: 'y2',
+                },
+                y2: {
+                    //id: 'y2',
                     type:'linear',
                     position:'right',
-                    scaleLabel : {
+                    title : {
                         display:true,
-                        labelString:'Energy',
+                        text:'Energy',
                     },
+                    min: 12,
+                    max: 21,
                     ticks : {
-                        min: 12,
-                        max: 21,
                         stepSize: 1.5,
                     }
                 }
-                ]
             }
         }
       });
 }
 
+//for the slider
+
+window.onload = function(){
+    slideOne();
+    slideTwo();
+}
+
+let sliderOne = document.getElementById("slider-1");
+let sliderTwo = document.getElementById("slider-2");
+let displayValOne = document.getElementById("range1");
+let displayValTwo = document.getElementById("range2");
+let minGap = 0;
+let sliderTrack = document.querySelector(".slider-track");
+let sliderMaxValue = document.getElementById("slider-1").max;
+
+function slideOne(){
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    }
+    displayValOne.textContent = sliderOne.value;
+    fillColor();
+}
+function slideTwo(){
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    }
+    displayValTwo.textContent = sliderTwo.value;
+    fillColor();
+}
+function fillColor(){
+    percent1 = (sliderOne.value / sliderMaxValue) * 100;
+    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+}
+
+sliderOne.addEventListener('input', slideOne);
+sliderTwo.addEventListener('input', slideTwo);
+
 whenDocumentLoaded(() => {
     console.log('loaded hey')
 
     d3.csv('data/final_short.csv').then((data) => {
-        drawTimeChart(data)
+        
+        console.log(sliderOne.value)
+        drawTimeChart(data, sliderOne.value, sliderTwo.value)
     })
 });
 /*

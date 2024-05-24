@@ -79,6 +79,25 @@
           src="img/uses-timeline.jpg"
           alt="Repartition of the carbon footprint of a swiss person" />-->
     <canvas id="timeChart"></canvas>
+    <div class="wrapper">
+      <div class="values">
+          <span id="range1">
+              0
+          </span>
+          <span> &dash; </span>
+          <span id="range2">
+              100
+          </span>
+      </div>
+      <div class="container">
+          <div class="slider-track"></div>
+          <input type="range" min="1965" max="2014" value="1965" id="slider-1" oninput="slideOne()">
+          <input type="range" min="1665" max="2014" value="2014" id="slider-2" oninput="slideTwo()">
+      </div>
+  </div>
+  
+  <!--Script-->
+  <script src="script.js"></script>
     </div>
       
       <div class="slide">
