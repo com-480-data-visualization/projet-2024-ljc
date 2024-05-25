@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbon emissions </title>
+    <title>Carbon emissions</title>
     <link rel="stylesheet" href="styles/carbon.css" />
+    <link rel="stylesheet" href="styles/graphiccharter.css" />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
     <div id="title-container">
@@ -23,17 +25,62 @@
         </defs>
     </svg>
 
-    <div class="main-container">
-        <p>Explainations of the effects of greenhouse gases, why the textile industry emits them, etc.</p>
-        <p>Example with the repartition of the co2 emissions in the fabrication of a cotton t-shirt:</p>
-        </div>
-        <img
-            class="sketch-picture"
-            text-align="center"
-            margin='auto'
-            src="img/cotton-co2-tshirt.jpg" />
+    <div class="t-shirt-container">
+        <svg class="t-shirt" id="tshirt" viewBox="-33 -25 66 50" xmlns="http://www.w3.org/2000/svg">
+            <g class="partnohover">
+                <path d="M 8 -24 C 8 -16 -8 -16 -8 -24 C -8 -20 8 -20 8 -24 Z" fill="var(--orange5)" stroke-style="solid" stroke="var(--orange1)" stroke-width="0.2"/>
+            </g>
+        </svg>
     </div>
 
     <script src="js/carbon.js"></script>
 </body>
 </html>
+
+
+<!-- <div class="t-shirt-container">
+    <svg class="t-shirt" viewBox="-33 -25 66 50" xmlns="http://www.w3.org/2000/svg">
+        <g class= "partnohover" id="part1">
+            <path d="M 8 -24 C 8 -16 -8 -16 -8 -24 C -8 -20 8 -20 8 -24 Z" fill="var(--orange5)" stroke-style="solid" stroke="var(--orange1)" stroke-width="0.2"/>
+        </g>
+        <g class="part" id="endoflife">
+          <path d="M 16 24 L 16 23 L -16 23 L -16 24 Z" fill="var(--orange8)" stroke-style="solid" stroke="var(--orange8)" stroke-width="0.2"/>
+          <text x="0" y="23.5" text-anchor="middle" dominant-baseline="middle" font-size="1" fill="color-mix(in srgb, var(--orange8) 50%,  var(--orange1) 50%)" fill-opacity="1">End of life</text>
+        </g>
+        <g class="part" id="part1">
+            <path d="M 16 20 L 16 23 L -16 23 L -16 20 Z" fill="var(--orange7)" stroke-style="solid" stroke="var(--orange7)" stroke-width="0.2"/>
+            <text x="0" y="21.5" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange7) 50%,  var(--orange1) 50%)" fill-opacity="1">Use</text>
+        </g>
+        <g class="part" id="part1">
+            <path d="M 16 20 L 16 16 L -16 16 L -16 20 Z" fill="var(--orange6)" stroke-style="solid" stroke="var(--orange6)" stroke-width="0.2"/>
+            <text x="0" y="18" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange6) 50%,  var(--orange1) 50%)" fill-opacity="1">Transport</text>
+        </g>
+        <g class="part" id="part1">
+            <path d="M 16 12 L 16 16 L -16 16 L -16 12 Z" fill="var(--orange5)" stroke-style="solid" stroke="var(--orange5)" stroke-width="0.2"/>
+            <text x="0" y="14" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange5) 50%,  var(--orange1) 50%)" fill-opacity="1">Manufacture</text>
+        </g>
+        <g class="part" id="part1">
+            <path d="M 16 12 L 16 -1 L -16 -1 L -16 12 Z
+                M 25 -1 L 24 0 L 22.67 -1 Z
+                M -25 -1 L -24 0 L -22.67 -1 Z" fill="var(--orange4)" stroke-style="solid" stroke="var(--orange4)" stroke-width="0.2"/>
+            <text x="0" y="5.5" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange4) 50%,  var(--orange1) 50%)" fill-opacity="1">Ennoblement</text>
+        </g>
+        <g class="part" id="part1">
+            <path d="M 16 -1 L -16 -1 L -16 -5 L 16 -5 Z
+                M -25 -1 L -29 -5 L -17.35 -5 L -22.67 -1 Z
+                M 25 -1 L 29 -5 L 17.35 -5 L 22.67 -1 Z" fill="var(--orange3)" stroke-style="solid" stroke="var(--orange3)" stroke-width="0.2"/>
+            <text x="0" y="-3" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange3) 50%,  var(--orange1) 50%)" fill-opacity="1">Knitting</text>
+        </g>
+        <g class="part" id="part1">
+            <path d="M 16 -9 L -16 -9 L -16 -5 L 16 -5 Z
+                M -16 -9 L -31 -9 L -32 -8 L -29 -5 L -17.35 -5 L -16 -6 Z
+                M 16 -9 L 31 -9 L 32 -8 L 29 -5 L 17.35 -5 L 16 -6 Z" fill="var(--orange2)" stroke-style="solid" stroke="var(--orange2)" stroke-width="0.2"/>
+            <text x="0" y="-7" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange2) 50%,  var(--orange1) 50%)" fill-opacity="1">Spinning</text>
+        </g>
+        <g class="part" id="part1">
+            <path d="M 16 -9 L -16 -9 L -16 -10 L -16 -9 L -31 -9 L -16 -24 L -8 -24 C -8 -16 8 -16 8 -24 L 16 -24 L 31 -9 L 16 -9 L 16 -10 Z" 
+            fill="var(--orange1)" stroke-style="solid" stroke="var(--orange1)" stroke-width="0.2"/>
+            <text x="0" y="-13" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="var(--orange1)" fill-opacity="1">Fabric</text>
+        </g>
+    </svg>
+</div> -->

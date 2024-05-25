@@ -78,3 +78,86 @@ function animate() {
 }
 
 animate();
+
+var body = d3.select("body");
+
+var tooltip = body.append("div")
+  .attr("class", "tooltip")
+  .attr("id", "tooltip")
+  .style("opacity", 0);
+
+const parts_co2 = [
+    ["Fabric", "M 16 -9 L -16 -9 L -16 -10 L -16 -9 L -31 -9 L -16 -24 L -8 -24 C -8 -16 8 -16 8 -24 L 16 -24 L 31 -9 L 16 -9 L 16 -10 Z", -13, 8, 2.74, 31],
+    ["Spinning", "M 16 -9 L -16 -9 L -16 -5 L 16 -5 Z " +
+    "M -16 -9 L -31 -9 L -32 -8 L -29 -5 L -17.35 -5 L -16 -6 Z " +
+    "M 16 -9 L 31 -9 L 32 -8 L 29 -5 L 17.35 -5 L 16 -6 Z", -7, 8, 0.72, 8],
+    ["Knitting", "M 16 -1 L -16 -1 L -16 -5 L 16 -5 Z " +
+    "M -25 -1 L -29 -5 L -17.35 -5 L -22.67 -1 Z " +
+    "M 25 -1 L 29 -5 L 17.35 -5 L 22.67 -1 Z", -3, 7, 0.76, 9],
+    ["Ennoblement", "M 16 12 L 16 -1 L -16 -1 L -16 12 Z " +
+    "M 25 -1 L 24 0 L 22.67 -1 Z " +
+    "M -25 -1 L -24 0 L -22.67 -1 Z", 5.5, 7, 2.5, 28],
+    ["Manufacture", "M 16 12 L 16 16 L -16 16 L -16 12 Z", 14, 2, 0.78, 9],
+    ["Transport", "M 16 20 L 16 16 L -16 16 L -16 20 Z", 18, 2, 0.69, 8],
+    ["Use", "M 16 20 L 16 23 L -16 23 L -16 20 Z", 21.5, 1, 0.53, 6],
+    ["End of life", "M 16 24 L 16 23 L -16 23 L -16 24 Z", 23.5, 1, 0.2, 2],
+]
+
+var i;
+for (i=7; i>=0; --i) {    
+    var p = d3.select(".t-shirt").append("g")
+        .attr("class", "part")
+        .attr("id", "part" + (i+1))
+        .attr("data-index", i)
+        .on("mousemove", function (d) {
+            var index = Number(this.getAttribute('data-index'))
+            var clr2 = "var(--orange" + (Number(index)+1) + ")"
+            var clr1 = "var(--orange" + parts_co2[index][3] + ")"
+
+            tooltip.style("opacity", 1);
+            tooltip.style("color", clr1);
+            tooltip.style("text-align", "left");
+            tooltip.html(
+                "<div><b>" + parts_co2[index][0] + ": " + parts_co2[index][4] + " kg eq. CO2 (" + parts_co2[index][5] +"%)" )
+              .style("left", d3.event.pageX + 10 + "px")
+              .style("top", d3.event.pageY - 28 + "px")
+              .style("background-color", clr2)
+              .style("font-size", "20px")
+          })
+          .on("mouseout", function (d) {
+            tooltip.style("opacity", 0);
+          });
+            
+    p.append("path")
+        .attr("d", parts_co2[i][1])
+        .attr("fill", "var(--orange" + (i+1) + ")")
+
+    var fontsize;
+    if (i == 7) { fontsize = 1; } else { fontsize = 2; 
+    }
+    p.append("text")
+        .attr("x", "0")
+        .attr("y", parts_co2[i][2])
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .attr("font-size", fontsize)
+        .attr("fill", "var(--orange" + parts_co2[i][3] + ")") 
+        .text(parts_co2[i][0])
+    
+}
+
+    {/* <g class="part" id="part1">
+        <path 
+            d="M 16 20 L 16 23 L -16 23 L -16 20 Z" 
+            fill="var(--orange7)"/>
+        <text 
+            x="0" 
+            y="21.5" 
+            text-anchor="middle" 
+            dominant-baseline="middle" 
+            font-size="2" 
+            fill="var(--orange2)" 
+            fill-opacity="1">
+                Use
+        </text>
+    </g> */}

@@ -73,7 +73,7 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
       tooltip.html(
           "<div><b>" + d.data.name + "</b></div>" +
           '<br>Category: ' + d.data.category +
-          '<br>Consumption: ' + d.data.value + "kg eq. CO2")
+          '<br>Consumption: ' + d.data.value + " kg eq. CO2")
         .attr("data-value", d.data.value)
         .style("left", d3.event.pageX + 10 + "px")
         .style("top", d3.event.pageY - 28 + "px");
