@@ -148,19 +148,74 @@ sliderTwo.addEventListener('input', slideTwo);
 
 whenDocumentLoaded(() => {
     console.log('loaded hey')
+    window.onload = function(){
+    slideOne();
+    slideTwo();
+}
+
+let sliderOne = document.getElementById("slider-1");
+let sliderTwo = document.getElementById("slider-2");
+let displayValOne = document.getElementById("range1");
+let displayValTwo = document.getElementById("range2");
+let minGap = 0;
+let sliderTrack = document.querySelector(".slider-track");
+let sliderMaxValue = document.getElementById("slider-1").max;
+/*
+
+function slideOne(){
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    }
+    displayValOne.textContent = sliderOne.value;
+    fillColor();
+}
+function slideTwo(){
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    }
+    displayValTwo.textContent = sliderTwo.value;
+    fillColor();
+}
+*/
+
+function slideOne() {
+    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+    }
+    displayValOne.textContent = sliderOne.value;
+    displayValOne.style.left = `${(sliderOne.value - sliderOne.min) / (sliderOne.max - sliderOne.min) * 100}%`;
+    fillColor();
+    updateChart();
+}
+
+function slideTwo() {
+    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+    }
+    displayValTwo.textContent = sliderTwo.value;
+    displayValTwo.style.left = `${(sliderTwo.value - sliderTwo.min) / (sliderTwo.max - sliderTwo.min) * 100}%`;
+    fillColor();
+    updateChart();
+}
+
+function fillColor(){
+    percent1 = (sliderOne.value / sliderMaxValue) * 100;
+    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+}
+    sliderOne.addEventListener('input', slideOne);
+    sliderTwo.addEventListener('input', slideTwo);
 
     d3.csv('data/final_short.csv').then((data) => {
         drawTimeChart(data, sliderOne.value, sliderTwo.value)
-        document.getElementById('slider-1').addEventListener('input', () => {
+            document.getElementById('slider-1').addEventListener('input', () => {
             canvas = document.getElementById('canvas');
-            console.log(sliderOne.value)
             drawTimeChart(data, sliderOne.value, sliderTwo.value);
             sliderOne.addEventListener('input', slideOne);
             sliderTwo.addEventListener('input', slideTwo);
         }) 
         document.getElementById('slider-2').addEventListener('input', () => {
             canvas = document.getElementById('canvas');
-            console.log(sliderTwo.value)
             drawTimeChart(data, sliderOne.value, sliderTwo.value);
             sliderOne.addEventListener('input', slideOne);
             sliderTwo.addEventListener('input', slideTwo);
