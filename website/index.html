@@ -6,7 +6,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>BeAwareLOCAL</title>
+  <title>BeAware</title>
   <meta name="author" content="Clara Tavernier, Julie Korber, Louise Font" />
   
   <link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
@@ -67,27 +67,28 @@
    
     <div class="section">
       <div class="slide" id="carbonfootprint-slide">
-        <div class="section-title">Repartition of the carbon footprint of a swiss person</div>
+        <div class="section-title">Annual carbon footprint of a swiss</div>
         <div class="section-text">
           A way to better understand the environmental impact of the textile industry compared to other sectors is using comparison. 
           A term that is often mentioned in discussion about the environment is the carbon footprint. 
           As an indicator, we will focus on the yearly average carbon footprint of a Swiss person which corresponds to <a href="https://climpact.ch/carbon-footprint/">11,639 kgCO2eq </a>
         </div>
-        <div class="section-text">
-          Hence as expected the transport and food sector are huge consumers of carbon, the clothes and shoes section remain an important category too. 
-          Let see further information on its role in environmental pollution. 
-        </div> 
         <div id="divi">
-          <svg id="swiss-carbonfootprint" width="1200" height="400"></svg>
+          <svg id="swiss-carbonfootprint" width="1250" height="400"></svg>
           <div id="legend-container" width="800" >
             <svg id="scfp-legend" width="800" ></svg>
           </div>
-        </div>        
+        </div>   
+        <div class="section-text">
+          Hence as expected the transport and food sector are huge consumers of carbon, the clothes and shoes section remain an important category too. 
+          Let see further information on its role in environmental pollution. 
+        </div>      
       </div>
     </div>
 
     <div class="section">
       <div class="slide">
+        <div class="section-title"> Timeline of the impact of the textile industry</div>
         <div class="section-text">
           Environmental questions are quite huge, and many aspects need to be taken into account. 
           In the fashion industry, our inclination to regularly change our wardrobe is responsible for 8-10% of global greenhouse gas emissions. 
@@ -96,7 +97,8 @@
           More information on those sectors and their relation with the fashion industry can be found on the left. 
           The growth of those sector consumption across the years highlights the urge to start rethinking our way of living. 
         </div>
-        <canvas id="timeChart"></canvas>
+        
+        <canvas id="timeChart" width="1200" height="350"></canvas>
 
       <div class="wrapper">
         <div class="values">
@@ -113,7 +115,7 @@
     </div>
       
     <div class="slide">
-      <div class="section-text">Let's have a closer look at each consumptions:</div>
+      <div class="section-title">Let's have a closer look at each consumptions:</div>
       <div class="partitioned-tshirt-container">
         <svg class="partitioned-tshirt" viewBox="-20 -20 40 60" xmlns="http://www.w3.org/2000/svg">
           <g class="part" id="part1">
@@ -148,35 +150,37 @@
       </div>
     </div>
     </div>
-
+    <div class="section">
+      <div class="section-title">Which fabric is the best?</div>
+      <div class="text-intro">
+        To address the environmental impact of the fashion industry, we can take steps at our level. For that, the choice of our clothes given their 
+        composition can be a first step.  Indeed, different textiles have varying sustainability profiles. While natural fabrics typically consume more 
+        water and land, they emit less carbon dioxide and require less energy. The production of textile fibers like cotton and polyester involves 
+        energy-intensive processes and fossil fuel use. Cotton cultivation, for instance, demands substantial water and pesticide usage, while synthetic 
+        fiber production relies on extracting non-renewable resources. By understanding these differences, we can make more informed choices about the clothes
+        we wear and their environmental impact.
+      </div>
+    </div>
     <div class="section">
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
         <div class="section-text">
-          To address the environmental impact of the fashion industry, we can take steps at our level. For that, the choice of our clothes given their 
-          composition can be a first step.  Indeed, different textiles have varying sustainability profiles. While natural fabrics typically consume more 
-          water and land, they emit less carbon dioxide and require less energy. The production of textile fibers like cotton and polyester involves 
-          energy-intensive processes and fossil fuel use. Cotton cultivation, for instance, demands substantial water and pesticide usage, while synthetic 
-          fiber production relies on extracting non-renewable resources. By understanding these differences, we can make more informed choices about the clothes
-          we wear and their environmental impact.
-        </div>
-        <div class="section-text">
           Here is a plot showing a limited selection of fabric types, their relative consumption of water, energy and greenhouses emissions. 
           Not that the percentage is computed according to the fabrics with the highest value within the selection. For example, cotton has 100% 
           of water use since it is the one that consumes the most water compared to the others. To see the relative distribution of those fabrics, 
-          look at the right page :) 
+          look at the right page 
         </div>
-        <canvas class = 'plots', id="radarChart"></canvas>
+        <canvas class = 'plots' id="radarChart" ></canvas>
       </div> 
 
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
-        <div class="section-text">We want to class by pollution category to see the repartition</div>
+        <div class="section-text">We want to class by pollution category to see the repartition <br>
 
         <button class="button clicked" onclick = "clicked(this)" id="waterButton">Water</button>
         <button class="button" onclick = "clicked(this)" id="co2Button">CO2</button>
         <button class="button" onclick = "clicked(this)" id="energyButton">Energy</button>
-        
+      </div>
         <script>
           function clicked(button) {
               // Remove clicked class from all buttons, not to have two button selected at same time
@@ -245,11 +249,11 @@
     new fullpage('#fullpage', {
       autoScrolling:true,
       scrollHorizontally: true,
-      sectionsColor: ['#ffb330', 'var(--white-color)', 'var(--white-color)', 'var(--white-color)', 'var(--white-color)','var(--white-color)', 'var(--white-color)'],
+      sectionsColor: ['#ffb330', 'var(--white-color)', 'var(--white-color)', 'var(--white-color)', 'var(--white-color)', 'var(--white-color)','var(--white-color)', 'var(--white-color)'],
       navigation: true,
       slidesNavigation: true,
-      anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
-      navigationTooltips: ['Title', 'Introduction', 'Your carbon footprint', 'Main problems', 'Fabric comparision', 'Conclusion'],
+      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
+      navigationTooltips: ['Title', 'Introduction', 'Your carbon footprint', 'Main problems', 'Fabric choice', 'Fabric comparision', 'Conclusion'],
       loopHorizontal: false,
       fitToSection: true,
       scrollOverflow: false,

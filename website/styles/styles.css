@@ -34,10 +34,10 @@
 }
 
 .partitioned-tshirt {
-    width: 70%; /* Adjust according to your design */
+    width: 100%; /* Adjust according to your design */
     max-width: 1000px;
     margin-bottom: auto;
-    margin-top: auto;
+    margin-top: -150px;
 }
 
 .part {
@@ -70,8 +70,11 @@ animation: openYourHeart 10s infinite;
 
 .section-title {
     font-size: 40px;
-    text-align: center;
-    font-family: cursive;
+    text-align: left;
+    /*font-family: cursive;*/
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 100px;
 }
 
 .section-text {
@@ -79,7 +82,8 @@ animation: openYourHeart 10s infinite;
     text-align: justify;
     margin-left: 100px;
     margin-right: 100px;
-    margin: 40px;
+    margin-bottom: 10px;
+
 }
 
 /* Pop up */
@@ -164,11 +168,13 @@ h1 {
 
  .plots {
     margin: auto;
-    width: 900px;
+    width: 40%;
+    height: 40%;
 }
 
 .button{
     padding: 10px 30px;
+    text-align: center;
     margin: 1px;
     border: 1px solid #ccc;
     background-color: rgb(216, 216, 216);
@@ -199,6 +205,7 @@ h1 {
 
 .text-intro {
     display: flex;
+    font-size: 20px;
     justify-content: space-between;
     align-items: center; 
     text-align: center;
@@ -275,7 +282,7 @@ input[type="range"]{
     position: relative;
     margin: auto;
     /*left: 20%; */ 
-    top: 50%;  
+    top: 10%;  
     transform: translateY(-50%);  /* Adjust for track height */
     /*top: 0;*/
     bottom: 0;
@@ -285,7 +292,7 @@ input[type="range"]{
 
 input[type="range"]::-webkit-slider-runnable-track{
     -webkit-appearance: none;
-    height: 4px;
+    height: 40px;
     background-color: transparent;
 }
 
