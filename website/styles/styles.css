@@ -3,9 +3,6 @@
     font-size: 3em;
 }
 
-svg {
-    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.4));
-}
 
 /* #sectionintro{
     background-image: url("../img/habits.png");
@@ -33,6 +30,7 @@ svg {
     align-items: center;
     margin-bottom: auto;
     margin-top: auto;
+    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.4));
 }
 
 .partitioned-tshirt {

@@ -15,7 +15,7 @@ var treemap = d3.treemap()
 
 var color = d3.scaleOrdinal()
   .domain(["Goods and Services", "Food", "Transport", "Housing"])
-  .range(["#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"]); //#264653
+  .range(["var(--blue-color)", "var(--green-color)", "var(--orange-color)", "var(--pink2-color)"]);
 
 d3.json('data/swiss-carbon-footprint.json').then(data => {
   var root = d3.hierarchy(data)
@@ -35,7 +35,8 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
     .attr("class", "group")
     .attr("transform", function (d) {
       return "translate(" + d.x0 + "," + d.y0 + ")";
-    });
+    })
+    .attr("box-show", "none");
 
   var tile = cell.append("rect")
     .attr("id", function (d) {
@@ -50,7 +51,7 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
     })
     .attr("rx", 5)
     .attr("ry", 5)
-    .attr("stroke", "#264653")
+    .attr("stroke", "var(--white-color)")
     .attr("stroke-width", 5)
     .attr("stroke-opacity", 1)
     .attr("data-name", function (d) {
@@ -65,6 +66,7 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
     .attr("fill", function (d) {
       return color(d.data.category);
     })
+    .attr("fill-opacity", 0.5)
     .on("mousemove", function (d) {
       var clr = color(d.data.category)
       tooltip.style("opacity", .9);
@@ -77,11 +79,11 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
         .attr("data-value", d.data.value)
         .style("left", d3.event.pageX + 10 + "px")
         .style("top", d3.event.pageY - 28 + "px");
-      d3.select(this).style("fill", "color-mix(in srgb, " + clr + ", #264653)");
+      d3.select(this).style("fill-opacity", 1);
     })
     .on("mouseout", function (d) {
       tooltip.style("opacity", 0);
-      d3.select(this).style("fill", color(d.data.category));
+      d3.select(this).style("fill-opacity", 0.5);
     });
 
   cell.append("text")
@@ -97,7 +99,8 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
     })
     .text(function (d) {
       return d;
-    });
+    })
+    
 
   var categories = root.leaves().map(function (nodes) {
     return nodes.data.category;

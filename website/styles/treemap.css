@@ -20,7 +20,7 @@
   cursor: default;
   font-family: 'URW Bookman L', serif;
   font-size: 15px;
-  fill: #264653; 
+  fill: var(--white-color); 
 }
 
 div.tooltip {
@@ -30,22 +30,27 @@ div.tooltip {
   box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
   border: 0px;        
   border-radius: 2px;            
-  pointer-events: none; 
+  pointer-events: none;
+  background: color-mix(in srgb, #264653 95%, rgba(255, 255, 255, 0)); 
 }
 
 #legend-container {
   display: flex;
   justify-content: center; 
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 #scfp-legend {
   font-family: 'Brush Script MT', cursive;
-  font-size: 30px;
+  font-size: 20px;
   width: auto;
   height: auto;
   fill: white;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#swiss-carbonfootprint {
+  box-shadow: none;
 }
