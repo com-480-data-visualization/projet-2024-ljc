@@ -17,6 +17,7 @@ svg {
 
 .fp-watermark {
     display: none;
+    color: #ff0000;
 }
 
 .tshirt {
@@ -77,7 +78,7 @@ animation: openYourHeart 10s infinite;
 
 .section-text {
     font-size: 20px;
-    text-align: left;
+    text-align: justify;
     margin-left: 100px;
     margin-right: 100px;
     margin: 40px;
@@ -196,6 +197,29 @@ h1 {
     font-size: 16px;
     z-index: 1000;
     cursor: pointer;
+}
+
+.text-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    text-align: center;
+    margin-left: 60px;
+}
+.gif-container {
+    text-align: center;
+    margin-right: 60px;
+    margin-left: 50px;
+}
+.gif-container a {
+    display: block;
+    font-size: 12px; 
+    margin-bottom: 5px;
+    text-align: center;
+}
+.gif-container iframe {
+    display: block;
+    margin: 0 auto;
 }
 
 

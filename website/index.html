@@ -6,7 +6,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>BeAware</title>
+  <title>BeAwareLOCAL</title>
   <meta name="author" content="Clara Tavernier, Julie Korber, Louise Font" />
   
   <link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
@@ -30,6 +30,7 @@
 </head>
 
 <body>
+
   <div id="counter"> Worldwide textile waste in tons since you opened this page: <br> 0 </div>
 
   <div id="fullpage">
@@ -48,112 +49,129 @@
         </svg>
       </div> -->
     </div>
-
+    <div class = "section">
+      <div class = 'text-intro'>
+      <div class="section-text">
+        Following the latest IPCC report, the inevitable consequences of climate change have once again been highlighted. 
+        Rising greenhouse gas emissions, ocean acidification and water pollution are having an undeniable impact on our environment.
+        When confronted with this information, the public's first point of attack is often transport. Indeed, the political battle against the use of  
+        combustion engine cars and the work of environmental movements to promote rail travel over air travel highlight the primary impact of this sector 
+        on global warming. However, other sectors have an important impact on the matter as it is for the fashion industry. 
+      </div>
+      <div class="gif-container">
+        <iframe src="https://giphy.com/embed/xUOrw4vslaW2a8SaZ2" width="357" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <p><a href="https://giphy.com/gifs/xUOrw4vslaW2a8SaZ2">via GIPHY</a></p>
+      </div>
+    </div>
+    </div>
    
-
     <div class="section">
       <div class="slide" id="carbonfootprint-slide">
+        <div class="section-title">Repartition of the carbon footprint of a swiss person</div>
+        <div class="section-text">
+          A way to better understand the environmental impact of the textile industry compared to other sectors is using comparison. 
+          A term that is often mentioned in discussion about the environment is the carbon footprint. 
+          As an indicator, we will focus on the yearly average carbon footprint of a Swiss person which corresponds to <a href="https://climpact.ch/carbon-footprint/">11,639 kgCO2eq </a>
+        </div>
+        <div class="section-text">
+          Hence as expected the transport and food sector are huge consumers of carbon, the clothes and shoes section remain an important category too. 
+          Let see further information on its role in environmental pollution. 
+        </div> 
         <div id="divi">
-          <svg id="swiss-carbonfootprint" width="800" height="500"></svg>
+          <svg id="swiss-carbonfootprint" width="1200" height="400"></svg>
           <div id="legend-container" width="800" >
             <svg id="scfp-legend" width="800" ></svg>
           </div>
         </div>        
       </div>
-      <div class="slide">
-        <div class="section-title">Repartition of the carbon footprint of a swiss person</div>
-        <div class="section-text">First of all, here is the average repartition of a swiss person carbon footprint :</div>
-        <img
-          class="sketch-picture"
-          src="img/swiss-carbon-footprint.jpg"
-          alt="Repartition of the carbon footprint of a swiss person" />
-        <div class="section-text">We can see that Clothing is not that small, and more important, a part that we have a lot of influence of our footprint.</div>
-        <script>console.log('hey')</script>
-      </div>
     </div>
 
     <div class="section">
       <div class="slide">
-        <div class="section-text">In the textile industry, not only the carbon emissions matter. Actually, the 4 main (?) are water use, carbon emissions, energy consumption and land use. And the 4 of them are in constant increase for the past century:</div>
-        <!--img
-          class="sketch-picture"
-          src="img/uses-timeline.jpg"
-          alt="Repartition of the carbon footprint of a swiss person" />-->
-    <canvas id="timeChart"></canvas>
-    <div class="wrapper">
-      <div class="values">
-          <span id="range1">
-              0
-          </span>
+        <div class="section-text">
+          Environmental questions are quite huge, and many aspects need to be taken into account. 
+          In the fashion industry, our inclination to regularly change our wardrobe is responsible for 8-10% of global greenhouse gas emissions. 
+          Cotton production uses 2.5% of agricultural land, and synthetic materials consume 342 million barrels of oil every year. 
+          Thus we will focus on 4 aspects: the water use, the energy consumption and the land use. 
+          More information on those sectors and their relation with the fashion industry can be found on the left. 
+          The growth of those sector consumption across the years highlights the urge to start rethinking our way of living. 
+        </div>
+        <canvas id="timeChart"></canvas>
+
+      <div class="wrapper">
+        <div class="values">
+          <span id="range1"> 0 </span>
           <span> &dash; </span>
-          <span id="range2">
-              100
-          </span>
-      </div>
-      <div class="container">
+          <span id="range2"> 100 </span>
+        </div>
+        <div class="container">
           <div class="slider-track"></div>
           <input type="range" min="1965" max="2014" value="1965" id="slider-1" oninput="sliderOne()">
           <input type="range" min="1665" max="2014" value="2014" id="slider-2" oninput="sliderTwo()">
-      </div>
-  </div>
-  
-  <!--Script-->
-  <script></script>
-    </div>
-      
-      <div class="slide">
-        <div class="section-text">Let's have a closer look at each consumptions:</div>
-        <div class="partitioned-tshirt-container">
-          <svg class="partitioned-tshirt" viewBox="-20 -20 40 60" xmlns="http://www.w3.org/2000/svg">
-              <g class="part" id="part1">
-                <path d="M -9 0 L -9 -4 L -13 0 L -17 -4 L -9 -12 L -4 -12 C -4 -9 0 -9 0 -9 L 0 0 Z" fill="#d1edff"/>
-                <text text-anchor="middle" x="-4.5" y="-6" font-size="1" width="2" fill="black">
-                  <tspan x="-4.5" dy="1.2em">Water</tspan>
-                  <tspan x="-4.5" dy="1.2em">Use</tspan>
-                </text>
-              </g>
-              <g class="part" id="part2">
-                <path d="M 9 0 L 9 -4 L 13 0 L 17 -4 L 9 -12 L 4 -12 C 4 -9 0 -9 0 -9 L 0 0 Z" fill="#fffed4"/>
-                <text text-anchor="middle" x="4.5" y="-6" font-size="1" width="2" fill="black">
-                  <tspan x="4.5" dy="1.2em">Energy</tspan>
-                  <tspan x="4.5" dy="1.2em">Consumption</tspan>
-                </text>
-              </g>
-              <g class="part" id="part3">
-                <path d="M 9 12 L 9 0 L 0 0 L 0 12 Z" fill="#dddddd"/>
-                <text text-anchor="middle" x="4.5" y="4" font-size="1" width="2" fill="black">
-                  <tspan x="4.5" dy="1.2em">Greenhouse</tspan>
-                  <tspan x="4.5" dy="1.2em">Gas Emissions</tspan>
-                </text>
-              </g>
-              <g class="part" id="part4">
-                <path d="M -9 12 L -9 0 L 0 0 L 0 12 Z" fill="#F1FDB0"/>
-                <text text-anchor="middle" x="-4.5" y="4" font-size="1" width="2" fill="black">
-                  <tspan x="-4.5" dy="1.2em">Land</tspan>
-                  <tspan x="-4.5" dy="1.2em">Use</tspan>
-                </text>
-              </g>
-          </svg>
         </div>
       </div>
+    </div>
+      
+    <div class="slide">
+      <div class="section-text">Let's have a closer look at each consumptions:</div>
+      <div class="partitioned-tshirt-container">
+        <svg class="partitioned-tshirt" viewBox="-20 -20 40 60" xmlns="http://www.w3.org/2000/svg">
+          <g class="part" id="part1">
+            <path d="M -9 0 L -9 -4 L -13 0 L -17 -4 L -9 -12 L -4 -12 C -4 -9 0 -9 0 -9 L 0 0 Z" fill="#d1edff"/>
+            <text text-anchor="middle" x="-4.5" y="-6" font-size="1" width="2" fill="black">
+              <tspan x="-4.5" dy="1.2em">Water</tspan>
+              <tspan x="-4.5" dy="1.2em">Use</tspan>
+            </text>
+          </g>
+          <g class="part" id="part2">
+            <path d="M 9 0 L 9 -4 L 13 0 L 17 -4 L 9 -12 L 4 -12 C 4 -9 0 -9 0 -9 L 0 0 Z" fill="#fffed4"/>
+            <text text-anchor="middle" x="4.5" y="-6" font-size="1" width="2" fill="black">
+              <tspan x="4.5" dy="1.2em">Energy</tspan>
+              <tspan x="4.5" dy="1.2em">Consumption</tspan>
+            </text>
+          </g>
+          <g class="part" id="part3">
+            <path d="M 9 12 L 9 0 L 0 0 L 0 12 Z" fill="#dddddd"/>
+            <text text-anchor="middle" x="4.5" y="4" font-size="1" width="2" fill="black">
+              <tspan x="4.5" dy="1.2em">Greenhouse</tspan>
+              <tspan x="4.5" dy="1.2em">Gas Emissions</tspan>
+            </text>
+          </g>            
+          <g class="part" id="part4">
+            <path d="M -9 12 L -9 0 L 0 0 L 0 12 Z" fill="#F1FDB0"/>
+            <text text-anchor="middle" x="-4.5" y="4" font-size="1" width="2" fill="black">
+              <tspan x="-4.5" dy="1.2em">Land</tspan>
+              <tspan x="-4.5" dy="1.2em">Use</tspan>
+            </text>
+          </g>
+        </svg>
+      </div>
+    </div>
     </div>
 
     <div class="section">
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
-        <div class="section-text">We can compare the water use, carbon emissions and land use for different fabrics:</div>
+        <div class="section-text">
+          To address the environmental impact of the fashion industry, we can take steps at our level. For that, the choice of our clothes given their 
+          composition can be a first step.  Indeed, different textiles have varying sustainability profiles. While natural fabrics typically consume more 
+          water and land, they emit less carbon dioxide and require less energy. The production of textile fibers like cotton and polyester involves 
+          energy-intensive processes and fossil fuel use. Cotton cultivation, for instance, demands substantial water and pesticide usage, while synthetic 
+          fiber production relies on extracting non-renewable resources. By understanding these differences, we can make more informed choices about the clothes
+          we wear and their environmental impact.
+        </div>
+        <div class="section-text">
+          Here is a plot showing a limited selection of fabric types, their relative consumption of water, energy and greenhouses emissions. 
+          Not that the percentage is computed according to the fabrics with the highest value within the selection. For example, cotton has 100% 
+          of water use since it is the one that consumes the most water compared to the others. To see the relative distribution of those fabrics, 
+          look at the right page :) 
+        </div>
         <canvas class = 'plots', id="radarChart"></canvas>
-
-        <!-- <img
-          class="sketch-picture"
-          src="img/star-plot.jpg"
-          alt="Repartition of the carbon footprint of a swiss person" />-->
-        <div class="section-text">So each fabric has its pros and cons. Natural ones consume in general more water and land use, but emit less carbon dioxide and consume less energy.</div>
       </div> 
 
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
-        <div class="section-text">If you want to focus on one consumptions:</div>
+        <div class="section-text">We want to class by pollution category to see the repartition</div>
 
         <button class="button clicked" onclick = "clicked(this)" id="waterButton">Water</button>
         <button class="button" onclick = "clicked(this)" id="co2Button">CO2</button>
@@ -168,19 +186,20 @@
               // Add clicked class to the actual clicked button
               button.classList.add('clicked');
           }
-      </script>
-
-
+        </script>
         <canvas class = 'plot', id="comparisonFabric"></canvas>
         
       </div>
     </div>
+    
     <div class="section">
       <div class="section-title">Conclusion: Be responsible</div>
-      
+      <div class="section-text">
+        In terms of fashion choice, while there's no perfect solution, individuals can still have an impact by choosing sustainable fabrics, 
+        reducing consumption, and supporting second-hand options. By prioritizing quality over quantity, embracing reuse and upcycling, and advocating 
+        for ethical production practices, we can collectively contribute to a more sustainable and responsible fashion industry.
+        </div>
     </div>
-
-
   </div>
 
 
@@ -226,11 +245,11 @@
     new fullpage('#fullpage', {
       autoScrolling:true,
       scrollHorizontally: true,
-      sectionsColor: ['#ffb330', '#fff0cb', '#fff0cb', '#fff0cb','#fff0cb'],
+      sectionsColor: ['#ffb330', '#fdf8e1', '#fdf8e1', '#fdf8e1', '#fdf8e1','#fdf8e1', '#fdf8e1'],
       navigation: true,
       slidesNavigation: true,
       anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastPage'],
-      navigationTooltips: ['Introduction', 'Your carbon footprint', 'Main problems', 'Fabric comparision', 'Conclusion'],
+      navigationTooltips: ['Title', 'Introduction', 'Your carbon footprint', 'Main problems', 'Fabric comparision', 'Conclusion'],
       loopHorizontal: false,
       fitToSection: true,
       scrollOverflow: false,
