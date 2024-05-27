@@ -21,6 +21,10 @@
   <link rel="stylesheet" href="styles/treemap.css" />
   <link href="https://cdn.jsdelivr.net/npm/nouislider@16.6.2/distribute/nouislider.min.css" rel="stylesheet">
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap" rel="stylesheet">
+
     <!-- Chart.js for the radar chart -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- d3 to load csv data -->
@@ -35,18 +39,6 @@
   <div id="fullpage">
     <div class="section" id="sectionintro">
       <h1>Impact Of The Textile Industry</h1>
-    
-      <!-- <div class="tshirt">
-        <svg viewBox="0 0 10 10" fill="#ffcdf9">
-          <clipPath id="myClip">
-            <circle cx="6" cy="5" r="1" />
-          </clipPath>
-          <path
-            id="heart"
-            d="M 3 8 L 3 4 L 2 5 L 1 4 L 3 2 L 4 2 C 4 3 6 3 6 2 L 7 2 L 9 4 L 8 5 L 7 4 L 7 8 T 3 8" />
-          <use clip-path="url(#myClip)" href="#heart" fill="#fffecd" />
-        </svg>
-      </div> -->
     </div>
     <div class = "section">
       <div class = 'text-intro'>
@@ -119,9 +111,9 @@
         <svg class="partitioned-tshirt" viewBox="-20 -20 40 60" xmlns="http://www.w3.org/2000/svg">
           <g class="part" id="part1">
             <path d="M 0 0 L -9 0 L -9 -5.625 L -9 -3.375 L -13.5 0 L -18 -4.5 L -9 -13.5 L -4.5 -13.5 C -4.5 -10.125 0 -10.125 0 -10.125 L 0 -7.3125 Z" 
-              fill="var(--blue-color)" fill-opacity="0.5"/>
+              fill="var(--blue-color)"/>
             <path d="M 0 -10.125 C 0 -10.125 -4.5 -10.125 -4.5 -13.5 C -3.375 -11.8125 0 -11.8125 0 -11.8125 Z" 
-              fill="color-mix(in srgb, var(--blue-color), black)" fill-opacity="0.5"/>
+              fill="color-mix(in srgb, var(--blue-color), black)"/>
             <text text-anchor="middle" x="-4.5" y="-6" font-size="1" width="2" fill="var(--white-color)">
               <tspan x="-4.5" dy="1.2em">Water</tspan>
               <tspan x="-4.5" dy="1.2em">Use</tspan>
@@ -129,23 +121,23 @@
           </g>
           <g class="part" id="part2">
             <path d="M 0 0 L 9 0 L 9 -5.625 L 9 -3.375 L 13.5 0 L 18 -4.5 L 9 -12.9375 L 4.5 -13.5 C 4.5 -10.125 0 -10.125 0 -10.125 L 0 -7.3125 Z" 
-              fill="var(--yellow-color)" fill-opacity="0.5"/>
+              fill="var(--yellow-color)"/>
             <path d="M 0 -10.125 C 0 -10.125 4.5 -10.125 4.5 -13.5 C 3.375 -11.8125 0 -11.8125 0 -11.8125 Z" 
-              fill="color-mix(in srgb, var(--yellow-color), black)" fill-opacity="0.5"/>
+              fill="color-mix(in srgb, var(--yellow-color), black)"/>
             <text text-anchor="middle" x="4.5" y="-6" font-size="1" width="2" fill="var(--white-color)">
               <tspan x="4.5" dy="1.2em">Energy</tspan>
               <tspan x="4.5" dy="1.2em">Consumption</tspan>
             </text>
           </g>
           <g class="part" id="part4">
-            <path d="M 9 12 L 9 0 L 0 0 L 0 12 Z" fill="var(--green-color)" fill-opacity="0.5"/>
+            <path d="M 9 12 L 9 0 L 0 0 L 0 12 Z" fill="var(--green-color)"/>
             <text text-anchor="middle" x="4.5" y="4" font-size="1" width="2" fill="var(--white-color)">
               <tspan x="4.5" dy="1.2em">Land</tspan>
               <tspan x="4.5" dy="1.2em">Use</tspan>
             </text>
           </g>            
           <g class="part" id="part3">
-            <path d="M -9 12 L -9 0 L 0 0 L 0 12 Z" fill="var(--orange-color)" fill-opacity="0.5"/>
+            <path d="M -9 12 L -9 0 L 0 0 L 0 12 Z" fill="var(--orange-color)"/>
             <text text-anchor="middle" x="-4.5" y="4" font-size="1" width="2" fill="var(--white-color)">
               <tspan x="-4.5" dy="1.2em">Greenhouse</tspan>
               <tspan x="-4.5" dy="1.2em">Gas Emissions</tspan>

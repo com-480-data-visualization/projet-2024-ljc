@@ -21,10 +21,16 @@
     --orange9: #935E38;
 
     --dark-color: #272633;
+
+    /* Fonts */
+    --font-title: "Yeseva One", serif;
+    --font-text: "Noto Sans", sans-serif;;
+
 }
 
 body {
     color: var(--dark-color);
+    font-family: var(--font-text);
 }
 
 
