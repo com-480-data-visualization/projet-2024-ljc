@@ -99,6 +99,12 @@ function barChart(row_fabric, dataLabel, first = false) {
                                             position: 'top', 
                                         }
                                     },
+                                    layout: {
+                                        padding: {
+                                            top: 20, // Adjust the top padding to create a margin above the legend
+                                            bottom: 20 // Optional: Adjust bottom padding if needed
+                                        }
+                                    }
                                 }
                     });
     } 
