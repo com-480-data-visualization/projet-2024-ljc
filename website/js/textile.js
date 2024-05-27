@@ -123,17 +123,8 @@ const lab_ = ["water_use [kg for 1 kg Fiber]", "co2_emissions [kg for 1 kg Fiber
 // Execute when document is loaded
 whenDocumentLoaded(() => {
     d3.csv('data/fabrics-comparison.csv').then((textiles) => {
-        console.log(textiles.columns)
-
-        // Rename the columns in each textile
-        textiles.forEach((textile) => {
-            Object.keys(columnMapping).forEach(oldName => {
-                if (textile.hasOwnProperty(oldName)) {
-                    textile[columnMapping[oldName]] = textile[oldName];
-                    delete textile[oldName];
-                }
-            });
-        });
+        console.log('a')
+        console.log(textiles)
 
         // Add a color to each textile using D3's category10 color scheme
        // const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
