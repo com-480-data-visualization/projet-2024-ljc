@@ -118,20 +118,42 @@ function getColorWithOpacity(color, opacity) {
 }
 
 
-const lab_ = ["water_use (kg/kg fabric)", "co2_emissions (kg/kg Fiber)", "energy_consumption (kW h/kg Fiber)" ];
+const lab_ = ["water_use [kg for 1 kg Fiber]", "co2_emissions [kg for 1 kg Fiber]", "energy_consumption [kW/h for 1 kg Fiber]" ];
 
 // Execute when document is loaded
 whenDocumentLoaded(() => {
-
     d3.csv('data/fabrics-comparison.csv').then((textiles) => {
-        console.log(textiles)
+        console.log(textiles.columns)
+
+        // Rename the columns in each textile
+        textiles.forEach((textile) => {
+            Object.keys(columnMapping).forEach(oldName => {
+                if (textile.hasOwnProperty(oldName)) {
+                    textile[columnMapping[oldName]] = textile[oldName];
+                    delete textile[oldName];
+                }
+            });
+        });
+
         // Add a color to each textile using D3's category10 color scheme
-        const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+       // const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+       const colorScale = [
+        getComputedStyle(document.documentElement).getPropertyValue('--orange-color').trim(),
+        getComputedStyle(document.documentElement).getPropertyValue('--pink-color').trim(),
+        getComputedStyle(document.documentElement).getPropertyValue('--green-color').trim(),
+        getComputedStyle(document.documentElement).getPropertyValue('--blue-color').trim(),
+        getComputedStyle(document.documentElement).getPropertyValue('--purple-color').trim(),
+        getComputedStyle(document.documentElement).getPropertyValue('--yellow-color').trim(),
+        getComputedStyle(document.documentElement).getPropertyValue('--blue2-color').trim(),
+        getComputedStyle(document.documentElement).getPropertyValue('--pink2-color').trim()]
 
         textiles.forEach((textile, index) => {
             // Assign color from the color scale
-            textile.color = d3.rgb(colorScale(index));
+
+            //textile.color = d3.rgb(colorScale(index));
+            textile.color = d3.rgb(colorScale[index]);
         });
+
         // Bar plots
         barChart(textiles, lab_[0], true);
         // Add event listeners to buttons

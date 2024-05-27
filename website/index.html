@@ -170,17 +170,18 @@
           of water use since it is the one that consumes the most water compared to the others. To see the relative distribution of those fabrics, 
           look at the right page 
         </div>
-        <canvas class = 'plots' id="radarChart" ></canvas>
+        <canvas class = 'plots-fabric' id="radarChart" ></canvas>
       </div> 
 
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
-        <div class="section-text">We want to class by pollution category to see the repartition <br>
-
-        <button class="button clicked" onclick = "clicked(this)" id="waterButton">Water</button>
-        <button class="button" onclick = "clicked(this)" id="co2Button">CO2</button>
-        <button class="button" onclick = "clicked(this)" id="energyButton">Energy</button>
+        <div class="section-text">We want to class by pollution category to see the repartition </div>
+        <div class="button-container">
+          <button class="button clicked" onclick = "clicked(this)" id="waterButton">Water</button>
+          <button class="button" onclick = "clicked(this)" id="co2Button">CO2</button>
+          <button class="button" onclick = "clicked(this)" id="energyButton">Energy</button>
       </div>
+      
         <script>
           function clicked(button) {
               // Remove clicked class from all buttons, not to have two button selected at same time
@@ -191,7 +192,7 @@
               button.classList.add('clicked');
           }
         </script>
-        <canvas class = 'plot', id="comparisonFabric"></canvas>
+        <canvas class = 'plots-fabric', id="comparisonFabric"></canvas>
         
       </div>
     </div>

@@ -138,7 +138,7 @@ body {
 
 h1 {
 	/*background-image: url(https://media.giphy.com/media/t2aAdTgnU9Ie6jvG0W/giphy.gif);*/
-    background-image: url(https://i.natgeofe.com/n/b41b1997-d6e6-402a-aeb8-677ef7a57fdd/MM9940_220518_0582.jpg);
+   /* background-image: url(https://i.natgeofe.com/n/b41b1997-d6e6-402a-aeb8-677ef7a57fdd/MM9940_220518_0582.jpg);*/
 	background-size: contain;
 	color: #ffffff;
 	-moz-background-clip: text;
@@ -168,12 +168,18 @@ h1 {
 }
  /* added by me :) */
 
- .plots {
+ .plots-fabric {
     margin: auto;
-    width: 40%;
-    height: 40%;
+    width: 75%;
+    height: 70%;
 }
 
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .button{
     padding: 10px 30px;
     text-align: center;
