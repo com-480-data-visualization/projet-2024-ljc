@@ -30,7 +30,7 @@
     align-items: center;
     margin-bottom: auto;
     margin-top: auto;
-    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.4));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.16));
 }
 
 .partitioned-tshirt {
