@@ -3,7 +3,6 @@
     font-size: 3em;
 }
 
-
 /* #sectionintro{
     background-image: url("../img/habits.png");
     background-repeat: no-repeat;
@@ -283,8 +282,8 @@ input[type="range"]{
     width: 60%;
     outline: none;
     position: relative;
-    margin: 10px;
-    top: 0;
+    margin: 0px;
+    top: 10px;
     bottom: 0;
     background-color: transparent;
     pointer-events: auto;

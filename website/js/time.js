@@ -194,6 +194,8 @@ function slideTwo() {
 
 
 whenDocumentLoaded(() => {
+    slideOne()
+    slideTwo()
     sliderOne.addEventListener('input', slideOne);
     sliderTwo.addEventListener('input', slideTwo);
     console.log('louie')
