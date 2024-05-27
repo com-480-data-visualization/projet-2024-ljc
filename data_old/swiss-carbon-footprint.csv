@@ -1,0 +1,52 @@
+sector,category,carbon_footprint
+goods and services,"Education, social and financial services",821
+goods and services,Health,627
+goods and services,Restaurants and hotels ,569
+goods and services,Cloting and shoes,522
+goods and services,Electronic devices ,250
+goods and services,Internet network,108
+goods and services,Data centers,85
+goods and services,Freight,309
+goods and services,Mail services,24
+goods and services,Recreation and culture,205
+transport,Car,1683
+transport,Plane,1679
+transport,Road public transport,51
+transport,Train,25
+transport,Motorbike,31
+housing,Heating,1459
+housing,Waste management,174
+housing,New buildings,599
+housing,Hot water,118
+housing,Water,24
+housing,Lighting,18
+housing,Maintenance work,49
+housing,Renovation,17
+housing,Furniture,245
+housing,Household appliances,183
+food,"Beef, veal",389
+food,Pork,130
+food,Fruits,149
+food,Vegetables,77
+food,Rice,45
+food,"Milk, dairy products",260
+food,Fish and crustaceans,56
+food,Chicken,43
+food,Eggs,38
+food,Sugar,28
+food,Potatoes,11
+food,Cereals-based products ,99
+food,Animal fats,82
+food,Pasta,35
+food,Chocolate,30
+food,Bread,24
+food,Fruit and vegetable juices,49
+food,Vegetable fats,55
+food,Walnuts,6
+food,Spices,2
+food,Sweet drink,95
+food,Coffee,15
+food,Tobacco,13
+food,Alcoholic beverage,10
+food,Tea,2
+food,Oilseeds,12
