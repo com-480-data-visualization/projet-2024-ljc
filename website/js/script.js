@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // The world produces 92 million tons of textile waste every year. (https://theroundup.org/textile-waste-statistics/)
         waste_per_second = 92*1e6/365/24/60/60;
         counter+=waste_per_second;
-        counterButton.innerText = 'Worldwide textile waste in tons since you opened this page:\n' + Math.round(counter*100)/100;
+        counterButton.innerText = 'Worldwide textile waste since you opened this page:\n' + Math.round(counter*100)/100 + ' tons';
     }, 1000);
 });
 

@@ -66,7 +66,7 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
     .attr("fill", function (d) {
       return color(d.data.category);
     })
-    .attr("fill-opacity", 0.5)
+    .attr("fill-opacity", 0.7)
     .on("mousemove", function (d) {
       var clr = color(d.data.category)
       tooltip.style("opacity", .9);
@@ -83,7 +83,7 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
     })
     .on("mouseout", function (d) {
       tooltip.style("opacity", 0);
-      d3.select(this).style("fill-opacity", 0.5);
+      d3.select(this).style("fill-opacity", 0.7);
     });
 
   cell.append("text")

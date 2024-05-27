@@ -31,7 +31,7 @@ div.tooltip {
   border: 0px;        
   border-radius: 2px;            
   pointer-events: none;
-  background: color-mix(in srgb, #264653 95%, rgba(255, 255, 255, 0)); 
+  background: color-mix(in srgb, var(--dark-color) 95%, rgba(255, 255, 255, 0)); 
 }
 
 #legend-container {

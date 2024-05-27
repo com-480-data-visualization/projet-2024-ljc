@@ -1,6 +1,6 @@
 :root {
     /* Colour palette */
-    --white-color: #fdf8e1; /* f7f7f7 */
+    --white-color: #f8fbf7; /* f7f7f7 */
     --orange-color: #f8a163;
     --pink-color: #fa75a8; /* #FFBFB7 */
     --green-color: #9cc087;
@@ -19,6 +19,12 @@
     --orange7: #FCE688;
     --orange8: #FFF492;
     --orange9: #935E38;
+
+    --dark-color: #272633;
+}
+
+body {
+    color: var(--dark-color);
 }
 
 
