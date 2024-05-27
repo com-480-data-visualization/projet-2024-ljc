@@ -120,6 +120,7 @@ animation: openYourHeart 10s infinite;
 body {
 	background-color: rgba(0, 0, 0, 0);
     background-image: url(https://i.natgeofe.com/n/b41b1997-d6e6-402a-aeb8-677ef7a57fdd/MM9940_220518_0582.jpg);
+    background-size: 120%;
     font-family: system-ui;
 }
 
@@ -137,9 +138,6 @@ body {
 }
 
 h1 {
-	/*background-image: url(https://media.giphy.com/media/t2aAdTgnU9Ie6jvG0W/giphy.gif);*/
-   /* background-image: url(https://i.natgeofe.com/n/b41b1997-d6e6-402a-aeb8-677ef7a57fdd/MM9940_220518_0582.jpg);*/
-	background-size: contain;
 	color: #ffffff;
 	-moz-background-clip: text;
 	-webkit-background-clip: text;
