@@ -2,31 +2,32 @@
 
 
 body {
-	background: #d1edff;
-	font-family: "Poppins", sans-serif;
+	background: color-mix(in srgb, var(--blue-color) 30%, transparent 70%);
+	font-family: var(--font-text);
 }
 
-.wrapper {
-	position: fixed;
+.water-title {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
-    inline-size: 8em;
+
 }
 
-.wrapper h1 {
+.water-title h1 {
 	color: #fff;
 	font-size: 8em;
 	position: absolute;
 	transform: translate(-50%, -50%);
 }
 
-.wrapper h1:nth-child(1) {
+.water-title h1:nth-child(1) {
 	color: transparent;
 	-webkit-text-stroke: 2px #004976;
 }
 
-.wrapper h1:nth-child(2) {
+.water-title h1:nth-child(2) {
 	color: #004976;
 	animation: animate 4s ease-in-out infinite;
 }
@@ -79,4 +80,5 @@ body {
 .text {
 	font-size: 20px;
 	color: #004976;
+	text-align: justify;
 }
