@@ -31,6 +31,14 @@ body {
 	animation: animate 4s ease-in-out infinite;
 }
 
+.water-title#water {
+	transform: translate(-160px);
+}
+
+.water-title#use {
+	transform: translate(160px);
+}
+
 @keyframes animate {
 	0%,
 	100% {
@@ -110,12 +118,12 @@ body {
 .bottle-container {
     display: grid;
     justify-content: center;
-    gap: 3px; /* Reduced spacing between bottles */
+    gap: 3px;
 }
 
 .bottle {
-    width: 15px; /* Increased width by 1.5 times */
-    height: 37.5px; /* Increased height by 1.5 times */
+    width: 15px;
+    height: 37.5px;
 }
 
 div.tooltip {

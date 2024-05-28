@@ -1,5 +1,19 @@
 body {
-    background: #F1FDB0;
+	background: color-mix(in srgb, var(--green-color) 50%, transparent 50%);
+	font-family: var(--font-text);
+}
+
+.main-container {
+	text-align: left;
+	margin: 30px auto;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.text {
+	font-size: 20px;
+	color: #7c5921;
+	text-align: justify;
 }
 
 * {
@@ -41,7 +55,8 @@ body {
 .plant{
     position: absolute;
     top: -0rem;
-    animation: plant 3s infinite;
+    animation: plant 5s 1;
+    animation-fill-mode: forwards;
 }
 
 @keyframes plant{
@@ -64,7 +79,8 @@ body {
     width: 0.8rem;
     height: 9rem;
     border-radius: 0.8rem;
-    animation: stem 3s infinite;
+    animation: stem 5s 1;
+    animation-fill-mode: forwards;
 }
 
 @keyframes stem {
@@ -101,8 +117,9 @@ body {
 .left {
     left: -3.8rem;
     top: 18%;
-     transform: scale(0);
-      animation: left 3s infinite;
+    transform: scale(0);
+    animation: left 5s 1;
+    animation-fill-mode: forwards;
     transform-origin: 100% 100%;
 }
 
@@ -131,12 +148,13 @@ body {
 }
 
 .right {
-       background: var(--green);
+    background: var(--green);
     transform: scaleX(-1) scaleY(0);
     left: -3.8rem;
     top: 40%;
-      animation: right 3s infinite;
+    animation: right 5s 1;
     transform-origin: 100% 100%;
+    animation-fill-mode: forwards;
 }
   
 @keyframes right{
@@ -175,7 +193,8 @@ body {
     border-bottom-left-radius: 1.2rem;
     border-bottom-right-radius: 0.7rem;
     transform:  scale(0) rotate(0deg);
-     animation: recep 3s infinite;
+    animation: recep 5s infi1nite;
+    animation-fill-mode: forwards;
 }
   
 .receptacle::after {
@@ -226,7 +245,8 @@ body {
 
 .flower span:nth-child(1) {
     transform: rotate(12deg) translateY(0.2rem) scale(0);
-      animation: flower1 3s infinite;
+    animation: flower1 5s 1;
+    animation-fill-mode: forwards;
 }
 
 @keyframes flower1{
@@ -241,7 +261,8 @@ body {
 }
   .flower span:nth-child(2) {
     transform: rotate(84deg) translateY(0.2rem);
-    animation: flower2 3s infinite;
+    animation: flower2 5s 1;
+    animation-fill-mode: forwards;
   }
   @keyframes flower2{
     0%{transform: scale(0) rotate(84deg) translateY(0.2rem);}
@@ -255,7 +276,8 @@ body {
   }
   .flower span:nth-child(3) {
     transform: rotate(156deg) translateY(0.2rem);
-    animation: flower3 3s infinite;
+    animation: flower3 5s 1;
+    animation-fill-mode: forwards;
   }
   @keyframes flower3{
     0%{transform: scale(0) rotate(156deg) translateY(0.2rem);}
@@ -269,7 +291,8 @@ body {
   }
   .flower span:nth-child(4) {
     transform: rotate(228deg) translateY(0.2rem);
-      animation: flower4 3s infinite;
+    animation: flower4 5s 1;
+    animation-fill-mode: forwards;
   }
   @keyframes flower4{
     0%{transform: scale(0) rotate(228deg) translateY(0.2rem);}
@@ -283,7 +306,8 @@ body {
   }
   .flower span:nth-child(5) {
     transform: rotate(300deg) translateY(0.2rem);
-    animation: flower5 3s infinite;
+    animation: flower5 5s 1;
+    animation-fill-mode: forwards;
   }
   @keyframes flower5{
     0%{transform: scale(0) rotate(300deg) translateY(0.2rem);}
@@ -305,7 +329,8 @@ body {
     border-radius: 100%;
     opacity: 0;
     z-index: 9;
-    animation: fruit 3s infinite;
+    animation: fruit 5s 1;
+    animation-fill-mode: forwards;
   }
   
   @keyframes fruit{

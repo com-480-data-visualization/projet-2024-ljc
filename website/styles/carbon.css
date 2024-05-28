@@ -3,7 +3,6 @@
 body {
     background-color: color-mix(in srgb, var(--orange-color) 30%, transparent 70%);
     font-family: var(--font-text);
-    align-items: center;
 }
 
 .main-container {
