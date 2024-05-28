@@ -170,27 +170,7 @@ function fillColor(){
 
 sliderOne.addEventListener('input', slideOne);
 sliderTwo.addEventListener('input', slideTwo);
-/*
-function slideOne() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-        sliderOne.value = parseInt(sliderTwo.value) - minGap;
-    }
-    displayValOne.textContent = sliderOne.value;
-    displayValOne.style.left = `${(sliderOne.value - sliderOne.min) / (sliderOne.max - sliderOne.min) * 100}%`;
-    fillColor();
-    updateChart();
-}
 
-function slideTwo() {
-    if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-        sliderTwo.value = parseInt(sliderOne.value) + minGap;
-    }
-    displayValTwo.textContent = sliderTwo.value;
-    displayValTwo.style.left = `${(sliderTwo.value - sliderTwo.min) / (sliderTwo.max - sliderTwo.min) * 100}%`;
-    fillColor();
-    updateChart();
-}
-*/
 whenDocumentLoaded(() => {
     console.log('louise')
     slideOne()

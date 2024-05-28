@@ -124,10 +124,12 @@ animation: openYourHeart 10s infinite;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Cairo');
+
 body {
 	background-color: rgba(0, 0, 0, 0);
     background-image: url(https://i.natgeofe.com/n/b41b1997-d6e6-402a-aeb8-677ef7a57fdd/MM9940_220518_0582.jpg);
-    background-size: 120%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .page-title {
@@ -257,6 +259,16 @@ h1 {
 .gif-container iframe {
     display: block;
     margin: 0 auto;
+}
+
+img {
+    border-radius: 0px;
+    width: 100%;
+    margin-top: 200px; /* Adjust this value as needed to create the desired space */
+}
+
+.section {
+    padding-top: 0px; /* Optional: Add padding to the section for better layout */
 }
 
 
