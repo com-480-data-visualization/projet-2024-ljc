@@ -42,19 +42,22 @@
     </div>
     <div class = "section">
       <div class = 'text-intro'>
-      <div class="section-text">
-        Following the latest IPCC report, the inevitable consequences of climate change have once again been highlighted. 
-        Rising greenhouse gas emissions, ocean acidification and water pollution are having an undeniable impact on our environment.
-        When confronted with this information, the public's first point of attack is often transport. Indeed, the political battle against the use of  
-        combustion engine cars and the work of environmental movements to promote rail travel over air travel highlight the primary impact of this sector 
-        on global warming. However, other sectors have an important impact on the matter as it is for the fashion industry. 
-      </div>
-      <div class="gif-container">
-        <iframe src="https://giphy.com/embed/xUOrw4vslaW2a8SaZ2" width="357" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-        <p><a href="https://giphy.com/gifs/xUOrw4vslaW2a8SaZ2">via GIPHY</a></p>
-      </div>
+        <div class="text-container">
+          <div class="section-title">A few words for context…</div>
+          <div class="section-text">
+            Following the latest IPCC report, the inevitable consequences of climate change have once again been highlighted. 
+            Rising greenhouse gas emissions, ocean acidification and water pollution are having an undeniable impact on our environment.
+            When confronted with this information, the public's first point of attack is often transport. Indeed, the political battle against the use of  
+            combustion engine cars and the work of environmental movements to promote rail travel over air travel highlight the primary impact of this sector 
+            on global warming. However, other sectors have an important impact on the matter as it is for the fashion industry. 
+          </div>
+        </div>
+        <div class="gif-container">
+          <iframe src="https://giphy.com/embed/xUOrw4vslaW2a8SaZ2" width="357" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          <p><a href="https://giphy.com/gifs/xUOrw4vslaW2a8SaZ2">via GIPHY</a></p>
+        </div>
     </div>
-    </div>
+  </div>
    
     <div class="section">
       <div class="slide" id="carbonfootprint-slide">
@@ -63,7 +66,7 @@
           Now to better understand the impact of fashion, let’s see it amidst the average yearly CO2 emissions of a Swiss person (<a href="https://climpact.ch/carbon-footprint/">11'639 kgCO2eq </a>). 
           This graph allows us to observe that, as expected, transport and food are responsible for a huge part of the mean carbon emissions. 
           However, this also shows that clothes and shoes are not to be underestimated either. 
-          And that when wishing to reduce our carbon footprint in an eco friendly approach, we should also consider having at our wardrobe.
+          And that when wishing to reduce our carbon footprint in an eco friendly approach, we should also consider having a look at our wardrobe.
           </div>
         <div id="divi">
           <svg id="swiss-carbonfootprint" width="1250" height="400"></svg>
@@ -80,15 +83,15 @@
       <div class="slide">
         <div class="section-title"> Timeline of the impact of the textile industry</div>
         <div class="section-text">
-          Environmental questions are quite huge, and many aspects need to be taken into account. 
-          In the fashion industry, our inclination to regularly change our wardrobe is responsible for 8-10% of global greenhouse gas emissions. 
+          Environmental questions are quite tricky as many aspects need to be taken into account. 
+          Fashion wise, our inclination to regularly change our wardrobe is responsible for 8-10% of global greenhouse gas emissions. 
           Cotton production uses 2.5% of agricultural land, and synthetic materials consume 342 million barrels of oil every year. 
-          Thus we will focus on 4 aspects: the water use, the energy consumption and the land use. 
-          More information on those sectors and their relation with the fashion industry can be found on the left. 
-          The growth of those sector consumption across the years highlights the urge to start rethinking our way of living. 
+          To have a global understanding of the situation we will focus on 4 aspects: the water use, the energy consumption, the greenhouse gas emissions and the land use. 
+          The overall growth of those sector consumption across the years highlights the urge to start rethinking our way of living. 
+          More information on those sectors and their relation with the fashion industry can be found on the right.
         </div>
         
-        <canvas id="timeChart" width="1200" height="350"></canvas>
+      <canvas id="timeChart" width="1200" height="350"></canvas>
 
       <div class="wrapper">
         <div class="values">
@@ -149,29 +152,33 @@
     <div class="section">
       <div class="section-title">Which fabric is the best?</div>
       <div class="text-intro">
-        To address the environmental impact of the fashion industry, we can take steps at our level. For that, the choice of our clothes given their 
-        composition can be a first step.  Indeed, different textiles have varying sustainability profiles. While natural fabrics typically consume more 
-        water and land, they emit less carbon dioxide and require less energy. The production of textile fibers like cotton and polyester involves 
-        energy-intensive processes and fossil fuel use. Cotton cultivation, for instance, demands substantial water and pesticide usage, while synthetic 
-        fiber production relies on extracting non-renewable resources. By understanding these differences, we can make more informed choices about the clothes
-        we wear and their environmental impact.
+        To address the environmental impact of the fashion industry, we can take steps at our level. 
+        For that, the choice of our clothes given their composition can be a first step.  
+        Indeed, different textiles have varying sustainability profiles. 
+        While natural fabrics typically consume more water and land, they emit less carbon dioxide and require less energy. 
+        The production of textile fibers like cotton and polyester involves energy-intensive processes and fossil fuel use. 
+        Cotton cultivation, for instance, demands substantial water and pesticide usage, while synthetic fiber production relies on extracting non-renewable resources. 
+        However, one fabric stands out by its exemplary water consumption and CO2 emission: hemp. Historically widely grown and used around Europe to produce fabric, it has been almost fully replaced by imported cotton and synthetic fibers. 
+        By understanding these differences, we can make more informed choices about the clothes we wear and their environmental impact, and if you can, choose hemp over cotton. 
       </div>
     </div>
     <div class="section">
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
         <div class="section-text">
-          Here is a plot showing a limited selection of fabric types, their relative consumption of water, energy and greenhouses emissions. 
-          Not that the percentage is computed according to the fabrics with the highest value within the selection. For example, cotton has 100% 
-          of water use since it is the one that consumes the most water compared to the others. To see the relative distribution of those fabrics, 
-          look at the right page 
+          The following plot illustrates that. 
+          Note that the percentage is computed according to the fabrics with the highest value within the selection.
+          For example, cotton has 100% of water use since it is the one that consumes the most water compared to the others. 
+          To see the relative distribution of those fabrics, look at the right page. 
         </div>
         <canvas class = 'plots-fabric' id="radarChart" ></canvas>
       </div> 
 
       <div class="slide">
         <div class="section-title">Which fabric is the best?</div>
-        <div class="section-text">We want to class by pollution category to see the repartition </div>
+        <div class="section-text">
+          Now to evaluate more separately the different ecological impact on our environment of fashion, we focus on each category comparing the different fabrics.
+         </div>
         <div class="button-container">
           <button class="button clicked" onclick = "clicked(this)" id="waterButton">Water</button>
           <button class="button" onclick = "clicked(this)" id="co2Button">CO2</button>
@@ -196,9 +203,8 @@
     <div class="section">
       <div class="section-title">Conclusion: Be responsible</div>
       <div class="section-text">
-        In terms of fashion choice, while there's no perfect solution, individuals can still have an impact by choosing sustainable fabrics, 
-        reducing consumption, and supporting second-hand options. By prioritizing quality over quantity, embracing reuse and upcycling, and advocating 
-        for ethical production practices, we can collectively contribute to a more sustainable and responsible fashion industry.
+        In terms of fashion choice, while there's no perfect solution, individuals can still have an impact by choosing sustainable fabrics and supporting eco-friendly brands, reducing consumption, and going for second-hand options. 
+        By prioritizing quality over quantity, embracing reuse and upcycling, and advocating for ethical production practices, we can collectively contribute to a more sustainable and responsible fashion industry.
         </div>
     </div>
   </div>
