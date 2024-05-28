@@ -44,6 +44,7 @@ window.addEventListener('click', function(event) {
 
 function closePopup(id) {
     document.getElementById(id).style.display = 'none';
+    hideOrShowWasteCounter();
 }
 
 
