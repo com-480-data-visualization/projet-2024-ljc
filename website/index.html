@@ -17,8 +17,9 @@
 
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="styles/graphiccharter.css" />
-
   <link rel="stylesheet" href="styles/treemap.css" />
+  <link rel="stylesheet" href="styles/time.css" />
+
   <link href="https://cdn.jsdelivr.net/npm/nouislider@16.6.2/distribute/nouislider.min.css" rel="stylesheet">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,64 +92,70 @@
           More information on those sectors and their relation with the fashion industry can be found on the right.
         </div>
         
-      <canvas id="timeChart" width="1200" height="350"></canvas>
+        <canvas id="timeChart" width="1200" height="300"></canvas>
 
-      <div class="wrapper">
-        <div class="values">
-          <span id="range1"> 1965 </span>
-          <span> &dash; </span>
-          <span id="range2"> 2014 </span>
-        </div>
-        <div class="container">
-          <div class="slider-track"></div>
-          <input type="range" min="1965" max="2014" value="1965" id="slider-1" oninput="sliderOne()">
-          <input type="range" min="1665" max="2014" value="2014" id="slider-2" oninput="sliderTwo()">
+        <div class="slider-main-container">
+          <div class="slider-container">
+            <div class="track">
+              <div class="progress"></div>
+            </div>
+            <div class="thumb-1">
+              <div class="thumb-indicator-1"></div>
+            </div>
+            <div class="thumb-2">
+              <div class="thumb-indicator-2"></div>
+            </div> 
+          </div>
+          <div class="slider-values">
+            <div class="value-1">0</div>
+            <div class="value-2">0</div>   
+          </div>
         </div>
       </div>
-    </div>
       
-    <div class="slide">
-      <div class="section-title">Let's have a closer look at each consumptions:</div>
-      <div class="partitioned-tshirt-container">
-        <svg class="partitioned-tshirt" viewBox="-20 -20 40 60" xmlns="http://www.w3.org/2000/svg">
-          <g class="part" id="part1">
-            <path d="M 0 0 L -9 0 L -9 -5.625 L -9 -3.375 L -13.5 0 L -18 -4.5 L -9 -13.5 L -4.5 -13.5 C -4.5 -10.125 0 -10.125 0 -10.125 L 0 -7.3125 Z" 
-              fill="var(--blue-color)"/>
-            <path d="M 0 -10.125 C 0 -10.125 -4.5 -10.125 -4.5 -13.5 C -3.375 -11.8125 0 -11.8125 0 -11.8125 Z" 
-              fill="color-mix(in srgb, var(--blue-color), black)"/>
-            <text text-anchor="middle" x="-4.5" y="-6" font-size="1" width="2" fill="var(--white-color)">
-              <tspan x="-4.5" dy="1.2em">Water</tspan>
-              <tspan x="-4.5" dy="1.2em">Use</tspan>
-            </text>
-          </g>
-          <g class="part" id="part2">
-            <path d="M 0 0 L 9 0 L 9 -5.625 L 9 -3.375 L 13.5 0 L 18 -4.5 L 9 -12.9375 L 4.5 -13.5 C 4.5 -10.125 0 -10.125 0 -10.125 L 0 -7.3125 Z" 
-              fill="var(--yellow-color)"/>
-            <path d="M 0 -10.125 C 0 -10.125 4.5 -10.125 4.5 -13.5 C 3.375 -11.8125 0 -11.8125 0 -11.8125 Z" 
-              fill="color-mix(in srgb, var(--yellow-color), black)"/>
-            <text text-anchor="middle" x="4.5" y="-6" font-size="1" width="2" fill="var(--white-color)">
-              <tspan x="4.5" dy="1.2em">Energy</tspan>
-              <tspan x="4.5" dy="1.2em">Consumption</tspan>
-            </text>
-          </g>
-          <g class="part" id="part4">
-            <path d="M 9 12 L 9 0 L 0 0 L 0 12 Z" fill="var(--green-color)"/>
-            <text text-anchor="middle" x="4.5" y="4" font-size="1" width="2" fill="var(--white-color)">
-              <tspan x="4.5" dy="1.2em">Land</tspan>
-              <tspan x="4.5" dy="1.2em">Use</tspan>
-            </text>
-          </g>            
-          <g class="part" id="part3">
-            <path d="M -9 12 L -9 0 L 0 0 L 0 12 Z" fill="var(--orange-color)"/>
-            <text text-anchor="middle" x="-4.5" y="4" font-size="1" width="2" fill="var(--white-color)">
-              <tspan x="-4.5" dy="1.2em">Greenhouse</tspan>
-              <tspan x="-4.5" dy="1.2em">Gas Emissions</tspan>
-            </text>
-          </g>
-        </svg>
+      <div class="slide">
+        <div class="section-title">Let's have a closer look at each consumptions:</div>
+        <div class="partitioned-tshirt-container">
+          <svg class="partitioned-tshirt" viewBox="-20 -20 40 60" xmlns="http://www.w3.org/2000/svg">
+            <g class="part" id="part1">
+              <path d="M 0 0 L -9 0 L -9 -5.625 L -9 -3.375 L -13.5 0 L -18 -4.5 L -9 -13.5 L -4.5 -13.5 C -4.5 -10.125 0 -10.125 0 -10.125 L 0 -7.3125 Z" 
+                fill="var(--blue-color)"/>
+              <path d="M 0 -10.125 C 0 -10.125 -4.5 -10.125 -4.5 -13.5 C -3.375 -11.8125 0 -11.8125 0 -11.8125 Z" 
+                fill="color-mix(in srgb, var(--blue-color), black)"/>
+              <text text-anchor="middle" x="-4.5" y="-6" font-size="1" width="2" fill="var(--white-color)">
+                <tspan x="-4.5" dy="1.2em">Water</tspan>
+                <tspan x="-4.5" dy="1.2em">Use</tspan>
+              </text>
+            </g>
+            <g class="part" id="part2">
+              <path d="M 0 0 L 9 0 L 9 -5.625 L 9 -3.375 L 13.5 0 L 18 -4.5 L 9 -12.9375 L 4.5 -13.5 C 4.5 -10.125 0 -10.125 0 -10.125 L 0 -7.3125 Z" 
+                fill="var(--yellow-color)"/>
+              <path d="M 0 -10.125 C 0 -10.125 4.5 -10.125 4.5 -13.5 C 3.375 -11.8125 0 -11.8125 0 -11.8125 Z" 
+                fill="color-mix(in srgb, var(--yellow-color), black)"/>
+              <text text-anchor="middle" x="4.5" y="-6" font-size="1" width="2" fill="var(--white-color)">
+                <tspan x="4.5" dy="1.2em">Energy</tspan>
+                <tspan x="4.5" dy="1.2em">Consumption</tspan>
+              </text>
+            </g>
+            <g class="part" id="part4">
+              <path d="M 9 12 L 9 0 L 0 0 L 0 12 Z" fill="var(--green-color)"/>
+              <text text-anchor="middle" x="4.5" y="4" font-size="1" width="2" fill="var(--white-color)">
+                <tspan x="4.5" dy="1.2em">Land</tspan>
+                <tspan x="4.5" dy="1.2em">Use</tspan>
+              </text>
+            </g>            
+            <g class="part" id="part3">
+              <path d="M -9 12 L -9 0 L 0 0 L 0 12 Z" fill="var(--orange-color)"/>
+              <text text-anchor="middle" x="-4.5" y="4" font-size="1" width="2" fill="var(--white-color)">
+                <tspan x="-4.5" dy="1.2em">Greenhouse</tspan>
+                <tspan x="-4.5" dy="1.2em">Gas Emissions</tspan>
+              </text>
+            </g>
+          </svg>
+        </div>
       </div>
     </div>
-    </div>
+
     <div class="section">
       <div class="section-title">Which fabric is the best?</div>
       <div class="text-intro">
