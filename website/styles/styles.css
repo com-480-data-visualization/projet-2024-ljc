@@ -213,7 +213,7 @@ h1 {
     font-size: 16px;
     z-index: 1000;
 }
-
+/*
 .text-intro {
     display: flex;
     font-size: 20px;
@@ -222,6 +222,27 @@ h1 {
     text-align: center;
     margin-left: 60px;
 }
+*/
+.text-intro {
+    display: flex;
+    font-size:20px;
+    justify-content: space-between;
+    align-items: flex-start; 
+    margin-left: 60px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stacks title and text vertically */
+    text-align: left; /* Aligns text to the left */
+    margin-right: 20px; /* Adds some space between text and GIF */
+}
+
+.text-container .section-title {
+    margin-bottom: 80px; /* Adds space between title and text */
+}
+
+
 .gif-container {
     text-align: center;
     margin-right: 60px;
@@ -309,12 +330,12 @@ input[type="range"]::-webkit-slider-runnable-track{
 
 input[type="range"]::-moz-range-track{
     -moz-appearance: none;
-    height: 4px;
+    height: 40px;
     background-color: transparent;
 }
 input[type="range"]::-ms-track{
     appearance: none;
-    height: 4px;
+    height: 40px;
     background-color: transparent;
 }
 
@@ -327,7 +348,7 @@ input[type="range"]::-webkit-slider-thumb{
     /*
     top: 50%;   Center the input range vertically 
     transform: translateY(-50%);   Adjust for input range height */
-    background-color: #32fefe;
+    background-color: #81b2b7;
     cursor: pointer;
     margin-top: auto;
     pointer-events: auto;
@@ -341,7 +362,7 @@ input[type="range"]::-moz-range-thumb{
     width: 1.5em;
     cursor: pointer;
     border-radius: 50%;
-    background-color: #dcfe32;
+    background-color: #81b2b7;
     pointer-events: auto;
 }
 
@@ -351,19 +372,19 @@ input[type="range"]::-ms-thumb{
     width: 1.5em;
     cursor: pointer;
     border-radius: 50%;
-    background-color: #fe6832;
+    background-color: #81b2b7;
     pointer-events: auto;
 }
 
 /*couleur bouton qd il bouge*/
 input[type="range"]:active::-webkit-slider-thumb{
     background-color: #ffffff;
-    border: 3px solid #5efe32;
+    border: 3px solid #272633;
 }
 
 /*boite au dessus avec les chiffres*/
 .values{
-    background-color: #fe32d9;
+    background-color: #272633;
     width: 5%;
     position: relative;
     margin: auto;
