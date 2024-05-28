@@ -2,7 +2,7 @@
 
 
 body {
-	background: color-mix(in srgb, var(--lightBlue) 50%, transparent 50%);
+	background: color-mix(in srgb, var(--blue-color) 20%, transparent 80%);
 	font-family: var(--font-text);
 }
 
@@ -87,7 +87,7 @@ body {
     gap: 20px;
     padding: 20px;
     width: 90%;
-    background-color: color-mix(in srgb, var(--darkBlue) 40%, transparent 60%);
+    background-color: color-mix(in srgb, var(--blue-color) 50%, transparent 50%);
 	border-radius: 10px; 
 	text-align: center;
     justify-content: center;
@@ -132,7 +132,7 @@ div.tooltip {
     border: 0px;        
     border-radius: 5px;            
     pointer-events: none;
-    background: color-mix(in srgb, var(--lightBlue) 95%, rgba(255, 255, 255, 0)); 
+    background: color-mix(in srgb, var(--blue-color) 95%, rgba(255, 255, 255, 0)); 
 	color: var(--darkBlue);
 	font-family: var(--font-text);
 }
@@ -142,5 +142,5 @@ div.tooltip {
 }
 
 #bottleContent {
-	fill: var(--lightBlue);
+	fill: var(--blue-color);
 }
