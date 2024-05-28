@@ -2,7 +2,7 @@
 
 
 body {
-	background: color-mix(in srgb, var(--blue-color) 30%, transparent 70%);
+	background: color-mix(in srgb, var(--lightBlue) 50%, transparent 50%);
 	font-family: var(--font-text);
 }
 
@@ -12,7 +12,6 @@ body {
 	margin-right: auto;
     top: 0;
     left: 50%;
-
 }
 
 .water-title h1 {
@@ -24,11 +23,11 @@ body {
 
 .water-title h1:nth-child(1) {
 	color: transparent;
-	-webkit-text-stroke: 2px #004976;
+	-webkit-text-stroke: 2px var(--darkBlue);
 }
 
 .water-title h1:nth-child(2) {
-	color: #004976;
+	color: var(--darkBlue);
 	animation: animate 4s ease-in-out infinite;
 }
 
@@ -68,7 +67,6 @@ body {
 	margin:12em auto 0;
 	margin-left: 10%;
 	margin-right: 10%;
-	font-family: system-ui;
 }
 
 .sketch-picture {
@@ -79,6 +77,70 @@ body {
 
 .text {
 	font-size: 20px;
-	color: #004976;
+	color: var(--darkBlue);
 	text-align: justify;
+}
+
+#water-usage-comparison {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    background-color: color-mix(in srgb, var(--darkBlue) 40%, transparent 60%);
+	border-radius: 10px; 
+	text-align: center;
+    justify-content: center;
+	margin: auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.item-name {
+    font-weight: bold;
+    height: 50px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+	color: var(--darkBlue);
+	font-family: var(--font-text);
+}
+
+.bottle-container {
+    display: grid;
+    justify-content: center;
+    gap: 3px; /* Reduced spacing between bottles */
+}
+
+.bottle {
+    width: 15px; /* Increased width by 1.5 times */
+    height: 37.5px; /* Increased height by 1.5 times */
+}
+
+div.tooltip {
+    position: absolute;
+    padding: 10px;                
+    font: 12px 'IBM Plex Mono', monospace;
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
+    border: 0px;        
+    border-radius: 5px;            
+    pointer-events: none;
+    background: color-mix(in srgb, var(--lightBlue) 95%, rgba(255, 255, 255, 0)); 
+	color: var(--darkBlue);
+	font-family: var(--font-text);
+}
+
+#bottleContainer {
+	fill: var(--darkBlue);
+}
+
+#bottleContent {
+	fill: var(--lightBlue);
 }

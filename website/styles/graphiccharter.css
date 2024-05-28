@@ -9,7 +9,9 @@
     --yellow-color: #f7d370;
     --blue2-color: #81b2b7;
     --pink2-color: #f28a8a;
+    --dark-color: #272633;
 
+    /* Carbon popup */
     --orange1: #EE9759;
     --orange2: #F8A163;
     --orange3: #F8AE67;
@@ -20,7 +22,9 @@
     --orange8: #FFF492;
     --orange9: #935E38;
 
-    --dark-color: #272633;
+    /* Water popup */
+    --lightBlue: #caf0f8;
+    --darkBlue: #004976;
 
     /* Fonts */
     --font-title: "Yeseva One", serif;
