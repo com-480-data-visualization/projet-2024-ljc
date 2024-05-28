@@ -69,12 +69,6 @@ body {
 	margin-right: 10%;
 }
 
-.sketch-picture {
-    width: 400px;
-	display: block;
-    margin: 0 auto;
-}
-
 .text {
 	font-size: 20px;
 	color: var(--darkBlue);

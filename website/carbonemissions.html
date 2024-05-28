@@ -12,90 +12,51 @@
     <div id="title-container">
         <span id="text1"></span>
         <span id="text2"></span>
-    </div>
-    <div>
-        <p>
-            The carbon footprint of clothes measures the emission of greenhouse gases, such as carbon dioxide (CO2), methane, and nitrous oxide, throughout 
-            its life cycle from raw material production to its end-of-life disposal. The key contributors to these emissions include energy consumption, 
-            fossil fuel use, and the production of the materials such as fibers or dyes. During manufacturing, the use of chemicals and heat further adds 
-            to greenhouse gas emissions. Additionally, transportation involves moving the raw materials, components and finished products usually over 
-            long-distance travel resulting in huge emissions. Even after purchase, consumers contribute to emissions through the electricity used for washing, 
-            drying or ironing clothes. 
-            <a href="https://planbe.eco/en/blog/carbon-footprint-and-water-footprint-calculating-in-the-fashion-industry/"></a>
-        </p>
-        <p>Thus, the fashion industry has an important impact on these emissions, estimated as 10% of global carbon emissions. 
-            According to the European Environment Agency, textile products consumed in the EU generated 121 million tonnes of greenhouse gas emissions. 
-            Nowadays, climate change is highly driven by the human emissions of greenhouse gas, making it crucial to reduce these emission
-            <a href="https://ourworldindata.org/co2-and-greenhouse-gas-emissions"></a>
-        </p>
-    </div>
-    <svg id="filters">
-        <defs>
-            <filter id="threshold">
-                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
-                                        0 1 0 0 0
-                                        0 0 1 0 0
-                                        0 0 0 255 -140" />
-            </filter>
-        </defs>
-    </svg>
-
-    <div class="t-shirt-container">
-        <svg class="t-shirt" id="tshirt" viewBox="-33 -25 66 50" xmlns="http://www.w3.org/2000/svg">
-            <g class="partnohover">
-                <path d="M 8 -24 C 8 -16 -8 -16 -8 -24 C -8 -20 8 -20 8 -24 Z" fill="var(--orange5)" stroke-style="solid" stroke="var(--orange1)" stroke-width="0.2"/>
-            </g>
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                            0 1 0 0 0
+                                            0 0 1 0 0
+                                            0 0 0 255 -140" />
+                </filter>
+            </defs>
         </svg>
     </div>
+    
+    <div class="main-container">
+        <div class="text">
+            <p>
+                The carbon footprint of clothes measures the <b>emission of greenhouse gases</b>, such as carbon dioxide, methane, and nitrous oxide, throughout 
+                its life cycle from raw material production to its end-of-life disposal. The key contributors to these emissions include energy consumption, 
+                fossil fuel use, and the production of the materials such as fibers or dyes. During manufacturing, the use of chemicals and heat further adds 
+                to greenhouse gas emissions. Additionally, transportation involves moving the raw materials, components and finished products usually over 
+                long-distance travel resulting in huge emissions. Even after purchase, consumers contribute to emissions through the electricity used for washing, 
+                drying or ironing clothes. 
+                <a href="https://planbe.eco/en/blog/carbon-footprint-and-water-footprint-calculating-in-the-fashion-industry/"></a>
+            </p>
+            <p>
+                To visualize the contribution of each domain, here is the repartition of the greenhouse gas emissions during all the life of a cotton t-shirt. 
+                It is computed in carbon dioxide equivalent (CO<sub>2</sub>eq) which is the mass of CO<sub>2</sub> which would warm the earth as much as the sum 
+                of all the emitted greenhouse gas:
+            </p>
+            <div class="t-shirt-container">
+                <svg class="t-shirt" id="tshirt" viewBox="-33 -25 66 50" xmlns="http://www.w3.org/2000/svg">
+                    <g class="partnohover">
+                        <path d="M 8 -24 C 8 -16 -8 -16 -8 -24 C -8 -20 8 -20 8 -24 Z" fill="var(--orange7)" stroke-style="solid" stroke="var(--orange1)" stroke-width="0.2"/>
+                    </g>
+                </svg>
+            </div>
+            <p>Thus, the fashion industry has an important impact on these emissions, estimated as 10% of global carbon emissions. 
+                According to the European Environment Agency, textile products consumed in the EU generated 121 million tonnes of greenhouse gas emissions. 
+                Nowadays, climate change is highly driven by the human emissions of greenhouse gas, making it crucial to reduce these emission
+                <a href="https://ourworldindata.org/co2-and-greenhouse-gas-emissions"></a>
+            </p>
+        </div>
+    </div>
+
 
     <script src="js/carbon.js"></script>
+    
 </body>
 </html>
-
-
-<!-- <div class="t-shirt-container">
-    <svg class="t-shirt" viewBox="-33 -25 66 50" xmlns="http://www.w3.org/2000/svg">
-        <g class= "partnohover" id="part1">
-            <path d="M 8 -24 C 8 -16 -8 -16 -8 -24 C -8 -20 8 -20 8 -24 Z" fill="var(--orange5)" stroke-style="solid" stroke="var(--orange1)" stroke-width="0.2"/>
-        </g>
-        <g class="part" id="endoflife">
-          <path d="M 16 24 L 16 23 L -16 23 L -16 24 Z" fill="var(--orange8)" stroke-style="solid" stroke="var(--orange8)" stroke-width="0.2"/>
-          <text x="0" y="23.5" text-anchor="middle" dominant-baseline="middle" font-size="1" fill="color-mix(in srgb, var(--orange8) 50%,  var(--orange1) 50%)" fill-opacity="1">End of life</text>
-        </g>
-        <g class="part" id="part1">
-            <path d="M 16 20 L 16 23 L -16 23 L -16 20 Z" fill="var(--orange7)" stroke-style="solid" stroke="var(--orange7)" stroke-width="0.2"/>
-            <text x="0" y="21.5" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange7) 50%,  var(--orange1) 50%)" fill-opacity="1">Use</text>
-        </g>
-        <g class="part" id="part1">
-            <path d="M 16 20 L 16 16 L -16 16 L -16 20 Z" fill="var(--orange6)" stroke-style="solid" stroke="var(--orange6)" stroke-width="0.2"/>
-            <text x="0" y="18" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange6) 50%,  var(--orange1) 50%)" fill-opacity="1">Transport</text>
-        </g>
-        <g class="part" id="part1">
-            <path d="M 16 12 L 16 16 L -16 16 L -16 12 Z" fill="var(--orange5)" stroke-style="solid" stroke="var(--orange5)" stroke-width="0.2"/>
-            <text x="0" y="14" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange5) 50%,  var(--orange1) 50%)" fill-opacity="1">Manufacture</text>
-        </g>
-        <g class="part" id="part1">
-            <path d="M 16 12 L 16 -1 L -16 -1 L -16 12 Z
-                M 25 -1 L 24 0 L 22.67 -1 Z
-                M -25 -1 L -24 0 L -22.67 -1 Z" fill="var(--orange4)" stroke-style="solid" stroke="var(--orange4)" stroke-width="0.2"/>
-            <text x="0" y="5.5" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange4) 50%,  var(--orange1) 50%)" fill-opacity="1">Ennoblement</text>
-        </g>
-        <g class="part" id="part1">
-            <path d="M 16 -1 L -16 -1 L -16 -5 L 16 -5 Z
-                M -25 -1 L -29 -5 L -17.35 -5 L -22.67 -1 Z
-                M 25 -1 L 29 -5 L 17.35 -5 L 22.67 -1 Z" fill="var(--orange3)" stroke-style="solid" stroke="var(--orange3)" stroke-width="0.2"/>
-            <text x="0" y="-3" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange3) 50%,  var(--orange1) 50%)" fill-opacity="1">Knitting</text>
-        </g>
-        <g class="part" id="part1">
-            <path d="M 16 -9 L -16 -9 L -16 -5 L 16 -5 Z
-                M -16 -9 L -31 -9 L -32 -8 L -29 -5 L -17.35 -5 L -16 -6 Z
-                M 16 -9 L 31 -9 L 32 -8 L 29 -5 L 17.35 -5 L 16 -6 Z" fill="var(--orange2)" stroke-style="solid" stroke="var(--orange2)" stroke-width="0.2"/>
-            <text x="0" y="-7" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="color-mix(in srgb, var(--orange2) 50%,  var(--orange1) 50%)" fill-opacity="1">Spinning</text>
-        </g>
-        <g class="part" id="part1">
-            <path d="M 16 -9 L -16 -9 L -16 -10 L -16 -9 L -31 -9 L -16 -24 L -8 -24 C -8 -16 8 -16 8 -24 L 16 -24 L 31 -9 L 16 -9 L 16 -10 Z" 
-            fill="var(--orange1)" stroke-style="solid" stroke="var(--orange1)" stroke-width="0.2"/>
-            <text x="0" y="-13" text-anchor="middle" dominant-baseline="middle" font-size="2" fill="var(--orange1)" fill-opacity="1">Fabric</text>
-        </g>
-    </svg>
-</div> -->
