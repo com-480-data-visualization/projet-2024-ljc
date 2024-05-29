@@ -24,9 +24,9 @@ You can find our milestone 2 pdf [here](milestones/Milestone_2.pdf).
 
 **80% of the final grade**
 
-You can find the website [here]().
-You can find our process book [here]().
-You can find our screencast [here]().
+< You can find the website [here]().
+< You can find our process book [here]().
+< You can find our screencast [here]().
 
 Concerning the structure of our code and where to find all the necessary information :
 - in `website/js`: you can find all the JavaScript files that contain the code to the graphs of our website.
