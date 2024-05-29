@@ -33,7 +33,7 @@ function radarChart(row_fabric) {
     new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: lab_,
+            labels: ["Water use [%]", "CO2 emissions [%]", "Energy consumption [%]" ],
             datasets: datasets
         },
         options: {
@@ -124,7 +124,7 @@ function getColorWithOpacity(color, opacity) {
 }
 
 
-const lab_ = ["water_use [kg for 1 kg Fiber]", "co2_emissions [kg for 1 kg Fiber]", "energy_consumption [kW/h for 1 kg Fiber]" ];
+const lab_ = ["Water use [kg for 1 kg Fiber]", "CO2 emissions [kg for 1 kg Fiber]", "Energy consumption [kW/h for 1 kg Fiber]" ];
 
 // Execute when document is loaded
 whenDocumentLoaded(() => {
