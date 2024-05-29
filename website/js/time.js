@@ -63,7 +63,7 @@ d3.csv('data/final_short.csv').then((data) => {
                     data : d.col4,
                     label : col[4],
                     fill : false,
-                    borderColor : getComputedStyle(document.documentElement).getPropertyValue('--purple-color').trim(),
+                    borderColor : getComputedStyle(document.documentElement).getPropertyValue('--yellow-color').trim(),
                     yAxisID : 'y2',
                     xAxisID : 'x1'
                 }]

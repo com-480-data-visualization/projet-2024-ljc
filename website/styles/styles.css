@@ -232,6 +232,35 @@ h1 {
     color: white;
 }
 
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+.square {
+    width: 20px;
+    height: 20px;
+}
+.square.natural {
+    border: 1.5px solid rgb(200, 200, 200); /* Empty square with border for natural */
+    background-color: rgba(190, 190, 190, 0.2);
+}
+
+
+.square.synthetic {
+    background: repeating-linear-gradient(
+        45deg, /* Angle of the stripes */
+        #c8c8c8, /* Color of the first stripe */
+        #c8c8c8 1.5px, /* Thickness of the first stripe */
+        var(--white-color) 1.5px, /* Color of the second stripe */
+        var(--white-color) 5px /* Thickness of the second stripe */
+    );
+    border: 1px solid rgb(200, 200, 200);
+
+}
+
 #counter {
     position: fixed;
     text-align: center;

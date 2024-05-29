@@ -32,7 +32,6 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-
   
 </head>
 
@@ -196,6 +195,15 @@
           <button class="button" onclick = "clicked(this)" id="co2Button">CO2</button>
           <button class="button" onclick = "clicked(this)" id="energyButton">Energy</button>
       </div>
+
+      <div class="button-container">
+        <div class="legend-item">
+            <div class="square natural"></div>
+            <span>Natural fiber</span>
+            <div class="square synthetic"></div>
+            <span>Synthetic fiber</span>
+        </div>
+    </div>
       
         <script>
           function clicked(button) {

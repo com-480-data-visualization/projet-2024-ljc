@@ -23,7 +23,7 @@ body {
 .title {
     font-size: 200px;
     text-align: center;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-title);/*"Poppins", sans-serif;*/
     color: #7c5921;
 }
 

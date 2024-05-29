@@ -6,7 +6,8 @@ body {
 }
 
 .energy-title {
-	font-family: "Cairo";
+	/*font-family: "Cairo";*/
+	font-family: var(--font-title);
 	text-align: center;
 	color: #FFF;
 	display: flex;
