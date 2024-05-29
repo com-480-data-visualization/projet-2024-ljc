@@ -103,6 +103,15 @@ animation: openYourHeart 10s infinite;
 
 }
 
+.intro-text {
+    font-size: 20px;
+    line-height: 160%;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
 /* Pop up */
 
 .popup {
@@ -204,10 +213,16 @@ h1 {
 }
  /* added by me :) */
 
-.plots-fabric {
+.bar-plot {
     margin: auto;
     width: 75%;
     height: 70%;
+}
+
+.radar-plot {
+    margin: auto;
+    width: 40%;
+    height: 40%;
 }
 
 .button-container {
@@ -264,7 +279,7 @@ h1 {
 #counter {
     position: fixed;
     text-align: center;
-    top: 10px;
+    top: 20px;
     right: 10px;
     padding: 10px 20px;
     background-color: var(--dark-color);

@@ -47,7 +47,7 @@
       <div class = 'text-intro'>
         <div class="text-container">
           <div class="section-title">A few words for context…</div>
-          <div class="section-text">
+          <div class="intro-text">
             Following the latest IPCC report, the inevitable consequences of climate change have once again been highlighted. 
             Rising greenhouse gas emissions, ocean acidification and water pollution are having an undeniable impact on our environment.
             When confronted with this information, the public's first point of attack is often transport. Indeed, the political battle against the use of  
@@ -66,13 +66,13 @@
       <div class="slide" id="carbonfootprint-slide">
         <div class="section-title">Annual carbon footprint of a swiss</div>
         <div class="section-text">
-          Now to better understand the impact of fashion, let’s see it amidst the average yearly CO2 emissions of a Swiss person (<a href="https://climpact.ch/carbon-footprint/">11'639 kgCO2eq </a>). 
+          Now to better understand the impact of fashion, let’s see it amidst the average yearly CO<sub>2</sub> emissions of a Swiss person (11'639 kgCO2eq<a href="https://climpact.ch/carbon-footprint/"><sup>[1]</sup></a>). 
           This graph allows us to observe that, as expected, transport and food are responsible for a huge part of the mean carbon emissions. 
           However, this also shows that clothes and shoes are not to be underestimated either. 
           And that when wishing to reduce our carbon footprint in an eco friendly approach, we should also consider having a look at our wardrobe.
           </div>
         <div id="divi">
-          <svg id="swiss-carbonfootprint" width="1250" height="400"></svg>
+          <svg id="swiss-carbonfootprint" width="1250" height="500"></svg>
           <div id="legend-container" width="800" >
             <svg id="scfp-legend" width="800" ></svg>
           </div>
@@ -84,17 +84,17 @@
 
     <div class="section">
       <div class="slide">
-        <div class="section-title"> Timeline of the impact of the textile industry</div>
+        <div class="section-title"> Timeline of the textile industry impact</div>
         <div class="section-text">
           Environmental questions are quite tricky as many aspects need to be taken into account. 
           Fashion wise, our inclination to regularly change our wardrobe is responsible for 8-10% of global greenhouse gas emissions. 
-          Cotton production uses 2.5% of agricultural land, and synthetic materials consume 342 million barrels of oil every year. 
+          Cotton production uses 2.5% of agricultural land, and synthetic materials consume 342 million barrels of oil every year<a href=https://www.bbc.com/news/science-environment-60382624><sup>[2]</sup></a>. 
           To have a global understanding of the situation we will focus on 4 aspects: the water use, the energy consumption, the greenhouse gas emissions and the land use. 
           The overall growth of those sector consumption across the years highlights the urge to start rethinking our way of living. 
           More information on those sectors and their relation with the fashion industry can be found on the right.
         </div>
         
-        <canvas id="timeChart" width="1200" height="340"></canvas>
+        <canvas id="timeChart" width="1200" height="400"></canvas>
 
         <div class="slider-main-container">
           <div class="slider-container">
@@ -182,7 +182,7 @@
           For example, cotton has 100% of water use since it is the one that consumes the most water compared to the others. 
           To see the relative distribution of those fabrics, look at the right page. 
         </div>
-        <canvas class = 'plots-fabric' id="radarChart" ></canvas>
+        <canvas class = 'radar-plot' id="radarChart" ></canvas>
       </div> 
 
       <div class="slide">
@@ -215,7 +215,7 @@
               button.classList.add('clicked');
           }
         </script>
-        <canvas class = 'plots-fabric', id="comparisonFabric"></canvas>
+        <canvas class = 'bar-plot', id="comparisonFabric"></canvas>
         
       </div>
     </div>
@@ -230,6 +230,7 @@
     </div>
   </div>
 
+  
 
   <div id="popup-part1" class="popup">
 		<div class="popup-content">
