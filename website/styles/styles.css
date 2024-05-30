@@ -86,8 +86,9 @@ animation: openYourHeart 10s infinite;
 
 .section-title {
     font-size: 40px;
+    top: -1%;
     text-align: left;
-    align-items: top;
+    position: absolute;
     font-family: var(--font-title);
     margin-bottom: 20px;
     margin-top: 30px;
@@ -95,11 +96,19 @@ animation: openYourHeart 10s infinite;
 }
 
 .section-text {
+    position: absolute;
+    top: 12%;
     font-size: 20px;
     text-align: justify;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 7%;
+    margin-right: 7%;
     margin-bottom: 60px;
+
+}
+
+.plots{
+    position: relative;
+    top: 25%;
 
 }
 
@@ -119,6 +128,18 @@ img {
     width: 100%;
     position:absolute;
     bottom: 10%;
+}
+
+
+.intro-title {
+    font-size: 40px;
+    text-align: left;
+    align-items: top;
+    font-family: var(--font-title);
+    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .intro-text {
@@ -233,19 +254,25 @@ h1 {
  /* added by me :) */
 
 .bar-plot {
+    position: relative;
+    top: 5%; 
     margin: auto;
-    width: 75%;
-    height: 65%;
+    width: 70%;
+    height: 70%;
 }
 
 .radar-plot {
+    position: relative;
+    top: 20%;
     margin: auto;
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
     padding: 0px;
 }
 
 .button-container {
+    position: relative;
+    top: 17%;
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -263,7 +290,8 @@ h1 {
 }
 
 .button.clicked{
-    background-color: #4CAF50;
+    background-color: var(--pink2-color);
+    border: 1px solid var(--pink2-color);
     color: white;
 }
 
@@ -299,8 +327,8 @@ h1 {
 #counter {
     position: fixed;
     text-align: center;
-    top: 20px;
-    right: 10px;
+    top: 2%;
+    right: 2%;
     padding: 10px 20px;
     background-color: var(--dark-color);
     color: var(--white-color);

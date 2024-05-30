@@ -1,5 +1,7 @@
 
 .slider-main-container {
+    position: relative; 
+    top: 27%;
     width: 20%;
     margin: auto;
     margin-top: 0;
