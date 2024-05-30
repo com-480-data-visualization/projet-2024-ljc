@@ -117,18 +117,37 @@ animation: openYourHeart 10s infinite;
     text-align: left;
     align-items: top;
     font-family: var(--font-title);
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    margin-left: 100px;
+}
+
+.section-title-image{
+    font-size: 40px;
+    text-align: left;
+    align-items: top;
+    font-family: var(--font-title);
+    margin-bottom: 1%;
+    margin-top: -20%;
+    margin-left: 100px;
+}
+
+.section-title-conclusion{
+    font-size: 40px;
+    text-align: left;
+    align-items: top;
+    font-family: var(--font-title);
+    margin-bottom: 1%;
+    margin-top: 8%;
     margin-left: 100px;
 }
 
 .section-text {
-    font-size: 20px;
+    font-size: 16px;
     text-align: justify;
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 60px;
-
+    margin-bottom: 1%;
 }
 
 .intro-text {
@@ -242,24 +261,34 @@ h1 {
  /* added by me :) */
 
 .bar-plot {
-    margin: auto;
     width: 75%;
-    height: 70%;
+    height: 55%;
+    margin-bottom: 15%;
+    margin-top:0%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2%;
+    padding-top: 0%;
 }
 
 .radar-plot {
     position: relative;
-    top: 20%;
-    margin: auto;
+    top: 2%;
+    bottom:-10px;
+    margin-bottom: -8%;
+    margin-top:0%;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
-    height: 50%;
+    height: 45%;
     padding: 0;
 }
 
 .button-container {
     position: relative;
-    top: 17%;
-    margin-top: 30px;
+    top: 0%;
+    margin-top: 10px;
+
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,7 +1,9 @@
 
 .slider-main-container {
     width: 20%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:0px;
     margin-top: 0;
 }
 .slider-container {
