@@ -8,6 +8,7 @@ body {
 
 .water-title {
 	position: absolute;
+	font-family: var(--font-title);
 	margin-left: auto;
 	margin-right: auto;
     top: 0;

@@ -4,6 +4,34 @@
     align-items: top;
 }
 
+.slide-interior {
+    text-align: justify;
+    padding: 0px;
+    margin: 0px;
+    align-items: top;
+    width: 100%;
+    height: 100%;
+}
+
+.section-interior {
+    text-align: justify;
+    padding: 0px;
+    margin: 0px;
+    align-items: top;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    text-align: center;
+    padding-top: 0px;
+    align-items: top;
+}
+
+.img-container {
+    width: 100%;
+}
+
 /* #sectionintro{
     background-image: url("../img/habits.png");
     background-repeat: no-repeat;
@@ -99,8 +127,16 @@ animation: openYourHeart 10s infinite;
     text-align: justify;
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
 
+}
+
+.intro-text {
+    font-size: 20px;
+    line-height: 160%;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /* Pop up */
@@ -182,6 +218,7 @@ h1 {
 	font-size: 120px;
 	margin: 10px 0;
     text-align: center;
+    font-family : Arial;
 }
 /* styling my button */
 
@@ -204,13 +241,24 @@ h1 {
 }
  /* added by me :) */
 
-.plots-fabric {
+.bar-plot {
     margin: auto;
     width: 75%;
     height: 70%;
 }
 
+.radar-plot {
+    position: relative;
+    top: 20%;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    padding: 0;
+}
+
 .button-container {
+    position: relative;
+    top: 17%;
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -229,14 +277,45 @@ h1 {
 
 .button.clicked{
     background-color: #4CAF50;
-    color: white;
+    background-color: var(--pink2-color);
+    border: 1px solid var(--pink2-color);
+    color: var(--white-color);
+}
+
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+.square {
+    width: 20px;
+    height: 20px;
+}
+.square.natural {
+    border: 1.5px solid rgb(200, 200, 200); /* Empty square with border for natural */
+    background-color: rgba(190, 190, 190, 0.2);
+}
+
+
+.square.synthetic {
+    background: repeating-linear-gradient(
+        45deg, /* Angle of the stripes */
+        #c8c8c8, /* Color of the first stripe */
+        #c8c8c8 1.5px, /* Thickness of the first stripe */
+        var(--white-color) 1.5px, /* Color of the second stripe */
+        var(--white-color) 5px /* Thickness of the second stripe */
+    );
+    border: 1px solid rgb(200, 200, 200);
+
 }
 
 #counter {
     position: fixed;
     text-align: center;
-    top: 10px;
-    right: 10px;
+    top: 2%;
+    right: 2%;
     padding: 10px 20px;
     background-color: var(--dark-color);
     color: var(--white-color);
@@ -290,7 +369,7 @@ img {
     border-radius: 0px;
     width: 100%;
     position:absolute;
-    bottom:0;
+    bottom:10%;
 }
 
 

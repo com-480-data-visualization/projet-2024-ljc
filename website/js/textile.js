@@ -1,4 +1,4 @@
-console.log("I'm in the textil.js file :)");
+console.log("I'm in the textil.js file 22 :)");
 
 function whenDocumentLoaded(action) {
 	if (document.readyState === "loading") {
@@ -33,7 +33,7 @@ function radarChart(row_fabric) {
     new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: lab_,
+            labels: ["Water use [%]", "CO2 emissions [%]", "Energy consumption [%]" ],
             datasets: datasets
         },
         options: {
@@ -54,6 +54,34 @@ function radarChart(row_fabric) {
     });
 }
 
+function createDiagonalPattern(type, color = 'black') {
+    if (type == 'synthetic') {
+        // create a 10x10 px canvas for the pattern's base shape
+        let shape = document.createElement('canvas')
+        shape.width = 10
+        shape.height = 10
+        // get the context for drawing
+        let c = shape.getContext('2d')
+        // draw 1st line of the shape 
+        c.strokeStyle = color
+        c.beginPath()
+        c.moveTo(2, 0)
+        c.lineTo(10, 8)
+        c.stroke()
+        // draw 2nd line of the shape 
+        c.beginPath()
+        c.moveTo(0, 8)
+        c.lineTo(2, 10)
+        c.stroke()
+        // create the pattern from the shape
+        return c.createPattern(shape, 'repeat')
+    } else if(type == 'natural'){
+        return getColorWithOpacity(color, 0.2)
+    } else {
+        console.log('Unknown type of fabric')
+    };
+        
+}
 
 function barChart(row_fabric, dataLabel, first = false) {
     console.log('BarChart');
@@ -69,7 +97,7 @@ function barChart(row_fabric, dataLabel, first = false) {
         let dataset = {
             label: row.fabric,
             data: [row[dataLabel]],
-            backgroundColor: getColorWithOpacity(row.color, 0.2), // Semi-transparent background
+            backgroundColor: createDiagonalPattern(row.type, row.color), // Semi-transparent background
             borderColor: getColorWithOpacity(row.color, 1), // Opaque border
             borderWidth: 1
         };
@@ -124,7 +152,7 @@ function getColorWithOpacity(color, opacity) {
 }
 
 
-const lab_ = ["water_use [kg for 1 kg Fiber]", "co2_emissions [kg for 1 kg Fiber]", "energy_consumption [kW/h for 1 kg Fiber]" ];
+const lab_ = ["Water use [kg for 1 kg Fiber]", "CO2 emissions [kg for 1 kg Fiber]", "Energy consumption [kW/h for 1 kg Fiber]" ];
 
 // Execute when document is loaded
 whenDocumentLoaded(() => {

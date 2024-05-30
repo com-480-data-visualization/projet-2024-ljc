@@ -1,4 +1,4 @@
-fabric,type,co2_emissions [kg for 1 kg Fiber],energy_consumption [kW/h for 1 kg Fiber],water_use [kg for 1 kg Fiber]
+fabric,type,CO2 emissions [kg for 1 kg Fiber],Energy consumption [kW/h for 1 kg Fiber],Water use [kg for 1 kg Fiber]
 Nylon,synthetic,37,69,465
 Acrylic,synthetic,26,49,210
 Polyester,synthetic,19,35,20
