@@ -109,7 +109,7 @@ animation: openYourHeart 10s infinite;
     text-align: justify;
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 400px;
+    margin-bottom: 20%;
     font-family: "Noto Sans", sans-serif;;
 }
 
@@ -118,7 +118,7 @@ img {
     border-radius: 0px;
     width: 100%;
     position:absolute;
-    bottom: 100px;
+    bottom: 10%;
 }
 
 .intro-text {
