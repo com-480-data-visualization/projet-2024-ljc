@@ -151,6 +151,43 @@ img {
 
 }
 
+
+.conclusion-title {
+    position: absolute;
+    top: 20%;
+    font-size: 40px;
+    text-align: left;
+    align-items: top;
+    font-family: var(--font-title);
+    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.conclusion-text {
+    position: relative;
+    top: -10%;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+/* Ensures that slides fit within the section */
+.slide {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    white-space: normal;  /* Ensures text wraps properly */
+}
+  
+
 /* Pop up */
 
 .popup {
@@ -180,14 +217,14 @@ img {
 }
 
 .popup-content {
-    background-color: white;
+    background-color: var(--white-color);
     width: 90%; 
     height: 90%; 
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 5px;
+    border-radius: 1px;
   }
   
 .close {

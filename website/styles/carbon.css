@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 
 body {
-    background-color: color-mix(in srgb, var(--orange-color) 30%, transparent 70%);
+    background-color: color-mix(in srgb, var(--orange-color) 10%, transparent 10%);
     font-family: var(--font-text);
 }
 

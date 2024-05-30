@@ -2,7 +2,7 @@
 
 
 body {
-	background: color-mix(in srgb, var(--blue-color) 20%, transparent 80%);
+	background: color-mix(in srgb, var(--blue-color) 15%, transparent 10%);
 	font-family: var(--font-text);
 }
 
@@ -135,7 +135,7 @@ div.tooltip {
     border: 0px;        
     border-radius: 5px;            
     pointer-events: none;
-    background: color-mix(in srgb, var(--blue-color) 95%, rgba(255, 255, 255, 0)); 
+    background: color-mix(in srgb, var(--blue-color) 5%, rgba(255, 255, 255, 0)); 
 	color: var(--darkBlue);
 	font-family: var(--font-text);
 }
