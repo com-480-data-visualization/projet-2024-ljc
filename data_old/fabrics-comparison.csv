@@ -1,9 +1,0 @@
-fabric,type,co2_emissions (kg/kg Fiber),energy_consumption (kW h/kg Fiber),water_use (kg/kg fabric)
-Nylon,synthetic,37,69,465
-Acrylic,synthetic,26,49,210
-Polyester,synthetic,19,35,20
-Polypropylene,synthetic,17,32,70
-Viscose,synthetic,15,28,390
-Cotton,natural,8,15,1850
-Wool,natural,7,13,10
-Hemp,natural,3,5,210

@@ -24,8 +24,8 @@ You can find our milestone 2 pdf [here](milestones/Milestone_2.pdf).
 
 **80% of the final grade**
 
-- You can find the website [here](). 
-- You can find our process book [here](). 
+- You can find the website [here](https://com-480-data-visualization.github.io/projet-2024-ljc/). 
+- You can find our process book [here](milestones/Process-book.pdf). 
 - You can find our screencast [here]().
 
 Concerning the structure of our code and where to find all the necessary information :
