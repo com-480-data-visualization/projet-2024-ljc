@@ -1,5 +1,6 @@
 var body = d3.select("body");
 
+// Adds a tooltip to allows the display of data on mouse hover
 var tooltip = body.append("div")
   .attr("class", "tooltip")
   .attr("id", "tooltip")
@@ -9,15 +10,20 @@ var svg = d3.select("#swiss-carbonfootprint"),
   width = +svg.attr("width"),
   height = +svg.attr("height");
 
+// Creates the treemap
 var treemap = d3.treemap()
   .size([width, height])
   .paddingInner(1);
 
+// Color palette for the treemap
 var color = d3.scaleOrdinal()
   .domain(["Goods and Services", "Food", "Transport", "Housing"])
   .range(["var(--blue-color)", "var(--green-color)", "var(--orange-color)", "var(--pink2-color)"]);
 
-d3.json('data/swiss-carbon-footprint.json').then(data => {
+
+d3.json('data/swiss-carbon-footprint.json').then(data => { // Retrieve the data from the json file
+  
+  // Fills the treemap with a skeleton from 'data' 
   var root = d3.hierarchy(data)
     .eachBefore(function (d) {
       d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name;
@@ -26,9 +32,9 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
     .sort(function (a, b) {
       return b.height - a.height || b.value - a.value;
     });
-
   treemap(root);
 
+  // Create the cell for the C02eq emitter 
   var cell = svg.selectAll("g")
     .data(root.leaves())
     .enter().append("g")
@@ -38,7 +44,8 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
     })
     .attr("box-show", "none");
 
-  var tile = cell.append("rect")
+  // Makes the cell's size proportionnal of its CO2eq value, fills it with informations and animations
+  cell.append("rect")
     .attr("id", function (d) {
       return d.data.id;
     })
@@ -67,7 +74,7 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
       return color(d.data.category);
     })
     .attr("fill-opacity", 0.7)
-    .on("mousemove", function (d) {
+    .on("mousemove", function (d) { // Adds the display of the data: name, categroy and co2eq value  
       var clr = color(d.data.category)
       tooltip.style("opacity", .9);
       tooltip.style("color", clr);
@@ -81,11 +88,12 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
         .style("top", d3.event.pageY - 28 + "px");
       d3.select(this).style("fill-opacity", 1);
     })
-    .on("mouseout", function (d) {
+    .on("mouseout", function (d) { // Removes the display
       tooltip.style("opacity", 0);
       d3.select(this).style("fill-opacity", 0.7);
     });
 
+  // Adds the name on the tile
   cell.append("text")
     .attr('class', 'tile-text')
     .selectAll("tspan")
@@ -101,6 +109,8 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
       return d;
     })
     
+
+  // Adds legend for each category 
 
   var categories = root.leaves().map(function (nodes) {
     return nodes.data.category;
@@ -148,6 +158,7 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
       return d;
     });
 });
+
 
 function sumBySize(d) {
   return d.value;

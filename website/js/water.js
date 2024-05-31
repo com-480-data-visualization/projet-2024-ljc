@@ -1,8 +1,11 @@
+// Adds a tooltip to allows the display of data on mouse hover
 var tooltip = d3.select("body").append("div")
   .attr("class", "tooltip")
   .attr("id", "tooltip")
   .style("opacity", 0);
 
+// Data on the water conommation by products: ['name of product', 'numer of bottles it represents*', 'liters of water used']
+// *each bottle represent 500 liters
 const data = [
     { name: 'Cup of tea', water: 0.1, reelwater: 34 },
     { name: 'Cup of coffee', water: 0.3, reelwater: 140 },
@@ -16,6 +19,7 @@ const data = [
     { name: 'Kilo of beef', water: 30.8, reelwater: 15400 },
 ];
 
+// SVG paths we will used: bottle as the container and different contents of bottles (10%, 30%, etc)
 const bottlePaths = {
     container: "M -3.4286 -11.1429 L -3.4286 -12.8571 C -3.4286 -12.8571 -3.4286 -14.5714 -1.7143 -14.5714 L 1.7143 -14.5714 C 3.4286 -14.5714 3.4286 -12.8571 3.4286 -12.8571 L 3.4286 -11.1429 Z M -2.5714 -11.1429 L -2.5714 -9.4286 C -3 -6 -7.7143 -7.7143 -7.7143 0 L -7.7143 24 C -7.7143 25.7143 -6 25.7143 -6 25.7143 L 6 25.7143 C 6 25.7143 7.7143 25.7143 7.7143 24 L 7.7143 0 C 7.7143 -7.7143 3 -6 2.5714 -9.4286 L 2.5714 -11.1429 Z",
     full: "M -6 22.2857 C -6 24 -4.2857 24 -4.2857 24 L 4.2857 24 C 4.2857 24 6 24 6 22.2857 L 6 0 C 6 -2.5714 5.1429 -4.2857 2.5714 -6 C -2 -6 -1.7143 -6 -2.5714 -6 C -5.1429 -4.2857 -6 -2.5714 -6 0 Z",
@@ -28,32 +32,33 @@ const bottlePaths = {
 
 const container = d3.select('#water-usage-comparison');
 
+// For each product, add the visualisation of their fabrication water consumption
 data.forEach(item => {
     const itemElement = container.append('div').attr('class', 'item');
     
+    //Add the product name
     itemElement.append('div')
         .attr('class', 'item-name')
         .text(item.name);
 
-    const totalBottles = Math.ceil(item.water);
-    const rows = 2;
+    const totalBottles = Math.ceil(item.water); // number of bottles
     var columns;
     if (totalBottles <= 3) { 
-        columns = totalBottles; 
+        columns = totalBottles; // Assures that if there is less than 3 bottles, the bottles stay on one row
     } else { 
-        columns = Math.ceil(totalBottles / rows); 
+        columns = Math.ceil(totalBottles / 2); // Computes the number of columns (for 2 rows)
     }        
-    const containerWidth = columns * 20;
-    const bottles = Math.floor(item.water);
-    const remainder = item.water % 1; 
+    const bottles = Math.floor(item.water); // number of full bottles
+    const remainder = item.water % 1; // the proportion of the last bottle (possibly 0)
 
+    // Creates the bottles container 
     const bottleContainer = itemElement.append('div')
         .attr('class', 'bottle-container')
         .style('grid-template-columns', `repeat(${columns}, 1fr)`)
-        .style('width', `${containerWidth}px`)
+        .style('width', `${20*columns}px`)
         .attr("data-name", item.name)
         .attr("data-reelwater", item.reelwater)
-        .on("mousemove", function (d) {
+        .on("mousemove", function (d) { // Displays the data on mouse hover
             var liters = this.getAttribute('data-reelwater');
             tooltip.style("opacity", .9);
             tooltip.style("text-align", "left");
@@ -66,7 +71,7 @@ data.forEach(item => {
             tooltip.style("opacity", 0);
         });
 
-
+    // Adds each full bottles
     for (let i = 0; i < bottles; i++) {
         const bottle = bottleContainer.append('svg')
             .attr('viewBox', '-8 -15 16 41')
@@ -83,6 +88,7 @@ data.forEach(item => {
             .attr('d', bottlePaths.full)
     }
 
+    // Adds not full bottle (if any)
     if (remainder > 0) {
         const bottle = bottleContainer.append('svg')
             .attr('viewBox', '-8 -15 16 41')
@@ -95,17 +101,11 @@ data.forEach(item => {
             .attr('d', bottlePaths.container)
 
         let path;
-        if (remainder >= 0.8) {
-            path = bottlePaths.eighty;
-        } else if (remainder >= 0.7) {
-            path = bottlePaths.seventy;
-        } else if (remainder >= 0.4) {
-            path = bottlePaths.forty;
-        } else if (remainder >= 0.3) {
-            path = bottlePaths.thirty;
-        } else {
-            path = bottlePaths.ten;
-        }
+        if (remainder >= 0.8) { path = bottlePaths.eighty; } 
+        else if (remainder >= 0.7) { path = bottlePaths.seventy; } 
+        else if (remainder >= 0.4) { path = bottlePaths.forty; } 
+        else if (remainder >= 0.3) { path = bottlePaths.thirty; } 
+        else { path = bottlePaths.ten; }
 
         bottle.append('path')
             .attr("id", "bottleContent")

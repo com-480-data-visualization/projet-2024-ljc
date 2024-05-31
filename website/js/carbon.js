@@ -1,3 +1,6 @@
+//////////////////////////////////////////////////////////////////////////////
+/* Title animation by @DotOnion (https://codepen.io/alvarotrigo/pen/eYEqPZa)*/
+//////////////////////////////////////////////////////////////////////////////
 const elts = {
     text1: document.getElementById("text1"),
     text2: document.getElementById("text2")
@@ -78,14 +81,19 @@ function animate() {
 }
 
 animate();
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
 
 var body = d3.select("body");
 
+// Add a tooltip to allows the display of data on mouse hover
 var tooltip = body.append("div")
   .attr("class", "tooltip")
   .attr("id", "tooltip")
   .style("opacity", 0);
 
+// Data on greenhouse gaz emissions: ['field', 'svg path', 'x position of text', 'colorIndex', 'co2eq value', 'co2eq percent value']
 const parts_co2 = [
     ["Fabric", "M 16 -9 L -16 -9 L -16 -10 L -16 -9 L -31 -9 L -16 -24 L -8 -24 C -8 -16 8 -16 8 -24 L 16 -24 L 31 -9 L 16 -9 L 16 -10 Z", -13, 8, 2.74, 31],
     ["Spinning", "M 16 -9 L -16 -9 L -16 -5 L 16 -5 Z " +
@@ -103,13 +111,14 @@ const parts_co2 = [
     ["End of life", "M 16 24 L 16 23 L -16 23 L -16 24 Z", 23.5, 1, 0.2, 2],
 ]
 
+//For each field, add their part of the t-shirt
 var i;
 for (i=7; i>=0; --i) {    
     var p = d3.select(".t-shirt").append("g")
         .attr("class", "part")
         .attr("id", "part" + (i+1))
         .attr("data-index", i)
-        .on("mousemove", function (d) {
+        .on("mousemove", function (d) { //Add the display of the value on mouse hover
             var index = Number(this.getAttribute('data-index'))
             var clr2 = "var(--orange" + (Number(index)+1) + ")"
             var clr1 = "var(--orange" + parts_co2[index][3] + ")"
@@ -130,14 +139,16 @@ for (i=7; i>=0; --i) {
             var index = Number(this.getAttribute('data-index'))
             d3.select("#part"+(index+1)).style("fill-opacity", 1);
           });
-            
+          
+    //Add the svg path
     p.append("path")
         .attr("d", parts_co2[i][1])
         .attr("fill", "var(--orange" + (i+1) + ")")
 
+    //Add the name of the field on each part
     var fontsize;
-    if (i == 7) { fontsize = 1; } else { fontsize = 2; 
-    }
+    if (i == 7) { fontsize = 1; } else { fontsize = 2; }
+
     p.append("text")
         .attr("x", "0")
         .attr("y", parts_co2[i][2])
