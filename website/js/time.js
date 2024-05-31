@@ -8,16 +8,19 @@ function whenDocumentLoaded(action) {
 
 d3.csv('data/final_short.csv').then((data) => {
 
+    // create an instance to update when move the slider
     let timeChartInstance = null;
 
     function drawTimeChart(dataset, startYear = 1965, endYear = 2014) {
       
         let ctx = document.getElementById('timeChart'); 
         
+        // if graph already exists, destory to make a new one
         if (timeChartInstance) {
             timeChartInstance.destroy();
         }
         
+        // filter by the dates chosen by slider to select what to plot
         let dataset_ = dataset.filter(function(row)  {
             return row.Year >= startYear && row.Year <= endYear;
         }); 
@@ -32,6 +35,7 @@ d3.csv('data/final_short.csv').then((data) => {
             d['col4'].push(row[col[4]])
         });
 
+        //create new chart
         timeChartInstance = new Chart(ctx, {
             type: "line",
             data: {
@@ -77,7 +81,6 @@ d3.csv('data/final_short.csv').then((data) => {
                 },
                 scales : {
                     y1: {
-                        //id: 'y1',
                         type:'linear',
                         position:'left',
                         title : {
@@ -94,7 +97,6 @@ d3.csv('data/final_short.csv').then((data) => {
                         }
                     },
                     y2: {
-                        //id: 'y2',
                         type:'linear',
                         position:'right',
                         title : {
@@ -131,6 +133,7 @@ d3.csv('data/final_short.csv').then((data) => {
 
     const sliderContainer = document.querySelector('.slider-container');
 
+    // initialize all elements for the slider
     const progressBar = document.querySelector('.slider-container .progress');
     const thumb1 = document.querySelector('.slider-container .thumb-1');
     const thumb2 = document.querySelector('.slider-container .thumb-2');
@@ -151,6 +154,7 @@ d3.csv('data/final_short.csv').then((data) => {
     var dragging2 = false;
     var translate;
 
+    // functions for the slider
     function setPosition1() {
         let position = (value1-minValue)/valueRange * sliderContainerWidth;
         thumb1.style.transform = 'translate(-50%)  translateX('+ position  +'px)';
@@ -187,7 +191,10 @@ d3.csv('data/final_short.csv').then((data) => {
     setPosition2();
     drawTimeChart(data, value1, value2);
 
+    
     document.addEventListener('mousemove', function(e) {
+        
+    // adapt the plot if slider moved by user and take into account range of dates
     if (dragging1) {
         if (e.clientX < sliderContainerLeft ) {
         value1 = minValue ;
@@ -211,7 +218,6 @@ d3.csv('data/final_short.csv').then((data) => {
         setPosition2();
     }
     });
-
 
     thumb1.addEventListener('mousedown', function(e) {
         dragging1 = true;
