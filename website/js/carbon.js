@@ -148,19 +148,3 @@ for (i=7; i>=0; --i) {
         .text(parts_co2[i][0])
     
 }
-
-    {/* <g class="part" id="part1">
-        <path 
-            d="M 16 20 L 16 23 L -16 23 L -16 20 Z" 
-            fill="var(--orange7)"/>
-        <text 
-            x="0" 
-            y="21.5" 
-            text-anchor="middle" 
-            dominant-baseline="middle" 
-            font-size="2" 
-            fill="var(--orange2)" 
-            fill-opacity="1">
-                Use
-        </text>
-    </g> */}

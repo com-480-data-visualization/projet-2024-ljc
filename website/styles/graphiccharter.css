@@ -1,8 +1,8 @@
 :root {
     /* Colour palette */
-    --white-color: #f8fbf7; /* f7f7f7 */
+    --white-color: #f8fbf7;
     --orange-color: #f8a163;
-    --pink-color: #fa75a8; /* #FFBFB7 */
+    --pink-color: #fa75a8;
     --green-color: #9cc087;
     --blue-color: #adb8eb;
     --purple-color: #c27ed5;
@@ -26,6 +26,7 @@
     --darkBlue: #3D4878;
 
     --darkYellow: #634d11;
+    --darkGreen: #37492c;
 
     /* Fonts */
     --font-title: "Yeseva One", serif;

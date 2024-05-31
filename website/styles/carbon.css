@@ -36,7 +36,7 @@ body {
     position: absolute;
     width: 90%;
     display: inline-block;
-    font-family: var(--font-title);/*"Raleway", sans-serif;*/
+    font-family: var(--font-title);
     font-size: 80pt;
     text-align: center;
     user-select: none;

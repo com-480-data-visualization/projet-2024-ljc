@@ -1,20 +1,13 @@
-console.log("I'm in the co2.js file :)");
-
 function whenDocumentLoaded(action) {
 	if (document.readyState === "loading") {
 		document.addEventListener("DOMContentLoaded", action);
 	} else {
-		// `DOMContentLoaded` already fired
 		action();
 	}
 }
 
 function drawTimeChart(dataset) {
-    console.log('drawTimeChart')
     let ctx = document.getElementById('co2tshirt'); 
-    
-    //let's make the data usable
-    //let = datasets [];
     
     let col = Object.keys(dataset[0]);
     let d = { 'year' : [], 'col1':[], 'col2':[], 'col2':[], 'col3':[], 'col4':[]}
@@ -25,7 +18,6 @@ function drawTimeChart(dataset) {
         d['col3'].push(row[col[3]])
         d['col4'].push(row[col[4]])
     });
-    console.log('just before chart')
     new Chart(ctx, {
         type: "line",
         data: {
@@ -95,8 +87,6 @@ function drawTimeChart(dataset) {
 }
 
 whenDocumentLoaded(() => {
-    console.log('loaded hey')
-
     d3.csv('data/final_short.csv').then((data) => {
         drawTimeChart(data)
     })

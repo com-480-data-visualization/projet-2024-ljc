@@ -2,7 +2,6 @@ function whenDocumentLoaded(action) {
 	if (document.readyState === "loading") {
 		document.addEventListener("DOMContentLoaded", action);
 	} else {
-		// `DOMContentLoaded` already fired
 		action();
 	}
 }
@@ -12,8 +11,7 @@ d3.csv('data/final_short.csv').then((data) => {
     let timeChartInstance = null;
 
     function drawTimeChart(dataset, startYear = 1965, endYear = 2014) {
-        console.log("minValue="+startYear+ " and maxValue="+endYear)
-        
+      
         let ctx = document.getElementById('timeChart'); 
         
         if (timeChartInstance) {
@@ -33,7 +31,7 @@ d3.csv('data/final_short.csv').then((data) => {
             d['col3'].push(row[col[3]])
             d['col4'].push(row[col[4]])
         });
-        console.log('just before chart new')
+
         timeChartInstance = new Chart(ctx, {
             type: "line",
             data: {
@@ -131,8 +129,6 @@ d3.csv('data/final_short.csv').then((data) => {
         });
     }
 
-    //for the slider
-
     const sliderContainer = document.querySelector('.slider-container');
 
     const progressBar = document.querySelector('.slider-container .progress');
@@ -201,7 +197,6 @@ d3.csv('data/final_short.csv').then((data) => {
         translate = e.clientX - sliderContainerLeft;
         value1 =  Math.round(translate / sliderContainerWidth* valueRange + minValue);
         }
-        console.log(value1);
         setPosition1();
     }
     if (dragging2) {
@@ -236,14 +231,11 @@ d3.csv('data/final_short.csv').then((data) => {
         thumbIndicator2.classList.remove('focus');
     });
 
-    // Select the nodes that will be observed for mutations
     const targetNode1 = document.querySelector('.value-1');
     const targetNode2 = document.querySelector('.value-2');
 
-    // Options for the observer (which mutations to observe)
     const config = { childList: true, subtree: true };
 
-    // Callback function to execute when mutations are observed
     const callback = (mutationsList, observer) => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList') {
@@ -252,24 +244,9 @@ d3.csv('data/final_short.csv').then((data) => {
         }
     };
 
-    // Create an observer instance linked to the callback function
     const observer = new MutationObserver(callback);
 
-    // Start observing the target nodes for configured mutations
     observer.observe(targetNode1, config);
     observer.observe(targetNode2, config);
 
-/*     whenDocumentLoaded(() => {
-        console.log('louise')
-        /* slideOne()
-        slideTwo()
-        sliderOne.addEventListener('input', slideOne);
-        sliderTwo.addEventListener('input', slideTwo);
-        console.log('before d3')
-
-        d3.csv('data/final_short.csv').then((data) => {
-            console.log('what is going on')
-            drawTimeChart(data)
-        })
-    }) */
 });

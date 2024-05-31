@@ -32,13 +32,6 @@
     width: 100%;
 }
 
-/* #sectionintro{
-    background-image: url("../img/habits.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-} */
-
 .fp-watermark {
     display: none;
     color: #ff0000;
@@ -183,7 +176,7 @@ animation: openYourHeart 10s infinite;
 }
 
 #popup-part4 {
-    background-color: color-mix(in srgb, #7c5921, transparent);
+    background-color: color-mix(in srgb, var(--darkGreen), transparent);
 }
 
 .popup-content {
@@ -323,18 +316,18 @@ h1 {
     height: 20px;
 }
 .square.natural {
-    border: 1.5px solid rgb(200, 200, 200); /* Empty square with border for natural */
+    border: 1.5px solid rgb(200, 200, 200); 
     background-color: rgba(190, 190, 190, 0.2);
 }
 
 
 .square.synthetic {
     background: repeating-linear-gradient(
-        45deg, /* Angle of the stripes */
-        #c8c8c8, /* Color of the first stripe */
-        #c8c8c8 1.5px, /* Thickness of the first stripe */
-        var(--white-color) 1.5px, /* Color of the second stripe */
-        var(--white-color) 5px /* Thickness of the second stripe */
+        45deg,
+        #c8c8c8,
+        #c8c8c8 1.5px,
+        var(--white-color) 1.5px,
+        var(--white-color) 5px
     );
     border: 1px solid rgb(200, 200, 200);
 
@@ -353,16 +346,7 @@ h1 {
     font-size: 16px;
     z-index: 1000;
 }
-/*
-.text-intro {
-    display: flex;
-    font-size: 20px;
-    justify-content: space-between;
-    align-items: center; 
-    text-align: center;
-    margin-left: 60px;
-}
-*/
+
 .text-intro {
     display: flex;
     font-size:20px;
@@ -401,8 +385,6 @@ img {
     bottom:10%;
 }
 
-
-/*added by louise*/
 *,
 *:before,
 *:after{

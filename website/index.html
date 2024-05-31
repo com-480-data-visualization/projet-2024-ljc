@@ -10,7 +10,6 @@
   <meta name="author" content="Clara Tavernier, Julie Korber, Louise Font" />
   
   <link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
-  <!-- <link rel="stylesheet" href="lib/fullpage.min.css" /> -->
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/nouislider@16.6.2/distribute/nouislider.min.js"></script>
@@ -26,12 +25,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap" rel="stylesheet">
 
-    <!-- Chart.js for the radar chart -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- d3 to load csv data -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
 
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   
 </head>
 
@@ -207,11 +204,9 @@
       
         <script>
           function clicked(button) {
-              // Remove clicked class from all buttons, not to have two button selected at same time
               const buttons = document.querySelectorAll('.button');
               buttons.forEach(btn => btn.classList.remove('clicked'));
       
-              // Add clicked class to the actual clicked button
               button.classList.add('clicked');
           }
         </script>

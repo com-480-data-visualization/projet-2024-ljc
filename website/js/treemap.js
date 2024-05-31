@@ -113,9 +113,7 @@ d3.json('data/swiss-carbon-footprint.json').then(data => {
   const LEGEND_RECT_SIZE = 20;
   const LEGEND_TEXT_X_OFFSET = 3;
   const LEGEND_TEXT_Y_OFFSET = 15;
-  const LEGEND_H_SPACING = 20; // Space between legend items
-
-  console.log(+legend.attr("width"))
+  const LEGEND_H_SPACING = 20;
 
   var legendElem = legend.append("g")
     .attr("transform", "translate(" + LEGEND_OFFSET + ", " + LEGEND_OFFSET + ")")
