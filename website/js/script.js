@@ -6,25 +6,37 @@ function hideOrShowWasteCounter() {
     }
 }
 
-document.getElementById('part1').addEventListener('click', function() {
+const pTshirt1 = document.getElementById('part1');
+if (pTshirt1) {
+    pTshirt1.addEventListener('click', function() {
     document.getElementById('popup-part1').style.display = 'block'; 
     hideOrShowWasteCounter();
-});
+    });
+}
 
-document.getElementById('part2').addEventListener('click', function() {
+const pTshirt2 = document.getElementById('part2');
+if (pTshirt2) {
+    pTshirt2.addEventListener('click', function() {
     document.getElementById('popup-part2').style.display = 'block'; 
     hideOrShowWasteCounter();
-});
+    });
+}
 
-document.getElementById('part3').addEventListener('click', function() {
+const pTshirt3 = document.getElementById('part3');
+if (pTshirt3) {
+    pTshirt3.addEventListener('click', function() {
     document.getElementById('popup-part3').style.display = 'block'; 
     hideOrShowWasteCounter();
-});
+    });
+}
 
-document.getElementById('part4').addEventListener('click', function() {
-    document.getElementById('popup-part4').style.display = 'block';
+const pTshirt4 = document.getElementById('part4');
+if (pTshirt4) {
+    pTshirt4.addEventListener('click', function() {
+    document.getElementById('popup-part4').style.display = 'block'; 
     hideOrShowWasteCounter();
-});
+    });
+}
 
 window.addEventListener('click', function(event) {
     if (event.target === document.getElementById('popup-part1')) {
@@ -56,7 +68,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // The world produces 92 million tons of textile waste every year. (https://theroundup.org/textile-waste-statistics/)
         waste_per_second = 92*1e6/365/24/60/60;
         counter+=waste_per_second;
-        counterButton.innerText = 'Worldwide textile waste since you opened this page:\n' + Math.round(counter*100)/100 + ' tons';
+        if (counterButton) {
+            counterButton.innerText = 'Worldwide textile waste since you opened this page:\n' + Math.round(counter*100)/100 + ' tons';
+        }
     }, 1000);
 });
 

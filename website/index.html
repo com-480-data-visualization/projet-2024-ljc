@@ -5,29 +5,26 @@
   <meta charset="utf-8" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>BeAware</title>
   <meta name="author" content="Clara Tavernier, Julie Korber, Louise Font" />
   
-  <link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.css" integrity="sha512-i5IHYtHBVvbgT6M4ltVKNqF7fh/MTVfGh3ilW1gxxgmlMocsl8aYz28aF0Iph+ceUpun06UW9CpExog9qXqFKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/nouislider@16.6.2/distribute/nouislider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  <!-- CSS files -->
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="styles/graphiccharter.css" />
   <link rel="stylesheet" href="styles/treemap.css" />
   <link rel="stylesheet" href="styles/time.css" />
-
-  <link href="https://cdn.jsdelivr.net/npm/nouislider@16.6.2/distribute/nouislider.min.css" rel="stylesheet">
   
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-
+  <!-- Icon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   
 </head>
@@ -259,22 +256,22 @@
 	</div>
 
   <!-- Scripts -->
-  <script src="lib/d3.v5.min.js"></script>
-  <script src="js/script.js"></script>
 
+  <script src="js/script.js"></script>
   <script src="js/treemap.js"></script>
   <script src="js/time.js"></script>
   <script src="js/textile.js"></script> 
-  <script type="text/javascript" src="lib/fullpage.js"></script>
-  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js" integrity="sha512-yHHLi2ZwgtW9QNVZd0asqMyWGJ6Kx73ijKlGWSi3MwYFB5ZzOJV8wPtopKr6muHk5SERgF3OB/2dZj3StlI34w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script>
     new fullpage('#fullpage', {
+      licenseKey: 'gplv3-license',
       autoScrolling:true,
-      scrollHorizontally: true,
       sectionsColor: ['transparent', 'var(--white-color)', 'var(--white-color)', 'var(--white-color)', 'var(--white-color)', 'var(--white-color)','var(--white-color)', 'var(--white-color)'],
       navigation: true,
       anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
-      navigationTooltips: ['Title', 'Context', 'Your carbon footprint', 'Some of many problems', 'Which fabric is the best?', 'TO BE REMOVED!!!', 'Be responsible'],
+      navigationTooltips: ['Title', 'Context', 'Your carbon footprint', 'Some of many problems', 'Which fabric is the best?', 'Which fabric is the best? (continues)', 'Be responsible'],
       loopHorizontal: false,
       fitToSection: true,
       scrollOverflow: false,
