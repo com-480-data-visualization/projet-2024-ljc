@@ -46,7 +46,7 @@
     <div class = "section">
       <div class = 'text-intro'>
         <div class="text-container">
-          <div class="intro-title">A few words for context…</div>
+          <div class="section-title">A few words for context…</div>
           <div class="intro-text">
             Following the latest IPCC report, the inevitable consequences of climate change have once again been highlighted. 
             Rising greenhouse gas emissions, ocean acidification and water pollution are having an undeniable impact on our environment.
@@ -63,6 +63,7 @@
   </div>
    
     <div class="section">
+      <div class="slide" id="carbonfootprint-slide">
         <div class="section-title">Annual carbon footprint of a swiss</div>
         <div class="section-text">
           Now to better understand the impact of fashion, let’s see it amidst the average yearly CO<sub>2</sub> emissions of a Swiss person (11'639 kgCO2eq<a href="https://climpact.ch/carbon-footprint/"><sup>[1]</sup></a>). 
@@ -71,14 +72,14 @@
           And that when wishing to reduce our carbon footprint in an eco friendly approach, we should also consider having a look at our wardrobe.
           </div>
         <div id="divi">
-          <svg class = 'plots' id="swiss-carbonfootprint" width="1250" height="450"></svg>
-          <div class = 'plots' id="legend-container" >
+          <svg id="swiss-carbonfootprint" width="1250" height="450"></svg>
+          <div id="legend-container" width="800" >
             <svg id="scfp-legend" width="800" ></svg>
           </div>
         </div>   
         <div class="section-text">
         </div>      
-
+      </div>
     </div>
 
     <div class="section">
@@ -93,7 +94,7 @@
           More information on those sectors and their relation with the fashion industry can be found on the right.
         </div>
         
-        <canvas class="plots" id="timeChart" width="1200" height="400"></canvas>
+        <canvas id="timeChart" width="1200" height="350"></canvas>
 
         <div class="slider-main-container">
           <div class="slider-container">
@@ -158,8 +159,8 @@
     </div>
 
     <div class="section">
-      <div class="section-title">Which fabric is the best?</div>
-      <div class="section-text-only">
+      <div class="section-title-image">Which fabric is the best?</div>
+      <div class="section-text">
         To address the environmental impact of the fashion industry, we can take steps at our level. 
         For that, the choice of our clothes given their composition can be a first step.  
         Indeed, different textiles have varying sustainability profiles. 
@@ -188,21 +189,21 @@
         <div class="section-title">Which fabric is the best?</div>
         <div class="section-text">
           Now to evaluate more separately the different ecological impact on our environment of fashion, we focus on each category comparing the different fabrics.
-        </div>
+         </div>
         <div class="button-container">
           <button class="button clicked" onclick = "clicked(this)" id="waterButton">Water</button>
           <button class="button" onclick = "clicked(this)" id="co2Button">CO2</button>
           <button class="button" onclick = "clicked(this)" id="energyButton">Energy</button>
-        </div>
+      </div>
 
-        <div class="button-container">
-          <div class="legend-item">
+      <div class="button-container">
+        <div class="legend-item">
             <div class="square natural"></div>
             <span>Natural fiber</span>
             <div class="square synthetic"></div>
             <span>Synthetic fiber</span>
-          </div>
         </div>
+    </div>
       
         <script>
           function clicked(button) {
@@ -220,12 +221,14 @@
     </div>
     
     <div class="section">
-        <div class="conclusion-title">Conclusion: Be responsible</div>
-        <div class="conclusion-text">
+      <div class="section-interior">
+        <div class="section-title-conclusion">Conclusion: Be responsible</div>
+        <div class="section-text">
           In terms of fashion choice, while there's no perfect solution, individuals can still have an impact by choosing sustainable fabrics and supporting eco-friendly brands, reducing consumption, and going for second-hand options. 
           By prioritizing quality over quantity, embracing reuse and upcycling, and advocating for ethical production practices, we can collectively contribute to a more sustainable and responsible fashion industry.
         </div>
         <img src = 'img/conclusion.jpg' alt="Collage" >
+      </div>
     </div>
   </div>
 
@@ -279,7 +282,6 @@
       navigationTooltips: ['Title', 'Context', 'Your carbon footprint', 'Some of many problems', 'Which fabric is the best?', 'TO BE REMOVED!!!', 'Be responsible'],
       loopHorizontal: false,
       fitToSection: true,
-      fitToSlide: true, 
       scrollOverflow: false,
       navigationPosition: 'left',
     });

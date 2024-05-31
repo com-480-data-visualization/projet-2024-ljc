@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cairo');
 
 body {
-	background: color-mix(in srgb, var(--yellow-color) 20%, transparent 10%);
+	background: color-mix(in srgb, var(--yellow-color) 60%, transparent 40%);
 	font-family: var(--font-text);
 }
 
