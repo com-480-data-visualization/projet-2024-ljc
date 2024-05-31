@@ -1,5 +1,3 @@
-console.log("I'm in the textil.js file 22 :)");
-
 function whenDocumentLoaded(action) {
 	if (document.readyState === "loading") {
 		document.addEventListener("DOMContentLoaded", action);
@@ -10,8 +8,6 @@ function whenDocumentLoaded(action) {
 }
 
 function radarChart(row_fabric) {
-    console.log('RadarChart');
-
     // get the id from the index.html
     let ctx = document.getElementById('radarChart');
 
@@ -22,8 +18,8 @@ function radarChart(row_fabric) {
         dataset = {
             label: row.fabric,
             data: [row[lab_[0]], row[lab_[1]], row[lab_[2]]],
-            backgroundColor: getColorWithOpacity(row.color, 0.2), // Semi-transparent background
-            borderColor: getColorWithOpacity(row.color, 1), // Opaque border
+            backgroundColor: getColorWithOpacity(row.color, 0.2),
+            borderColor: getColorWithOpacity(row.color, 1), 
             borderWidth: 1
         };
         datasets.push(dataset);
@@ -48,7 +44,7 @@ function radarChart(row_fabric) {
             },
             animation: {
                 duration: 700, 
-                easing: 'easeInOutQuad', // easeInOutQuad = Slow starts and ends & faster middle section 
+                easing: 'easeInOutQuad',
             }
         }
     });
@@ -56,24 +52,26 @@ function radarChart(row_fabric) {
 
 function createDiagonalPattern(type, color = 'black') {
     if (type == 'synthetic') {
-        // create a 10x10 px canvas for the pattern's base shape
+
         let shape = document.createElement('canvas')
         shape.width = 10
         shape.height = 10
-        // get the context for drawing
         let c = shape.getContext('2d')
-        // draw 1st line of the shape 
+
+        // Draw 1st line of the shape 
         c.strokeStyle = color
         c.beginPath()
         c.moveTo(2, 0)
         c.lineTo(10, 8)
         c.stroke()
-        // draw 2nd line of the shape 
+
+        // Draw 2nd line of the shape 
         c.beginPath()
         c.moveTo(0, 8)
         c.lineTo(2, 10)
         c.stroke()
-        // create the pattern from the shape
+
+        // Create the pattern from the shape
         return c.createPattern(shape, 'repeat')
     } else if(type == 'natural'){
         return getColorWithOpacity(color, 0.2)
@@ -84,8 +82,6 @@ function createDiagonalPattern(type, color = 'black') {
 }
 
 function barChart(row_fabric, dataLabel, first = false) {
-    console.log('BarChart');
-
     // Get the canvas element
     let canvas = document.getElementById('comparisonFabric');
     // Get the 2D context of the canvas
@@ -97,8 +93,8 @@ function barChart(row_fabric, dataLabel, first = false) {
         let dataset = {
             label: row.fabric,
             data: [row[dataLabel]],
-            backgroundColor: createDiagonalPattern(row.type, row.color), // Semi-transparent background
-            borderColor: getColorWithOpacity(row.color, 1), // Opaque border
+            backgroundColor: createDiagonalPattern(row.type, row.color), 
+            borderColor: getColorWithOpacity(row.color, 1), 
             borderWidth: 1
         };
         datasets.push(dataset);
@@ -119,9 +115,9 @@ function barChart(row_fabric, dataLabel, first = false) {
                                 options: {
                                     animation: {
                                         duration: 700, 
-                                        easing: 'easeInOutQuad' // easeInOutQuad = Slow starts and ends & faster middle section
+                                        easing: 'easeInOutQuad'
                                     },
-                                    plugins: { // Handle the legends
+                                    plugins: { 
                                         legend: {
                                             display: true,
                                             position: 'top', 
@@ -129,8 +125,8 @@ function barChart(row_fabric, dataLabel, first = false) {
                                     },
                                     layout: {
                                         padding: {
-                                            top: 20, // Adjust the top padding to create a margin above the legend
-                                            bottom: 20 // Optional: Adjust bottom padding if needed
+                                            top: 20, 
+                                            bottom: 20
                                         }
                                     }
                                 }
@@ -138,8 +134,6 @@ function barChart(row_fabric, dataLabel, first = false) {
     } 
     // Update the existing chart
     else if (myChart) {
-
-        // Updates
         myChart.data.labels = [dataLabel];
         myChart.data.datasets = datasets
         myChart.update();
@@ -157,11 +151,7 @@ const lab_ = ["Water use [kg for 1 kg Fiber]", "CO2 emissions [kg for 1 kg Fiber
 // Execute when document is loaded
 whenDocumentLoaded(() => {
     d3.csv('data/fabrics-comparison.csv').then((textiles) => {
-        console.log('a')
-        console.log(textiles)
 
-        // Add a color to each textile using D3's category10 color scheme
-       // const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
        const colorScale = [
         getComputedStyle(document.documentElement).getPropertyValue('--orange-color').trim(),
         getComputedStyle(document.documentElement).getPropertyValue('--pink-color').trim(),
@@ -174,8 +164,6 @@ whenDocumentLoaded(() => {
 
         textiles.forEach((textile, index) => {
             // Assign color from the color scale
-
-            //textile.color = d3.rgb(colorScale(index));
             textile.color = d3.rgb(colorScale[index]);
         });
 
@@ -194,15 +182,11 @@ whenDocumentLoaded(() => {
             barChart(textiles, lab_[2]);
         });
 
-        // Radar Chart
-
-        
         // Copy textile in a way it is not modified
         let textiles_percentage = JSON.parse(JSON.stringify(textiles))
 
         // Calculate percentages
         for (let i = 0; i < lab_.length; i++) {
-            console.log(i)
             const max_lab = Math.max(...Object.values(textiles_percentage).map(item => item[lab_[i]]).filter(val => !isNaN(val)));
             textiles_percentage.forEach((row) => {
                 row[lab_[i]] =row[lab_[i]]*100/max_lab;
@@ -210,26 +194,7 @@ whenDocumentLoaded(() => {
             })
 
           }
+        // radar Chart
         radarChart(textiles_percentage);
-
-
     });
-
 });
-
-
-/*
-
-SUGGESTION
-- For the radar chart
-    - start with one element and you can add if wanted
-    - Have fixed scale from 0 to 100
-- For the Bar plot
-    - add the synthetic, natural information
-    - keep into memory which label are  visible or not 
-TODO
-- graphical chart
-- class plot to a better visualization 
-
-*/ 
-
