@@ -26,7 +26,7 @@ You can find our milestone 2 pdf [here](milestones/Milestone_2.pdf).
 
 - You can find the website [here](https://com-480-data-visualization.github.io/projet-2024-ljc/). 
 - You can find our process book [here](milestones/Process-book.pdf). 
-- You can find our screencast [here]().
+- You can find our screencast [here](https://youtu.be/0vfOaEJjark).
 
 Concerning the structure of our code and where to find all the necessary information :
 - in `website/js`: you can find all the JavaScript files that contain the code to the graphs of our website.
