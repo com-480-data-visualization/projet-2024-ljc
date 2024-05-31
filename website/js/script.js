@@ -6,6 +6,7 @@ function hideOrShowWasteCounter() {
     }
 }
 
+// Water use
 const pTshirt1 = document.getElementById('part1');
 if (pTshirt1) {
     pTshirt1.addEventListener('click', function() {
@@ -14,6 +15,7 @@ if (pTshirt1) {
     });
 }
 
+// Energy consumption
 const pTshirt2 = document.getElementById('part2');
 if (pTshirt2) {
     pTshirt2.addEventListener('click', function() {
@@ -22,6 +24,7 @@ if (pTshirt2) {
     });
 }
 
+// Carbon emissions
 const pTshirt3 = document.getElementById('part3');
 if (pTshirt3) {
     pTshirt3.addEventListener('click', function() {
@@ -30,6 +33,7 @@ if (pTshirt3) {
     });
 }
 
+// Land use 
 const pTshirt4 = document.getElementById('part4');
 if (pTshirt4) {
     pTshirt4.addEventListener('click', function() {
